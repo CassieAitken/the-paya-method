@@ -16,22 +16,22 @@ export function FounderMessageModal({ isOpen, onClose }: { isOpen: boolean; onCl
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-6 bg-black/50" onClick={onClose}>
-      <div className="relative bg-white rounded-none shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
-        <div className="bg-gradient-to-b from-stone-50 to-white p-8 lg:p-12 space-y-8">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-6 bg-black/60" onClick={onClose}>
+      <div className="relative bg-[#4B1D5C] rounded-none shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+        <div className="p-8 lg:p-12 space-y-8">
           <div className="flex items-start justify-between">
-            <h3 className="text-4xl lg:text-5xl font-serif text-stone-900 leading-tight">
+            <h3 className="text-4xl lg:text-5xl font-serif text-[#FDFBF7] leading-tight">
               A Message From<br />the Founder
             </h3>
             <button
               onClick={onClose}
-              className="ml-4 p-2 hover:bg-stone-100 rounded-lg transition-colors flex-shrink-0 mt-1"
+              className="ml-4 p-2 hover:bg-[#FDFBF7]/10 rounded-lg transition-colors flex-shrink-0 mt-1"
             >
-              <Icons.X size={22} className="text-[#C4B9A8]" />
+              <Icons.X size={22} className="text-[#9AB8C4]" />
             </button>
           </div>
 
-          <div className="space-y-6 text-[#5C534E] leading-[1.8] font-light">
+          <div className="space-y-6 text-[#E4D9E8] leading-[1.8] font-light">
             <p>
               I've sat with a lot of dogs. Every stage of life. And I've watched their people — noticing every shift, every change, wondering what they're missing. For too long, we've been reactive. Wait for the diagnosis. Wait for something to break. Wait for decline.
             </p>
@@ -51,9 +51,9 @@ export function FounderMessageModal({ isOpen, onClose }: { isOpen: boolean; onCl
               Thank you for caring enough to look this closely. It means everything — to me, and to them.
             </p>
 
-            <div className="pt-6 border-t border-stone-200">
-              <p className="text-lg font-serif text-stone-900">Cassie Aitken</p>
-              <p className="text-[10px] text-[#C4B9A8] font-mono uppercase tracking-[0.2em] mt-1">Founder, PayaLabs</p>
+            <div className="pt-6 border-t border-[#FDFBF7]/15">
+              <p className="text-lg font-serif text-[#FDFBF7]">Cassie Aitken</p>
+              <p className="text-[10px] text-[#C9B9CE] font-mono uppercase tracking-[0.2em] mt-1">Founder, PayaLabs</p>
               <ul className="mt-3 space-y-1.5">
                 {[
                   '15+ Years Wellness Practice',
@@ -61,21 +61,14 @@ export function FounderMessageModal({ isOpen, onClose }: { isOpen: boolean; onCl
                   'Animal Behaviorist',
                   'Canine Biology & Nervous System Researcher',
                 ].map((item) => (
-                  <li key={item} className="flex items-center gap-2 text-xs text-stone-400 font-light">
-                    <span className="w-1 h-1 rounded-full bg-[#0A4682] flex-shrink-0"></span>
+                  <li key={item} className="flex items-center gap-2 text-xs text-[#C9B9CE] font-light">
+                    <span className="w-1 h-1 rounded-full bg-[#9AB8C4] flex-shrink-0"></span>
                     {item}
                   </li>
                 ))}
               </ul>
             </div>
           </div>
-
-          <button
-            onClick={onClose}
-            className="w-full bg-stone-900 text-white py-4 rounded-lg font-mono text-[11px] tracking-widest font-bold hover:bg-stone-800 transition-colors"
-          >
-            Close
-          </button>
         </div>
       </div>
     </div>
