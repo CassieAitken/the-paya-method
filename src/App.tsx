@@ -784,8 +784,8 @@ The part that got me? How much my own habits are showing up in their biology.`;
         )}
       </main>
 
-      <footer className={`max-w-4xl mx-auto px-8 lg:px-12 py-16 text-center mt-32 ${step === 'analyzing' ? 'hidden' : ''}`}>
-        <p className="text-[11px] text-stone-400 font-serif">
+      <footer className={`max-w-4xl mx-auto px-8 lg:px-12 py-16 text-center ${step === 'landing' ? '' : 'mt-32'} ${step === 'analyzing' ? 'hidden' : ''} ${step === 'landing' ? 'relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#4B1D5C] !max-w-none !px-8' : ''}`}>
+        <p className={`text-[11px] font-serif ${step === 'landing' ? 'text-[#C9B9CE]' : 'text-stone-400'}`}>
           For educational purposes. Always consult your veterinarian before making significant changes to your dog's care.
         </p>
       </footer>
