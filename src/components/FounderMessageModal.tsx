@@ -62,7 +62,7 @@ export function FounderMessageModal({ isOpen, onClose }: { isOpen: boolean; onCl
                   'Canine Biology & Nervous System Researcher',
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-2 text-xs text-stone-400 font-light">
-                    <span className="w-1 h-1 rounded-full bg-[#415A42] flex-shrink-0"></span>
+                    <span className="w-1 h-1 rounded-full bg-[#0A4682] flex-shrink-0"></span>
                     {item}
                   </li>
                 ))}

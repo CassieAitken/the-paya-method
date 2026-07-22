@@ -165,10 +165,10 @@ export function Audit({
     return (
       <div className="min-h-screen bg-[#FDFBF7] flex items-center justify-center px-4">
         <div className="max-w-md w-full text-center animate-[fade-in_0.4s_ease-out]">
-          <div className="w-16 h-16 rounded-full bg-[#415A42]/[0.03] flex items-center justify-center mx-auto mb-6">
-            <Icons.Check size={28} strokeWidth={2} className="text-[#415A42]" />
+          <div className="w-16 h-16 rounded-full bg-[#0A4682]/[0.03] flex items-center justify-center mx-auto mb-6">
+            <Icons.Check size={28} strokeWidth={2} className="text-[#0A4682]" />
           </div>
-          <p className="text-[9px] font-mono uppercase tracking-[0.4em] text-[#415A42] mb-3">
+          <p className="text-[9px] font-mono uppercase tracking-[0.4em] text-[#0A4682] mb-3">
             Phase {completedPhaseId} Complete
           </p>
           <h2 className="text-2xl sm:text-3xl font-serif text-[#2A2421] mb-3 tracking-tight">
@@ -215,13 +215,13 @@ export function Audit({
                     isActive
                       ? 'bg-[#2A2421] text-white'
                       : isComplete
-                      ? 'bg-[#415A42]/[0.03] text-[#415A42] border border-[#415A42]/30'
+                      ? 'bg-[#0A4682]/[0.03] text-[#0A4682] border border-[#0A4682]/30'
                       : 'bg-white text-[#8A7F72] border border-[#E8E2D9]'
                   }`}
                 >
                   <span className="hidden sm:inline truncate">{AUDIT_PHASES[phaseId].name}</span>
                   <span className="sm:hidden">Phase {phaseId}</span>
-                  {isComplete && <Icons.Check size={8} strokeWidth={3} className="text-[#415A42]" />}
+                  {isComplete && <Icons.Check size={8} strokeWidth={3} className="text-[#0A4682]" />}
                 </div>
               );
             })}
@@ -229,7 +229,7 @@ export function Audit({
           <div className="flex items-center gap-3">
             <div className="flex-1 h-1.5 bg-[#E8E2D9] rounded-full overflow-hidden">
               <div
-                className="h-full bg-[#415A42] rounded-full transition-all duration-500"
+                className="h-full bg-[#0A4682] rounded-full transition-all duration-500"
                 style={{ width: `${overallProgress}%` }}
               />
             </div>
@@ -281,7 +281,7 @@ export function Audit({
                     key={i}
                     className={`h-1 rounded-full transition-all duration-300 ${
                       i < currentQuestion
-                        ? 'bg-[#415A42] w-4'
+                        ? 'bg-[#0A4682] w-4'
                         : i === currentQuestion
                         ? 'bg-[#2A2421] w-6'
                         : 'bg-stone-200/80 w-3'
@@ -313,14 +313,14 @@ export function Audit({
                     onClick={() => handleSelect(level)}
                     className={`w-full flex items-center justify-between px-5 py-4 border-2 transition-all duration-150 text-left group ${
                       isSelected
-                        ? 'border-[#415A42] bg-[#415A42]/5'
+                        ? 'border-[#0A4682] bg-[#0A4682]/5'
                         : 'border-[#E8E2D9] bg-white/60 hover:border-stone-300/80'
                     }`}
                   >
                     <div className="flex items-center gap-4">
                       <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-all ${
                         isSelected
-                          ? 'border-[#415A42] bg-[#415A42]'
+                          ? 'border-[#0A4682] bg-[#0A4682]'
                           : 'border-stone-300/80 group-hover:border-stone-400'
                       }`}>
                         {isSelected && <div className="w-2 h-2 rounded-full bg-white" />}
@@ -339,7 +339,7 @@ export function Audit({
                       </div>
                     </div>
                     {isSelected && (
-                      <Icons.Check size={16} strokeWidth={2.5} className="text-[#415A42] flex-shrink-0" />
+                      <Icons.Check size={16} strokeWidth={2.5} className="text-[#0A4682] flex-shrink-0" />
                     )}
                   </button>
                 );
@@ -385,7 +385,7 @@ export function Audit({
                 disabled={!canAdvanceManually}
                 className={`flex items-center gap-2 px-6 py-3 text-[10px] font-mono uppercase tracking-[0.3em] font-medium transition-all ${
                   canAdvanceManually
-                    ? 'bg-[#415A42] text-white hover:bg-[#344a35] hover:-translate-y-0.5'
+                    ? 'bg-[#0A4682] text-white hover:bg-[#344a35] hover:-translate-y-0.5'
                     : 'bg-stone-100 text-[#8A7F72]/30 cursor-not-allowed'
                 }`}
               >
@@ -396,7 +396,7 @@ export function Audit({
           </div>
 
           {/* Biological insight — subtle footer */}
-          <div className="mt-8 pl-4 border-l-2 border-[#415A42]/20">
+          <div className="mt-8 pl-4 border-l-2 border-[#0A4682]/20">
             <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#8A7F72]/40 mb-1.5 flex items-center gap-1.5">
               <Icons.Microscope size={10} strokeWidth={1.5} /> Biological Insight
             </p>

@@ -88,7 +88,7 @@ export function ResultsHero({
           <circle cx="100" cy="100" r={radius} fill="none" stroke="#e7e5e4" strokeWidth="8" opacity="0.4" />
           <circle
             cx="100" cy="100" r={radius} fill="none"
-            stroke="#14B8A6" strokeWidth="8" strokeLinecap="round"
+            stroke="#0A4682" strokeWidth="8" strokeLinecap="round"
             strokeDasharray={circumference} strokeDashoffset={offset}
             className="transition-all duration-1000"
           />
@@ -114,7 +114,7 @@ export function ResultsHero({
             </p>
             <RadialScore score={results.score} />
             <div className="space-y-3 pt-2">
-              <div className="h-px w-16 bg-[#14B8A6]/30 mx-auto"></div>
+              <div className="h-px w-16 bg-[#0A4682]/30 mx-auto"></div>
               <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif text-[#2A2421] tracking-tight leading-[0.96]">
                 {results.archetype.name}
               </h3>
@@ -174,7 +174,7 @@ export function ResultsHero({
                 <><strong>PDF emailed instantly</strong> — yours to keep and share with your vet</>,
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <Icons.Check size={16} className="text-[#14B8A6] flex-shrink-0 mt-1" />
+                  <Icons.Check size={16} className="text-[#0A4682] flex-shrink-0 mt-1" />
                   <span className="text-base text-[#5C534E] leading-[1.7]">{item}</span>
                 </li>
               ))}
@@ -204,7 +204,7 @@ export function ResultsHero({
                       <div key={idx} className="bg-white border border-[#E8E2D9] p-4 space-y-2.5">
                         <div className="flex justify-between items-center">
                           <div className="flex items-center gap-2.5">
-                            <PhaseIcon size={14} strokeWidth={1.3} className="text-[#415A42]" />
+                            <PhaseIcon size={14} strokeWidth={1.3} className="text-[#0A4682]" />
                             <div>
                               <span className="font-mono text-[7.5px] uppercase tracking-[0.3em] font-medium text-[#2A2421] block leading-tight">
                                 {phase.label}
@@ -216,7 +216,7 @@ export function ResultsHero({
                         </div>
                         <div className="w-full h-1.5 bg-stone-200/60 rounded-full overflow-hidden">
                           <div
-                            className="h-full bg-[#415A42] rounded-full transition-all duration-700"
+                            className="h-full bg-[#0A4682] rounded-full transition-all duration-700"
                             style={{ width: `${phaseScore}%` }}
                           />
                         </div>
@@ -240,7 +240,7 @@ export function ResultsHero({
                   </div>
                   <div className="p-4">
                     <div className="flex gap-3">
-                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#14B8A6] flex items-center justify-center text-white font-mono text-[9px] font-medium mt-0.5">
+                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#0A4682] flex items-center justify-center text-white font-mono text-[9px] font-medium mt-0.5">
                         1
                       </div>
                       <p className="text-[13px] text-[#5C534E] leading-[1.8] font-light pt-0.5">
@@ -257,7 +257,7 @@ export function ResultsHero({
         {/* 6. Unlock CTA — the money-maker */}
         <div className="max-w-2xl mx-auto text-center space-y-6 sm:space-y-8 pt-8 sm:pt-12">
           <div className="bg-[#2A2421] rounded-none p-8 sm:p-12 shadow-none relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#14B8A6]/5 to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#0A4682]/5 to-transparent pointer-events-none" />
             <div className="relative z-10 space-y-6">
               <p className="text-white/50 text-[9px] font-mono uppercase tracking-[0.35em]">Unlock the Full Blueprint</p>
               <p className="text-white text-lg sm:text-xl font-light leading-[1.85] max-w-xl mx-auto">
@@ -269,7 +269,7 @@ export function ResultsHero({
               <div className="pt-4 space-y-4">
                 <button
                   onClick={onUnlock}
-                  className="bg-[#14B8A6] text-white px-10 sm:px-16 py-4 sm:py-5 text-[10px] font-mono uppercase tracking-[0.25em] sm:tracking-[0.3em] hover:bg-[#0D9488] hover:-translate-y-1 transition-all font-bold rounded-none inline-flex items-center gap-3 shadow-none"
+                  className="bg-[#0A4682] text-white px-10 sm:px-16 py-4 sm:py-5 text-[10px] font-mono uppercase tracking-[0.25em] sm:tracking-[0.3em] hover:bg-[#0D9488] hover:-translate-y-1 transition-all font-bold rounded-none inline-flex items-center gap-3 shadow-none"
                 >
                   <span>UNLOCK {Name.toUpperCase()}'S BLUEPRINT — $49</span>
                   <Icons.ArrowRight size={16} strokeWidth={1.5} />
@@ -303,7 +303,7 @@ export function ResultsHero({
     <div className="space-y-8 sm:space-y-20 lg:space-y-24">
       {/* THE OPENING */}
       <div className="space-y-6 sm:space-y-14 lg:space-y-16 pb-4 sm:pb-12">
-        <div className="h-px w-24 bg-[#14B8A6]/30 mx-auto"></div>
+        <div className="h-px w-24 bg-[#0A4682]/30 mx-auto"></div>
 
         <div className="max-w-3xl mx-auto text-left space-y-8">
           <p className="text-[9px] font-mono uppercase tracking-[0.35em] text-[#5C534E]/60 font-medium">
@@ -317,7 +317,7 @@ export function ResultsHero({
           </p>
         </div>
 
-        <div className="h-px w-16 bg-[#14B8A6]/30 mx-auto"></div>
+        <div className="h-px w-16 bg-[#0A4682]/30 mx-auto"></div>
 
         {/* ABOUT YOUR DOG BIOLOGY BLUEPRINT */}
         <div className="max-w-2xl mx-auto text-center space-y-4">
@@ -371,7 +371,7 @@ export function ResultsHero({
               </div>
               <div className="w-full h-2 bg-stone-200/60 relative overflow-hidden rounded-full">
                 <div
-                  className="absolute top-0 left-0 h-full bg-[#14B8A6] transition-all duration-1000 rounded-full"
+                  className="absolute top-0 left-0 h-full bg-[#0A4682] transition-all duration-1000 rounded-full"
                   style={{ width: `${results.packSync}%` }}
                 />
               </div>

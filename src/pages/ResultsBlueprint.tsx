@@ -287,17 +287,17 @@ export function ResultsBlueprint({
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="bg-white border border-[#E8E2D9] p-6 sm:p-8 rounded-none shadow-none">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 rounded-full bg-[#14B8A6]/10 border border-[#14B8A6]/20 flex items-center justify-center">
-              <Icons.TrendingUp size={18} className="text-[#14B8A6]" />
+            <div className="w-10 h-10 rounded-full bg-[#0A4682]/10 border border-[#0A4682]/20 flex items-center justify-center">
+              <Icons.TrendingUp size={18} className="text-[#0A4682]" />
             </div>
             <div>
-              <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#14B8A6] font-medium block">Superpower</span>
+              <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#0A4682] font-medium block">Superpower</span>
               <h4 className="text-lg font-serif text-[#2A2421] leading-tight">{topPillar.title}</h4>
             </div>
           </div>
           <div className="flex items-center gap-3 mb-3">
             <div className="flex-1 h-2 bg-stone-200/60 rounded-full overflow-hidden">
-              <div className="h-full bg-[#14B8A6] rounded-full" style={{ width: `${topPillar.score}%` }} />
+              <div className="h-full bg-[#0A4682] rounded-full" style={{ width: `${topPillar.score}%` }} />
             </div>
             <span className="text-[#2A2421] font-serif text-lg font-light">{topPillar.score}%</span>
           </div>
@@ -350,7 +350,7 @@ export function ResultsBlueprint({
               >
                 <div className="flex justify-between items-center">
                   <div className="flex items-center gap-3">
-                    <Icon size={18} strokeWidth={1.3} className="text-[#14B8A6]" />
+                    <Icon size={18} strokeWidth={1.3} className="text-[#0A4682]" />
                     <span className="font-mono text-[8.5px] uppercase tracking-[0.35em] text-[#5C534E]/60 font-medium">
                       {f.label}
                     </span>
@@ -359,7 +359,7 @@ export function ResultsBlueprint({
                 </div>
                 <div className="w-full h-2 bg-stone-200/60 relative rounded-full overflow-hidden">
                   <div
-                    className="absolute top-0 left-0 h-full bg-[#14B8A6] transition-all duration-700 rounded-full"
+                    className="absolute top-0 left-0 h-full bg-[#0A4682] transition-all duration-700 rounded-full"
                     style={{ width: `${score}%` }}
                   />
                 </div>
@@ -389,7 +389,7 @@ export function ResultsBlueprint({
           )}
 
           {dogData.reflection && (
-            <p className="text-[#5C534E] text-lg mb-8 border-l-2 border-[#14B8A6]/30 pl-6 italic font-light leading-[1.8]">
+            <p className="text-[#5C534E] text-lg mb-8 border-l-2 border-[#0A4682]/30 pl-6 italic font-light leading-[1.8]">
               "{dogData.reflection}"
             </p>
           )}
@@ -448,7 +448,7 @@ export function ResultsBlueprint({
 
           <div className="p-6 sm:p-8 lg:p-10 border-b border-[#E8E2D9]">
             <div className="flex items-center gap-3 mb-4">
-              <Icons.FlaskConical size={16} className="text-[#14B8A6]" strokeWidth={1.5} />
+              <Icons.FlaskConical size={16} className="text-[#0A4682]" strokeWidth={1.5} />
               <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#5C534E]/50 font-medium">The Biology — Why This Matters</span>
             </div>
             <p className="text-[#5C534E] leading-[1.85] font-light text-[15px]">
@@ -458,7 +458,7 @@ export function ResultsBlueprint({
 
           <div className="p-6 sm:p-8 lg:p-10 border-b border-[#E8E2D9] bg-[#FDFBF7]/50">
             <div className="flex items-center gap-3 mb-4">
-              <Icons.Heart size={16} className="text-[#14B8A6]" strokeWidth={1.5} />
+              <Icons.Heart size={16} className="text-[#0A4682]" strokeWidth={1.5} />
               <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#5C534E]/50 font-medium">The Connection — What This Means for {Name}</span>
             </div>
             <p className="text-[#5C534E] leading-[1.85] font-light text-[15px]">
@@ -468,7 +468,7 @@ export function ResultsBlueprint({
 
           <div className="p-6 sm:p-8 lg:p-10">
             <div className="flex items-center gap-3 mb-6">
-              <Icons.ClipboardList size={16} className="text-[#14B8A6]" strokeWidth={1.5} />
+              <Icons.ClipboardList size={16} className="text-[#0A4682]" strokeWidth={1.5} />
               <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#5C534E]/50 font-medium">Your Protocol — Exactly What to Do</span>
             </div>
             <div className="space-y-10">
@@ -488,7 +488,7 @@ export function ResultsBlueprint({
                         <p className="text-[#2A2421] leading-[1.8] font-normal text-[14.5px]">{step.action}</p>
                       </div>
                       <div className="space-y-2">
-                        <span className="font-mono text-[7.5px] uppercase tracking-[0.3em] text-[#14B8A6] font-medium">Expected Outcome</span>
+                        <span className="font-mono text-[7.5px] uppercase tracking-[0.3em] text-[#0A4682] font-medium">Expected Outcome</span>
                         <p className="text-[#5C534E] leading-[1.8] font-light text-[14px] italic">{step.outcome}</p>
                       </div>
                     </div>
@@ -528,7 +528,7 @@ export function ResultsBlueprint({
 
             <div className="p-6 sm:p-8 border-b border-[#E8E2D9]">
               <div className="flex items-center gap-3 mb-4">
-                <Icons.FlaskConical size={16} className="text-[#14B8A6]" strokeWidth={1.5} />
+                <Icons.FlaskConical size={16} className="text-[#0A4682]" strokeWidth={1.5} />
                 <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#5C534E]/50 font-medium">Why This System Matters</span>
               </div>
               <p className="text-[#5C534E] leading-[1.85] font-light text-[15px]">
@@ -538,7 +538,7 @@ export function ResultsBlueprint({
 
             <div className="p-6 sm:p-8 bg-[#FDFBF7]/50 border-b border-[#E8E2D9]">
               <div className="flex items-center gap-3 mb-4">
-                <Icons.Heart size={16} className="text-[#14B8A6]" strokeWidth={1.5} />
+                <Icons.Heart size={16} className="text-[#0A4682]" strokeWidth={1.5} />
                 <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#5C534E]/50 font-medium">What This Means for {Name}</span>
               </div>
               <p className="text-[#5C534E] leading-[1.85] font-light text-[15px]">
@@ -548,7 +548,7 @@ export function ResultsBlueprint({
 
             <div className="p-6 sm:p-8">
               <div className="flex items-center gap-3 mb-6">
-                <Icons.ClipboardList size={16} className="text-[#14B8A6]" strokeWidth={1.5} />
+                <Icons.ClipboardList size={16} className="text-[#0A4682]" strokeWidth={1.5} />
                 <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#5C534E]/50 font-medium">Top 3 Actions</span>
               </div>
               <div className="space-y-8">
@@ -564,7 +564,7 @@ export function ResultsBlueprint({
                           <p className="text-[#2A2421] leading-[1.8] font-normal text-[14px]">{step.action}</p>
                         </div>
                         <div className="space-y-2">
-                          <span className="font-mono text-[7.5px] uppercase tracking-[0.3em] text-[#14B8A6] font-medium">Expected Outcome</span>
+                          <span className="font-mono text-[7.5px] uppercase tracking-[0.3em] text-[#0A4682] font-medium">Expected Outcome</span>
                           <p className="text-[#5C534E] leading-[1.8] font-light text-[13.5px] italic">{step.outcome}</p>
                         </div>
                       </div>
@@ -611,11 +611,11 @@ export function ResultsBlueprint({
               ]},
             ].map((block) => (
               <div key={block.day} className="p-6 sm:p-8">
-                <h5 className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#14B8A6] font-bold mb-5">{block.day}</h5>
+                <h5 className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#0A4682] font-bold mb-5">{block.day}</h5>
                 <ul className="space-y-3">
                   {block.items.map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#14B8A6]/40 flex-shrink-0 mt-[7px]" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#0A4682]/40 flex-shrink-0 mt-[7px]" />
                       <span className="text-[13.5px] text-[#5C534E] leading-[1.7] font-light">{item}</span>
                     </li>
                   ))}
@@ -672,7 +672,7 @@ export function ResultsBlueprint({
               <ul className="space-y-3 ml-14">
                 {phase.markers.map((marker, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <Icons.Check size={14} className="text-[#14B8A6] flex-shrink-0 mt-[3px]" strokeWidth={2} />
+                    <Icons.Check size={14} className="text-[#0A4682] flex-shrink-0 mt-[3px]" strokeWidth={2} />
                     <span className="text-[14px] text-[#5C534E] leading-[1.7] font-light">{marker}</span>
                   </li>
                 ))}
@@ -706,7 +706,7 @@ export function ResultsBlueprint({
                 <div className="flex items-center gap-2">
                   <div className="flex-1 h-2 bg-stone-200/60 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-[#14B8A6] transition-all"
+                      className="h-full bg-[#0A4682] transition-all"
                       style={{ width: `${results.phaseScores[i]}%` }}
                     />
                   </div>
@@ -720,8 +720,8 @@ export function ResultsBlueprint({
                   const answer = selectedRituals[r.id] || 'never';
                   const isPassed = answer !== 'never';
                   const frequencyDisplay: Record<string, { label: string; color: string }> = {
-                    daily: { label: 'Always', color: 'bg-[#14B8A6]' },
-                    often: { label: 'Usually', color: 'bg-[#14B8A6]/80' },
+                    daily: { label: 'Always', color: 'bg-[#0A4682]' },
+                    often: { label: 'Usually', color: 'bg-[#0A4682]/80' },
                     sometimes: { label: 'Sometimes', color: 'bg-amber-500' },
                     rarely: { label: 'Rarely', color: 'bg-amber-400' },
                     never: { label: 'Never', color: 'bg-stone-300' },
@@ -977,7 +977,7 @@ export function ResultsBlueprint({
 
             <button
               onClick={handleShareAudit}
-              className="w-full flex items-center justify-center gap-3 border border-[#E8E2D9] text-[#5C534E] px-6 py-4 text-[8.5px] font-mono uppercase tracking-[0.3em] hover:border-[#14B8A6] hover:text-[#14B8A6] transition-all rounded-none font-bold"
+              className="w-full flex items-center justify-center gap-3 border border-[#E8E2D9] text-[#5C534E] px-6 py-4 text-[8.5px] font-mono uppercase tracking-[0.3em] hover:border-[#0A4682] hover:text-[#0A4682] transition-all rounded-none font-bold"
             >
               {auditShared ? (
                 <>
@@ -993,7 +993,7 @@ export function ResultsBlueprint({
             </button>
 
             <div className="flex items-start gap-3 bg-white border border-[#E8E2D9] rounded-none p-4 shadow-none">
-              <Icons.Mail size={16} className="text-[#14B8A6] flex-shrink-0 mt-0.5" />
+              <Icons.Mail size={16} className="text-[#0A4682] flex-shrink-0 mt-0.5" />
               <p className="text-[13px] text-[#5C534E] leading-[1.7] font-light">
                 A copy of {Name}'s full Dog Biology Blueprint™ has been sent to <strong>{dogData.ownerEmail}</strong>. Check your inbox (and spam folder) shortly.
               </p>

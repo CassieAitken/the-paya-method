@@ -31,7 +31,7 @@ export function OwnerInfo({
               Breed <span className="text-[#C4B9A8]">(optional)</span>
             </label>
             <input
-              className="w-full bg-transparent border-b border-[#C4B9A8] pb-4 outline-none font-serif text-xl sm:text-2xl text-[#2A2421] focus:border-[#415A42] transition-colors placeholder:text-[#C4B9A8] font-light"
+              className="w-full bg-transparent border-b border-[#C4B9A8] pb-4 outline-none font-serif text-xl sm:text-2xl text-[#2A2421] focus:border-[#0A4682] transition-colors placeholder:text-[#C4B9A8] font-light"
               placeholder="e.g., Golden Retriever, Lab Mix"
               value={dogData.breed}
               onChange={(e) => setDogData({ ...dogData, breed: e.target.value })}
@@ -45,7 +45,7 @@ export function OwnerInfo({
                 Your Name
               </label>
               <input
-                className="w-full bg-transparent border-b border-[#C4B9A8] pb-4 outline-none font-serif text-2xl sm:text-3xl text-[#2A2421] focus:border-[#415A42] transition-colors placeholder:text-[#C4B9A8] font-light"
+                className="w-full bg-transparent border-b border-[#C4B9A8] pb-4 outline-none font-serif text-2xl sm:text-3xl text-[#2A2421] focus:border-[#0A4682] transition-colors placeholder:text-[#C4B9A8] font-light"
                 placeholder="e.g., Cassie"
                 value={dogData.ownerName}
                 onChange={(e) => setDogData({ ...dogData, ownerName: e.target.value })}
@@ -60,7 +60,7 @@ export function OwnerInfo({
               </label>
               <input
                 type="email"
-                className="w-full bg-transparent border-b border-[#C4B9A8] pb-4 outline-none font-serif text-2xl sm:text-3xl text-[#2A2421] focus:border-[#415A42] transition-colors placeholder:text-[#C4B9A8] font-light"
+                className="w-full bg-transparent border-b border-[#C4B9A8] pb-4 outline-none font-serif text-2xl sm:text-3xl text-[#2A2421] focus:border-[#0A4682] transition-colors placeholder:text-[#C4B9A8] font-light"
                 placeholder="you@example.com"
                 value={dogData.ownerEmail}
                 onChange={(e) => setDogData({ ...dogData, ownerEmail: e.target.value })}

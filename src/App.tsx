@@ -633,11 +633,11 @@ The part that got me? How much my own habits are showing up in their biology.`;
 
   return (
     <div className="min-h-screen text-[#2A2421] bg-[#FDFBF7]">
-      <nav className={`sticky top-0 z-50 w-full bg-[#FDFBF7]/95 backdrop-blur-xl border-b border-[#E6E0D5]/40 ${step === 'analyzing' ? 'hidden' : ''}`}>
+      <nav className={`sticky top-0 z-50 w-full bg-[#4B1D5C] border-b border-[#FDFBF7]/10 ${step === 'analyzing' ? 'hidden' : ''}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-4 sm:py-5 flex justify-between items-center">
         <button onClick={() => { setStep('landing'); window.scrollTo(0, 0); }} className="flex items-center gap-2.5 sm:gap-3 hover:opacity-80 transition-opacity flex-shrink-0">
-          <Icons.Leaf size={18} className="text-[#415A42] sm:w-5 sm:h-5" strokeWidth={1.5} />
-          <span className="font-serif text-lg sm:text-xl tracking-tight text-[#2A2421]">The Paya Method</span>
+          <Icons.Leaf size={18} className="text-[#9AB8C4] sm:w-5 sm:h-5" strokeWidth={1.5} />
+          <span className="font-serif text-lg sm:text-xl tracking-tight text-[#FDFBF7]">The Paya Method</span>
         </button>
         <div className="flex items-center gap-6 sm:gap-8">
           {step === 'landing' && (
@@ -651,18 +651,18 @@ The part that got me? How much my own habits are showing up in their biology.`;
                     window.scrollTo({ top, behavior: 'smooth' });
                   }
                 }}
-                className="text-[10px] font-semibold sm:font-medium tracking-[0.06em] sm:tracking-[0.12em] text-[#2A2421] sm:text-[#5C534E]/80 hover:text-[#2A2421] transition-colors px-2 sm:px-3 py-1.5"
+                className="text-[10px] font-semibold sm:font-medium tracking-[0.06em] sm:tracking-[0.12em] text-[#FDFBF7] sm:text-[#EDE6E9]/80 hover:text-[#FDFBF7] transition-colors px-2 sm:px-3 py-1.5"
               >
                 Pillars
               </button>
-              <span className="text-[#E6E0D5] text-[10px] select-none">&middot;</span>
+              <span className="text-[#FDFBF7]/25 text-[10px] select-none">&middot;</span>
               <button
                 onClick={() => setShowFounderMessage(true)}
-                className="text-[10px] font-semibold sm:font-medium tracking-[0.06em] sm:tracking-[0.12em] text-[#2A2421] sm:text-[#5C534E]/80 hover:text-[#2A2421] transition-colors px-2 sm:px-3 py-1.5"
+                className="text-[10px] font-semibold sm:font-medium tracking-[0.06em] sm:tracking-[0.12em] text-[#FDFBF7] sm:text-[#EDE6E9]/80 hover:text-[#FDFBF7] transition-colors px-2 sm:px-3 py-1.5"
               >
                 Founder
               </button>
-              <span className="text-[#E6E0D5] text-[10px] select-none">&middot;</span>
+              <span className="text-[#FDFBF7]/25 text-[10px] select-none">&middot;</span>
               <button
                 onClick={() => {
                   const el = document.getElementById('how-it-works');
@@ -672,13 +672,13 @@ The part that got me? How much my own habits are showing up in their biology.`;
                     window.scrollTo({ top, behavior: 'smooth' });
                   }
                 }}
-                className="text-[10px] font-semibold sm:font-medium tracking-[0.06em] sm:tracking-[0.12em] text-[#2A2421] sm:text-[#5C534E]/80 hover:text-[#2A2421] transition-colors px-2 sm:px-3 py-1.5"
+                className="text-[10px] font-semibold sm:font-medium tracking-[0.06em] sm:tracking-[0.12em] text-[#FDFBF7] sm:text-[#EDE6E9]/80 hover:text-[#FDFBF7] transition-colors px-2 sm:px-3 py-1.5"
               >
                 Preview
               </button>
               <button
                 onClick={() => { setStep('intake'); window.scrollTo(0, 0); }}
-                className="ml-2 sm:ml-4 text-[9px] sm:text-[10px] font-mono uppercase tracking-[0.15em] sm:tracking-[0.2em] text-white bg-[#2A2421] hover:bg-[#415A42] px-4 py-2.5 sm:px-5 transition-all duration-300 whitespace-nowrap rounded-sm"
+                className="ml-2 sm:ml-4 text-[9px] sm:text-[10px] font-mono uppercase tracking-[0.15em] sm:tracking-[0.2em] text-white bg-[#0A4682] hover:bg-[#083A6D] px-4 py-2.5 sm:px-5 transition-all duration-300 whitespace-nowrap rounded-sm"
               >
                 Begin
               </button>

@@ -54,7 +54,7 @@ export function Intake({
               Dog's Name
             </label>
             <input
-              className="w-full bg-transparent border-b border-[#C4B9A8] pb-4 sm:pb-6 outline-none font-serif text-3xl sm:text-4xl text-[#2A2421] focus:border-[#415A42] transition-colors placeholder:text-[#C4B9A8] font-light"
+              className="w-full bg-transparent border-b border-[#C4B9A8] pb-4 sm:pb-6 outline-none font-serif text-3xl sm:text-4xl text-[#2A2421] focus:border-[#0A4682] transition-colors placeholder:text-[#C4B9A8] font-light"
               placeholder="e.g., Paya"
               value={dogData.name}
               onChange={(e) => setDogData({ ...dogData, name: e.target.value })}
@@ -142,7 +142,7 @@ export function Intake({
                     min="0"
                     max="30"
                     onKeyDown={handleNumberInput}
-                    className="w-full bg-transparent border-b border-[#C4B9A8] pb-4 outline-none font-serif text-3xl text-[#2A2421] focus:border-[#415A42] transition-colors placeholder:text-[#C4B9A8] font-light"
+                    className="w-full bg-transparent border-b border-[#C4B9A8] pb-4 outline-none font-serif text-3xl text-[#2A2421] focus:border-[#0A4682] transition-colors placeholder:text-[#C4B9A8] font-light"
                     placeholder="0"
                     value={dogData.age}
                     onChange={(e) => {
@@ -158,7 +158,7 @@ export function Intake({
                     min="0"
                     max="11"
                     onKeyDown={handleNumberInput}
-                    className="w-full bg-transparent border-b border-[#C4B9A8] pb-4 outline-none font-serif text-3xl text-[#2A2421] focus:border-[#415A42] transition-colors placeholder:text-[#C4B9A8] font-light"
+                    className="w-full bg-transparent border-b border-[#C4B9A8] pb-4 outline-none font-serif text-3xl text-[#2A2421] focus:border-[#0A4682] transition-colors placeholder:text-[#C4B9A8] font-light"
                     placeholder="0"
                     value={dogData.ageMonths}
                     onChange={(e) => {
@@ -241,12 +241,12 @@ export function Intake({
                 </p>
               </div>
 
-              <div className="border-l border-[#415A42]/30 pl-6 space-y-3">
+              <div className="border-l border-[#0A4682]/30 pl-6 space-y-3">
                 <p className="text-[#5C534E] text-[14px] leading-[1.85] font-light">
                   In the meantime — reach out to{' '}
                   <a
                     href={`mailto:payalabs01@gmail.com?subject=${encodeURIComponent((dogData.name || 'My dog') + ' — Growth Phase Question')}&body=${encodeURIComponent(`Hi Paya Labs,\n\nMy dog ${dogData.name || ''} is currently in the growth phase and I'd love some guidance.\n\n`)}`}
-                    className="underline underline-offset-2 text-[#2A2421] hover:text-[#415A42] transition-colors"
+                    className="underline underline-offset-2 text-[#2A2421] hover:text-[#0A4682] transition-colors"
                   >
                     payalabs01@gmail.com
                   </a>
