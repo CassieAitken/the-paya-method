@@ -96,13 +96,13 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
       </section>
 
       {/* ===== SEVEN PILLARS (Card Grid) ===== */}
-      <section ref={pillarsReveal.ref as React.RefObject<HTMLElement>} className={`border-t border-[#E8E2D9] py-16 sm:py-24 lg:py-32 px-6 ${pillarsReveal.className}`} data-section="pillars">
+      <section ref={pillarsReveal.ref as React.RefObject<HTMLElement>} className={`relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#4B1D5C] py-16 sm:py-24 lg:py-32 px-6 ${pillarsReveal.className}`} data-section="pillars">
         <div className="max-w-5xl mx-auto">
           <div className="mb-12 sm:mb-16 text-center">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#2A2421] leading-[1.05] tracking-tight mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#FDFBF7] leading-[1.05] tracking-tight mb-4">
               The 7 Biology Markers
             </h2>
-            <p className="font-mono text-[9px] uppercase tracking-[0.3em] text-[#8A7F72]">
+            <p className="font-mono text-[9px] uppercase tracking-[0.3em] text-[#C9B9CE]">
               50 Markers &middot; 7 Biology Markers &middot; One Score out of 100
             </p>
           </div>
@@ -117,25 +117,25 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
                   key={f.id}
                   className={`group relative border rounded-lg transition-all duration-300 cursor-pointer ${
                     isOpen
-                      ? 'border-[#0A4682]/30 bg-[#0A4682]/[0.03] shadow-sm'
-                      : 'border-[#E8E2D9] hover:border-[#C9C2B8] hover:shadow-sm'
+                      ? 'border-[#9AB8C4]/40 bg-[#FDFBF7]/[0.06] shadow-sm'
+                      : 'border-[#FDFBF7]/15 hover:border-[#FDFBF7]/30 hover:bg-[#FDFBF7]/[0.03]'
                   } ${i === 6 ? 'sm:col-span-2 sm:max-w-[calc(50%-0.625rem)] sm:mx-auto' : ''}`}
                   onClick={() => setOpenPillar(isOpen ? null : i)}
                 >
                   <div className="p-5 sm:p-6">
                     <div className="flex items-start gap-4">
                       <div className={`w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 transition-colors ${
-                        isOpen ? 'bg-[#0A4682]/10' : 'bg-[#F5F2ED]'
+                        isOpen ? 'bg-[#9AB8C4]/15' : 'bg-[#FDFBF7]/10'
                       }`}>
-                        <Icon size={16} strokeWidth={1.4} className={`transition-colors ${isOpen ? 'text-[#0A4682]' : 'text-[#8A7F72]'}`} />
+                        <Icon size={16} strokeWidth={1.4} className={`transition-colors ${isOpen ? 'text-[#9AB8C4]' : 'text-[#C9B9CE]'}`} />
                       </div>
                       <div className="flex-1 min-w-0">
                         <h3 className={`font-serif text-base sm:text-lg tracking-tight transition-colors leading-tight ${
-                          isOpen ? 'text-[#2A2421]' : 'text-[#4A4340]'
+                          isOpen ? 'text-[#FDFBF7]' : 'text-[#EDE6E9]'
                         }`}>
                           {f.title}
                         </h3>
-                        <p className="font-mono text-[8px] uppercase tracking-[0.25em] text-[#8A7F72] mt-1.5">
+                        <p className="font-mono text-[8px] uppercase tracking-[0.25em] text-[#C9B9CE] mt-1.5">
                           {desc.focus}
                         </p>
                       </div>
@@ -144,12 +144,12 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
                     <div className={`transition-all duration-300 ease-in-out overflow-hidden ${
                       isOpen ? 'max-h-64 opacity-100 mt-4' : 'max-h-0 opacity-0 mt-0'
                     }`}>
-                      <p className="text-[#5C534E] leading-[1.8] font-light text-[13px] sm:text-[14px] pl-[52px]">
+                      <p className="text-[#E4D9E8] leading-[1.8] font-light text-[13px] sm:text-[14px] pl-[52px]">
                         {desc.definition}
                       </p>
                       <button
                         onClick={(e) => { e.stopPropagation(); onSelectPillar(f); }}
-                        className="text-[9px] font-mono uppercase tracking-[0.2em] text-[#0A4682] hover:text-[#2A2421] transition-colors font-bold mt-3 pl-[52px]"
+                        className="text-[9px] font-mono uppercase tracking-[0.2em] text-[#9AB8C4] hover:text-[#FDFBF7] transition-colors font-bold mt-3 pl-[52px]"
                       >
                         Explore Full Detail
                       </button>
@@ -163,20 +163,20 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
       </section>
 
       {/* ===== YOUR DOG BIOLOGY BLUEPRINT INCLUDES ===== */}
-      <section id="how-it-works" className="border-t border-[#E8E2D9] py-16 sm:py-24 lg:py-32 px-6">
+      <section id="how-it-works" className="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#4B1D5C] py-16 sm:py-24 lg:py-32 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="mb-14 sm:mb-20 text-center space-y-4">
-            <p className="font-mono text-[8px] uppercase tracking-[0.3em] text-[#8A7F72]">Delivered instantly. Personalized to your dog.</p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#2A2421] leading-[1.05] tracking-tight">
+            <p className="font-mono text-[8px] uppercase tracking-[0.3em] text-[#C9B9CE]">Delivered instantly. Personalized to your dog.</p>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#FDFBF7] leading-[1.05] tracking-tight">
               The Dog Biology Blueprint™<br className="hidden sm:block" /> Includes
             </h2>
-            <p className="text-[15px] text-[#6B6159] font-light leading-[1.8] max-w-xl mx-auto pt-2">
+            <p className="text-[15px] text-[#E4D9E8] font-light leading-[1.8] max-w-xl mx-auto pt-2">
               Every Blueprint is built from your dog's specific answers — no generic profiles, no one-size-fits-all advice. Here's what you receive:
             </p>
           </div>
 
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#E8E2D9] border border-[#E8E2D9]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#FDFBF7]/15 border border-[#FDFBF7]/15">
             {[
               {
                 icon: Icons.TrendingUp,
@@ -201,23 +201,23 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
             ].map((item) => {
               const Icon = item.icon;
               return (
-                <div key={item.title} className="bg-[#FDFBF7] p-8 sm:p-10 space-y-4">
-                  <Icon size={20} className="text-[#0A4682]" strokeWidth={1.2} />
-                  <h3 className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#2A2421] font-bold">{item.title}</h3>
-                  <p className="text-[13px] text-[#6B6159] leading-[1.8] font-light">{item.desc}</p>
+                <div key={item.title} className="bg-[#4B1D5C] p-8 sm:p-10 space-y-4">
+                  <Icon size={20} className="text-[#9AB8C4]" strokeWidth={1.2} />
+                  <h3 className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#FDFBF7] font-bold">{item.title}</h3>
+                  <p className="text-[13px] text-[#E4D9E8] leading-[1.8] font-light">{item.desc}</p>
                 </div>
               );
             })}
-            <div className="bg-[#FDFBF7] p-8 sm:p-10 space-y-4 md:col-span-2">
-              <Icons.Mail size={20} className="text-[#0A4682]" strokeWidth={1.2} />
-              <h3 className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#2A2421] font-bold">Personalized Delivery</h3>
-              <p className="text-[13px] text-[#6B6159] leading-[1.8] font-light max-w-2xl">
+            <div className="bg-[#4B1D5C] p-8 sm:p-10 space-y-4 md:col-span-2">
+              <Icons.Mail size={20} className="text-[#9AB8C4]" strokeWidth={1.2} />
+              <h3 className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#FDFBF7] font-bold">Personalized Delivery</h3>
+              <p className="text-[13px] text-[#E4D9E8] leading-[1.8] font-light max-w-2xl">
                 Your Dog Biology Blueprint™ is delivered as two detailed personalized reports with individualized findings, explanations, recommendations, and a practical action plan tailored specifically to your dog.
               </p>
             </div>
           </div>
 
-          <p className="text-center text-[12px] text-[#8A7F72] font-light mt-8 tracking-wide">
+          <p className="text-center text-[12px] text-[#C9B9CE] font-light mt-8 tracking-wide">
             Delivered instantly as a visual report you can save, revisit, and share with your vet.
           </p>
         </div>
