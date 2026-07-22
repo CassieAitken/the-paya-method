@@ -56,7 +56,7 @@ export function CheckinModal({
         <div className="bg-gradient-to-b from-stone-50 to-white p-8 lg:p-12 space-y-8">
           <div className="flex items-start justify-between">
             <div className="space-y-2">
-              <span className="text-sm font-mono text-[#6B6159] uppercase tracking-wider">Day {dayNumber} Check-In</span>
+              <span className="text-sm text-[#6B6159] uppercase tracking-[0.15em]">Day {dayNumber} Check-In</span>
               <h3 className="text-4xl lg:text-5xl font-serif text-[#2A2421] leading-tight">
                 How's {dogName} doing?
               </h3>
@@ -76,7 +76,7 @@ export function CheckinModal({
             {/* Energy Level */}
             <div className="space-y-4">
               <label className="block">
-                <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#8A7F72] font-medium">
+                <span className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72] font-medium">
                   Energy Level
                 </span>
                 <p className="text-[#6B6159] text-sm mt-1 font-light">
@@ -103,7 +103,7 @@ export function CheckinModal({
             {/* Digestion */}
             <div className="space-y-4">
               <label className="block">
-                <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#8A7F72] font-medium">
+                <span className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72] font-medium">
                   Digestion & Gut Health
                 </span>
                 <p className="text-[#6B6159] text-sm mt-1 font-light">
@@ -130,7 +130,7 @@ export function CheckinModal({
             {/* Mobility */}
             <div className="space-y-4">
               <label className="block">
-                <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#8A7F72] font-medium">
+                <span className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72] font-medium">
                   Mobility & Movement
                 </span>
                 <p className="text-[#6B6159] text-sm mt-1 font-light">
@@ -157,7 +157,7 @@ export function CheckinModal({
             {/* Notes */}
             <div className="space-y-4">
               <label className="block">
-                <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#8A7F72] font-medium">
+                <span className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72] font-medium">
                   Additional Observations (Optional)
                 </span>
                 <p className="text-[#6B6159] text-sm mt-1 font-light">
@@ -184,14 +184,14 @@ export function CheckinModal({
             <button
               onClick={onClose}
               disabled={isLoading}
-              className="flex-1 border-2 border-stone-300 text-[#8A7F72] py-4 rounded-lg font-mono text-[11px] tracking-widest font-bold hover:bg-stone-50 transition-colors disabled:opacity-50"
+              className="flex-1 border-2 border-stone-300 text-[#8A7F72] py-4 rounded-lg text-[11px] tracking-[0.15em] font-bold hover:bg-stone-50 transition-colors disabled:opacity-50"
             >
               CANCEL
             </button>
             <button
               onClick={handleSubmit}
               disabled={isLoading}
-              className="flex-1 bg-stone-900 text-white py-4 rounded-lg font-mono text-[11px] tracking-widest font-bold hover:bg-stone-800 transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
+              className="flex-1 bg-stone-900 text-white py-4 rounded-lg text-[11px] tracking-[0.15em] font-bold hover:bg-stone-800 transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
             >
               {isLoading && <Icons.Loader className="animate-spin" size={16} />}
               SUBMIT CHECK-IN

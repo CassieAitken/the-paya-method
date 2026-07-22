@@ -44,13 +44,13 @@ export function Intake({
     <div className="w-full bg-[#FDFBF7]">
       <div className="py-12 sm:py-24 lg:py-36 max-w-4xl mx-auto px-6 space-y-16 sm:space-y-24 lg:space-y-32">
         <div className="space-y-4">
-          <p className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#8A7F72]">The Assessment</p>
+          <p className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72]">The Assessment</p>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif text-[#2A2421] tracking-tight leading-[1.05]">Tell Us About Your Companion</h2>
         </div>
 
         <div className="space-y-16 sm:space-y-24 lg:space-y-32">
           <div className="space-y-6">
-            <label className="text-[10px] font-mono uppercase tracking-[0.25em] text-[#8A7F72] block">
+            <label className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72] block">
               Dog's Name
             </label>
             <input
@@ -63,7 +63,7 @@ export function Intake({
           </div>
 
           <div className="space-y-6">
-            <label className="text-[10px] font-mono uppercase tracking-[0.25em] text-[#8A7F72] block">
+            <label className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72] block">
               Photo <span className="text-[#C4B9A8]">(optional)</span>
             </label>
             <div className="flex items-center gap-6">
@@ -89,7 +89,7 @@ export function Intake({
               <button
                 type="button"
                 onClick={() => fileInputRef.current?.click()}
-                className="text-[9px] font-mono uppercase tracking-[0.25em] text-[#6B6159] border border-[#E8E2D9] px-5 py-3 hover:border-[#C4B9A8] transition-colors"
+                className="text-[10px] uppercase tracking-[0.15em] text-[#6B6159] border border-[#E8E2D9] px-5 py-3 hover:border-[#C4B9A8] transition-colors"
               >
                 {dogPhoto ? 'Change Photo' : 'Upload Photo'}
               </button>
@@ -114,7 +114,7 @@ export function Intake({
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 sm:gap-20 lg:gap-28">
             <div className="space-y-6">
-              <label className="text-[10px] font-mono uppercase tracking-[0.25em] text-[#8A7F72] block">
+              <label className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72] block">
                 Sex
               </label>
               <div className="grid grid-cols-2 border border-[#E8E2D9] overflow-hidden">
@@ -122,7 +122,7 @@ export function Intake({
                   <button
                     key={type}
                     onClick={() => setDogData({ ...dogData, gender: type })}
-                    className={`py-5 px-5 text-[9px] font-mono uppercase tracking-[0.25em] transition-all ${
+                    className={`py-5 px-5 text-[10px] uppercase tracking-[0.15em] transition-all ${
                       dogData.gender === type ? 'bg-[#4B1D5C] text-white' : 'text-[#6B6159] hover:bg-[#E8E2D9]/30'
                     }`}
                   >
@@ -132,7 +132,7 @@ export function Intake({
               </div>
             </div>
             <div className="space-y-6">
-              <label className="text-[10px] font-mono uppercase tracking-[0.25em] text-[#8A7F72] block">
+              <label className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72] block">
                 Age
               </label>
               <div className="flex gap-8">
@@ -150,7 +150,7 @@ export function Intake({
                       if (val === '' || (Number(val) >= 0 && Number(val) <= 30)) setDogData({ ...dogData, age: val });
                     }}
                   />
-                  <span className="text-[8px] text-[#8A7F72] font-mono uppercase tracking-[0.25em] mt-3 block">Years</span>
+                  <span className="text-[10px] text-[#8A7F72] uppercase tracking-[0.15em] mt-3 block">Years</span>
                 </div>
                 <div className="flex-1">
                   <input
@@ -166,7 +166,7 @@ export function Intake({
                       if (val === '' || (Number(val) >= 0 && Number(val) <= 11)) setDogData({ ...dogData, ageMonths: val });
                     }}
                   />
-                  <span className="text-[8px] text-[#8A7F72] font-mono uppercase tracking-[0.25em] mt-3 block">Months</span>
+                  <span className="text-[10px] text-[#8A7F72] uppercase tracking-[0.15em] mt-3 block">Months</span>
                 </div>
               </div>
             </div>
@@ -189,7 +189,7 @@ export function Intake({
                 setStep('audit');
                 window.scrollTo(0, 0);
               }}
-              className="text-[9px] font-mono uppercase tracking-widest text-amber-600 border border-amber-300 px-4 py-2 hover:bg-amber-50 transition-colors"
+              className="text-[10px] uppercase tracking-[0.15em] text-amber-600 border border-amber-300 px-4 py-2 hover:bg-amber-50 transition-colors"
             >
               Dev Skip
             </button>
@@ -197,7 +197,7 @@ export function Intake({
           <button
             disabled={!dogData.name || (!dogData.age && !dogData.ageMonths) || !dogData.gender}
             onClick={handleProceed}
-            className={`bg-[#0A4682] text-white px-10 py-5 sm:px-14 sm:py-5 text-[10px] font-mono uppercase tracking-[0.25em] flex items-center gap-3 transition-all font-bold ${
+            className={`bg-[#0A4682] text-white px-10 py-5 sm:px-14 sm:py-5 text-[10px] uppercase tracking-[0.15em] flex items-center gap-3 transition-all font-bold ${
               !dogData.name || (!dogData.age && !dogData.ageMonths) || !dogData.gender ? 'opacity-25 cursor-not-allowed' : 'hover:bg-[#3A3330]'
             }`}
           >
@@ -222,7 +222,7 @@ export function Intake({
 
             <div className="p-10 sm:p-12 space-y-8">
               <div className="space-y-4">
-                <p className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#8A7F72]">The Growth Phase</p>
+                <p className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72]">The Growth Phase</p>
                 <h3 className="text-3xl sm:text-4xl font-serif text-[#2A2421] tracking-tight leading-[1.1]">
                   Under 18 months
                 </h3>
@@ -256,7 +256,7 @@ export function Intake({
               <div className="flex items-center gap-4 pt-4">
                 <button
                   onClick={() => setShowGrowthGate(false)}
-                  className="text-[9px] font-mono uppercase tracking-[0.25em] text-[#8A7F72] hover:text-[#2A2421] transition-colors px-4 py-3"
+                  className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72] hover:text-[#2A2421] transition-colors px-4 py-3"
                 >
                   Adjust Age
                 </button>
@@ -266,7 +266,7 @@ export function Intake({
                     setStep('landing');
                     window.scrollTo(0, 0);
                   }}
-                  className="bg-[#0A4682] text-white px-8 py-3.5 text-[9px] font-mono uppercase tracking-[0.25em] hover:bg-[#3A3330] transition-all font-bold"
+                  className="bg-[#0A4682] text-white px-8 py-3.5 text-[10px] uppercase tracking-[0.15em] hover:bg-[#3A3330] transition-all font-bold"
                 >
                   Return Home
                 </button>

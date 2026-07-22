@@ -384,14 +384,14 @@ export function VitalityBadge({
           <button
             onClick={handleDownload}
             disabled={downloading}
-            className="flex items-center justify-center gap-2 px-8 py-3 bg-[#4A3C2F] text-[#F9F5ED] text-[9px] font-mono uppercase tracking-[0.25em] hover:bg-[#3A2E22] transition-all disabled:opacity-50"
+            className="flex items-center justify-center gap-2 px-8 py-3 bg-[#4A3C2F] text-[#F9F5ED] text-[10px] uppercase tracking-[0.15em] hover:bg-[#3A2E22] transition-all disabled:opacity-50"
           >
             <Icons.Download size={16} strokeWidth={1.5} />
             Download Badge
           </button>
           <button
             onClick={handleShare}
-            className="flex items-center justify-center gap-2 px-8 py-3 border border-[#CDC2B0] text-[#4A3C2F] text-[9px] font-mono uppercase tracking-[0.25em] hover:border-[#B09469] hover:text-[#B09469] transition-all"
+            className="flex items-center justify-center gap-2 px-8 py-3 border border-[#CDC2B0] text-[#4A3C2F] text-[10px] uppercase tracking-[0.15em] hover:border-[#B09469] hover:text-[#B09469] transition-all"
           >
             <Icons.Share size={16} strokeWidth={1.5} />
             Share Badge

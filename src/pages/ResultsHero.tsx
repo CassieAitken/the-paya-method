@@ -96,7 +96,7 @@ export function ResultsHero({
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <span className="text-5xl sm:text-6xl lg:text-7xl font-serif text-[#2A2421] font-light tracking-tight">{score}</span>
           <span className="text-base sm:text-lg font-serif text-[#5C534E]/50 -mt-1">/100</span>
-          <span className="text-[9px] font-mono uppercase tracking-[0.3em] text-[#5C534E]/40 mt-2">Vitality Index</span>
+          <span className="text-[10px] uppercase tracking-[0.15em] text-[#5C534E]/40 mt-2">Vitality Index</span>
         </div>
       </div>
     );
@@ -109,7 +109,7 @@ export function ResultsHero({
         {/* 1. Intro card with name, score, archetype */}
         <div className="space-y-6 sm:space-y-10 pb-4">
           <div className="bg-white rounded-none shadow-none border border-[#E8E2D9] p-8 sm:p-12 text-center space-y-6">
-            <p className="text-[9px] font-mono uppercase tracking-[0.35em] text-[#5C534E]/50 font-medium">
+            <p className="text-[10px] uppercase tracking-[0.15em] text-[#5C534E]/50 font-medium">
               Prepared for {dogData.ownerName || 'you'} & {name} — {trackLabel} Track
             </p>
             <RadialScore score={results.score} />
@@ -140,7 +140,7 @@ export function ResultsHero({
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#FAF9F5]/70 to-[#FAF9F5] pointer-events-none" />
                 </div>
               )}
-              <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#5C534E]/40 mt-4 text-center">
+              <p className="text-[10px] uppercase tracking-[0.15em] text-[#5C534E]/40 mt-4 text-center">
                 Full analysis unlocks with purchase
               </p>
             </div>
@@ -190,7 +190,7 @@ export function ResultsHero({
               <div className="space-y-4">
                 {/* Vitality phases preview */}
                 <div className="space-y-2.5">
-                  <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#5C534E]/40 font-medium">{Name}'s Vitality Phases</span>
+                  <span className="text-[10px] uppercase tracking-[0.15em] text-[#5C534E]/40 font-medium">{Name}'s Vitality Phases</span>
                   {[
                     { label: "The Nourished Spark", desc: "Nourishment, digestion & physiological baseline", icon: Icons.Activity, pillars: [0, 6] },
                     { label: "The Healing Sanctuary", desc: "Sleep recovery & environmental purification", icon: Icons.Moon, pillars: [1, 2] },
@@ -206,7 +206,7 @@ export function ResultsHero({
                           <div className="flex items-center gap-2.5">
                             <PhaseIcon size={14} strokeWidth={1.3} className="text-[#0A4682]" />
                             <div>
-                              <span className="font-mono text-[7.5px] uppercase tracking-[0.3em] font-medium text-[#2A2421] block leading-tight">
+                              <span className="text-[10px] uppercase tracking-[0.15em] font-medium text-[#2A2421] block leading-tight">
                                 {phase.label}
                               </span>
                               <span className="text-[9.5px] text-[#5C534E]/50 font-light">{phase.desc}</span>
@@ -231,7 +231,7 @@ export function ResultsHero({
                     <div className="flex items-center gap-3">
                       <span className="text-lg">{directives.priorityShift.emoji}</span>
                       <div>
-                        <span className="font-mono text-[7px] uppercase tracking-[0.3em] text-white/50 font-medium block">
+                        <span className="text-[10px] uppercase tracking-[0.15em] text-white/50 font-medium block">
                           {directives.bottomPillar.title} — Step 1 of {directives.priorityShift.protocolSteps.length}
                         </span>
                         <span className="text-xs font-light text-white/90">{directives.priorityShift.protocolTitle}</span>
@@ -259,7 +259,7 @@ export function ResultsHero({
           <div className="bg-[#4B1D5C] rounded-none p-8 sm:p-12 shadow-none relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-[#0A4682]/5 to-transparent pointer-events-none" />
             <div className="relative z-10 space-y-6">
-              <p className="text-white/50 text-[9px] font-mono uppercase tracking-[0.35em]">Unlock the Full Blueprint</p>
+              <p className="text-white/50 text-[10px] uppercase tracking-[0.15em]">Unlock the Full Blueprint</p>
               <p className="text-white text-lg sm:text-xl font-light leading-[1.85] max-w-xl mx-auto">
                 You spent 10 minutes learning how to love them better. Spend $49 to know exactly how.
               </p>
@@ -269,12 +269,12 @@ export function ResultsHero({
               <div className="pt-4 space-y-4">
                 <button
                   onClick={onUnlock}
-                  className="bg-[#0A4682] text-white px-10 sm:px-16 py-4 sm:py-5 text-[10px] font-mono uppercase tracking-[0.25em] sm:tracking-[0.3em] hover:bg-[#0D9488] hover:-translate-y-1 transition-all font-bold rounded-none inline-flex items-center gap-3 shadow-none"
+                  className="bg-[#0A4682] text-white px-10 sm:px-16 py-4 sm:py-5 text-[10px] uppercase tracking-[0.15em] sm:tracking-[0.15em] hover:bg-[#083A6D] hover:-translate-y-1 transition-all font-bold rounded-none inline-flex items-center gap-3 shadow-none"
                 >
                   <span>UNLOCK {Name.toUpperCase()}'S BLUEPRINT — $49</span>
                   <Icons.ArrowRight size={16} strokeWidth={1.5} />
                 </button>
-                <p className="text-[10px] text-white/40 font-mono tracking-wider flex items-center justify-center gap-3">
+                <p className="text-[10px] text-white/40 tracking-wider flex items-center justify-center gap-3">
                   <Icons.Shield size={12} strokeWidth={1.5} />
                   Instant access. One-time payment. PDF emailed immediately.
                 </p>
@@ -306,7 +306,7 @@ export function ResultsHero({
         <div className="h-px w-24 bg-[#0A4682]/30 mx-auto"></div>
 
         <div className="max-w-3xl mx-auto text-left space-y-8">
-          <p className="text-[9px] font-mono uppercase tracking-[0.35em] text-[#5C534E]/60 font-medium">
+          <p className="text-[10px] uppercase tracking-[0.15em] text-[#5C534E]/60 font-medium">
             Prepared for {dogData.ownerName || 'you'} & {name} — {trackLabel} Track
           </p>
           <p className="text-lg sm:text-xl lg:text-2xl leading-[1.9] text-[#5C534E] font-light">
@@ -321,7 +321,7 @@ export function ResultsHero({
 
         {/* ABOUT YOUR DOG BIOLOGY BLUEPRINT */}
         <div className="max-w-2xl mx-auto text-center space-y-4">
-          <h3 className="text-[11px] font-mono uppercase tracking-[0.35em] text-[#5C534E]/70 font-medium">
+          <h3 className="text-[11px] uppercase tracking-[0.15em] text-[#5C534E]/70 font-medium">
             About Your Dog Biology Blueprint™
           </h3>
           <p className="text-base sm:text-lg leading-[1.8] text-[#5C534E] font-light">
@@ -350,7 +350,7 @@ export function ResultsHero({
           {/* Score Display — Radial */}
           <div className="text-center space-y-10">
             <RadialScore score={results.score} />
-            <div className="inline-block bg-[#4B1D5C] text-white text-[8px] font-mono uppercase tracking-[0.3em] px-4 py-1.5 rounded-full shadow-none">
+            <div className="inline-block bg-[#4B1D5C] text-white text-[10px] uppercase tracking-[0.15em] px-4 py-1.5 rounded-full shadow-none">
               Founding Member
             </div>
             <div className="space-y-3 text-left max-w-md mx-auto">
@@ -362,7 +362,7 @@ export function ResultsHero({
           <div className="space-y-14">
             <div className="p-6 sm:p-8 lg:p-10 bg-white border border-[#E8E2D9] rounded-none shadow-none space-y-7">
               <div className="flex items-center justify-between">
-                <span className="font-mono text-[8.5px] uppercase tracking-[0.35em] text-[#5C534E]/60 font-medium">
+                <span className="text-[10px] uppercase tracking-[0.15em] text-[#5C534E]/60 font-medium">
                   Human-Dog Sync
                 </span>
                 <span className="text-[#2A2421] text-2xl font-serif font-light">

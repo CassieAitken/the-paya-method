@@ -18,7 +18,7 @@ export function Profile({
       </div>
       <div className="space-y-8 sm:space-y-24">
         <div className="space-y-8">
-          <label className="text-[8px] font-mono uppercase tracking-[0.35em] text-ink block font-medium">
+          <label className="text-[10px] uppercase tracking-[0.15em] text-ink block font-medium">
             Pack Structure
           </label>
           <div className="grid grid-cols-1 md:grid-cols-2 border border-stone-200/70 overflow-hidden bg-white/50 rounded-lg">
@@ -47,7 +47,7 @@ export function Profile({
                 >
                   <div className="flex items-center gap-3">
                     <OptIcon size={18} strokeWidth={1.4} />
-                    <span className="font-mono text-[8.5px] uppercase tracking-[0.32em] font-medium">{opt.label}</span>
+                    <span className="text-[10px] uppercase tracking-[0.15em] font-medium">{opt.label}</span>
                   </div>
                   <span className="text-sm leading-[1.7] font-light">{opt.desc}</span>
                 </button>
@@ -63,7 +63,7 @@ export function Profile({
               setStep('intake');
               window.scrollTo(0, 0);
             }}
-            className="text-[8.5px] font-mono uppercase tracking-[0.35em] text-[#8A7F72] hover:text-[#2A2421] transition-colors font-medium"
+            className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72] hover:text-[#2A2421] transition-colors font-medium"
           >
             Back
           </button>
@@ -74,7 +74,7 @@ export function Profile({
                 setStep('audit');
                 window.scrollTo(0, 0);
               }}
-              className="text-[9px] font-mono uppercase tracking-widest text-amber-600 border border-amber-300 px-4 py-2 rounded hover:bg-amber-50 transition-colors"
+              className="text-[10px] uppercase tracking-[0.15em] text-amber-600 border border-amber-300 px-4 py-2 rounded hover:bg-amber-50 transition-colors"
             >
               Dev Skip
             </button>
@@ -86,7 +86,7 @@ export function Profile({
             setStep('audit');
             window.scrollTo(0, 0);
           }}
-          className={`bg-stone-900 text-white px-16 py-6 text-[8.5px] font-mono uppercase tracking-[0.35em] transition-all font-medium ${
+          className={`bg-stone-900 text-white px-16 py-6 text-[10px] uppercase tracking-[0.15em] transition-all font-medium ${
             !dogData.social ? 'opacity-30 cursor-not-allowed' : 'hover:bg-stone-800 hover:-translate-y-1 hover:shadow-[0_25px_60px_-10px_rgba(0,0,0,0.2)]'
           }`}
         >

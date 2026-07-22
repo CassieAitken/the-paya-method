@@ -92,7 +92,7 @@ export function AnalysisLoader({
         {/* Top branding */}
         <div className="flex items-center gap-3 mb-6">
           <Icons.Leaf size={18} className="text-[#8A7F72]" strokeWidth={1.5} />
-          <span className="font-mono text-[9px] uppercase tracking-[0.4em] text-[#8A7F72] font-medium">
+          <span className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72] font-medium">
             PayaLabs Bio-Audit
           </span>
         </div>
@@ -102,7 +102,7 @@ export function AnalysisLoader({
         </h1>
 
         {/* Phase counter */}
-        <p className="font-mono text-[9px] uppercase tracking-[0.4em] text-[#C4B9A8] mb-6 font-medium">
+        <p className="text-[10px] uppercase tracking-[0.15em] text-[#C4B9A8] mb-6 font-medium">
           {phaseCounter}
         </p>
 
@@ -140,10 +140,10 @@ export function AnalysisLoader({
             />
           </div>
           <div className="flex justify-between items-center">
-            <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#C4B9A8] font-medium">
+            <span className="text-[10px] uppercase tracking-[0.15em] text-[#C4B9A8] font-medium">
               {progress < 100 ? 'Analyzing' : 'Complete'}
             </span>
-            <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#C4B9A8] font-medium">
+            <span className="text-[10px] uppercase tracking-[0.15em] text-[#C4B9A8] font-medium">
               {Math.round(progress)}%
             </span>
           </div>

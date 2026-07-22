@@ -678,7 +678,7 @@ The part that got me? How much my own habits are showing up in their biology.`;
               </button>
               <button
                 onClick={() => { setStep('intake'); window.scrollTo(0, 0); }}
-                className="ml-2 sm:ml-4 text-[9px] sm:text-[10px] font-mono uppercase tracking-[0.15em] sm:tracking-[0.2em] text-white bg-[#0A4682] hover:bg-[#083A6D] px-4 py-2.5 sm:px-5 transition-all duration-300 whitespace-nowrap rounded-sm"
+                className="ml-2 sm:ml-4 text-[10px] sm:text-[10px] uppercase tracking-[0.15em] sm:tracking-[0.15em] text-white bg-[#0A4682] hover:bg-[#083A6D] px-4 py-2.5 sm:px-5 transition-all duration-300 whitespace-nowrap rounded-sm"
               >
                 Begin
               </button>
@@ -688,7 +688,7 @@ The part that got me? How much my own habits are showing up in their biology.`;
             <button
               type="button"
               onClick={() => setHasPaid(true)}
-              className="text-[9px] font-mono uppercase tracking-widest text-amber-600 border border-amber-300 px-3 py-1.5 rounded hover:bg-amber-50 transition-colors"
+              className="text-[10px] uppercase tracking-[0.15em] text-amber-600 border border-amber-300 px-3 py-1.5 rounded hover:bg-amber-50 transition-colors"
             >
               Dev Unlock
             </button>
@@ -717,7 +717,7 @@ The part that got me? How much my own habits are showing up in their biology.`;
                   window.scrollTo(0, 0);
                 }
               }}
-              className="text-[9px] font-mono uppercase tracking-[0.3em] text-[#5C534E] flex items-center gap-2.5 hover:text-[#2A2421] transition-colors"
+              className="text-[10px] uppercase tracking-[0.15em] text-[#5C534E] flex items-center gap-2.5 hover:text-[#2A2421] transition-colors"
             >
               <Icons.ArrowLeft size={15} strokeWidth={1.5} /> Back
             </button>

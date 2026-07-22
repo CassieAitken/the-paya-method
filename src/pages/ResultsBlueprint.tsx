@@ -291,7 +291,7 @@ export function ResultsBlueprint({
               <Icons.TrendingUp size={18} className="text-[#0A4682]" />
             </div>
             <div>
-              <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#0A4682] font-medium block">Superpower</span>
+              <span className="text-[10px] uppercase tracking-[0.15em] text-[#0A4682] font-medium block">Superpower</span>
               <h4 className="text-lg font-serif text-[#2A2421] leading-tight">{topPillar.title}</h4>
             </div>
           </div>
@@ -312,7 +312,7 @@ export function ResultsBlueprint({
               <Icons.Target size={18} className="text-amber-600" />
             </div>
             <div>
-              <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-amber-600 font-medium block">Priority Gap</span>
+              <span className="text-[10px] uppercase tracking-[0.15em] text-amber-600 font-medium block">Priority Gap</span>
               <h4 className="text-lg font-serif text-[#2A2421] leading-tight">{bottomPillar.title}</h4>
             </div>
           </div>
@@ -351,7 +351,7 @@ export function ResultsBlueprint({
                 <div className="flex justify-between items-center">
                   <div className="flex items-center gap-3">
                     <Icon size={18} strokeWidth={1.3} className="text-[#0A4682]" />
-                    <span className="font-mono text-[8.5px] uppercase tracking-[0.35em] text-[#5C534E]/60 font-medium">
+                    <span className="text-[10px] uppercase tracking-[0.15em] text-[#5C534E]/60 font-medium">
                       {f.label}
                     </span>
                   </div>
@@ -364,7 +364,7 @@ export function ResultsBlueprint({
                   />
                 </div>
                 <div className="space-y-3 border-t border-[#E8E2D9] pt-5">
-                  <h5 className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#5C534E]/40 font-medium">
+                  <h5 className="text-[10px] uppercase tracking-[0.15em] text-[#5C534E]/40 font-medium">
                     Our Read
                   </h5>
                   <p className="text-sm text-[#5C534E] leading-[1.7] font-light" dangerouslySetInnerHTML={{ __html: (track === 'legacy' ? getLegacyPillarBridge : track === 'master' ? getMasterPillarBridge : getAscentPillarBridge)(score, f.label, name, pPoss, f.id) }} />
@@ -398,13 +398,13 @@ export function ResultsBlueprint({
             <div className="flex items-center gap-4">
               <span className="text-3xl">{mirror.icon}</span>
               <div>
-                <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#5C534E]/50 font-medium block">Your Resonance Level</span>
+                <span className="text-[10px] uppercase tracking-[0.15em] text-[#5C534E]/50 font-medium block">Your Resonance Level</span>
                 <h4 className="text-2xl font-serif text-[#2A2421]">{mirror.tier}</h4>
               </div>
             </div>
 
             <div className="space-y-4">
-              <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#5C534E]/50 font-medium block">
+              <span className="text-[10px] uppercase tracking-[0.15em] text-[#5C534E]/50 font-medium block">
                 The Biological Reality
               </span>
               <p className="text-[#5C534E] leading-[1.8] font-light text-base">
@@ -413,7 +413,7 @@ export function ResultsBlueprint({
             </div>
 
             <div className="bg-[#FDFBF7] border border-[#E8E2D9]/60 p-6 rounded-none">
-              <p className="text-[8px] font-mono uppercase tracking-[0.35em] text-[#5C534E]/50 font-medium mb-3">
+              <p className="text-[10px] uppercase tracking-[0.15em] text-[#5C534E]/50 font-medium mb-3">
                 The Human Bridge
               </p>
               <p className="text-[#5C534E] leading-[1.8] font-light">
@@ -440,7 +440,7 @@ export function ResultsBlueprint({
             <div className="flex items-center gap-4 mb-6">
               <span className="text-3xl">{priorityShift.emoji}</span>
               <div>
-                <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-white/40 font-medium block">{bottomPillar.title} — Priority Protocol</span>
+                <span className="text-[10px] uppercase tracking-[0.15em] text-white/40 font-medium block">{bottomPillar.title} — Priority Protocol</span>
                 <h4 className="text-2xl font-serif text-white leading-tight">{priorityShift.protocolTitle}</h4>
               </div>
             </div>
@@ -449,7 +449,7 @@ export function ResultsBlueprint({
           <div className="p-6 sm:p-8 lg:p-10 border-b border-[#E8E2D9]">
             <div className="flex items-center gap-3 mb-4">
               <Icons.FlaskConical size={16} className="text-[#0A4682]" strokeWidth={1.5} />
-              <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#5C534E]/50 font-medium">The Biology — Why This Matters</span>
+              <span className="text-[10px] uppercase tracking-[0.15em] text-[#5C534E]/50 font-medium">The Biology — Why This Matters</span>
             </div>
             <p className="text-[#5C534E] leading-[1.85] font-light text-[15px]">
               {priorityShift.biologicalWhy}
@@ -459,7 +459,7 @@ export function ResultsBlueprint({
           <div className="p-6 sm:p-8 lg:p-10 border-b border-[#E8E2D9] bg-[#FDFBF7]/50">
             <div className="flex items-center gap-3 mb-4">
               <Icons.Heart size={16} className="text-[#0A4682]" strokeWidth={1.5} />
-              <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#5C534E]/50 font-medium">The Connection — What This Means for {Name}</span>
+              <span className="text-[10px] uppercase tracking-[0.15em] text-[#5C534E]/50 font-medium">The Connection — What This Means for {Name}</span>
             </div>
             <p className="text-[#5C534E] leading-[1.85] font-light text-[15px]">
               {priorityShift.compassionateWhat}
@@ -469,7 +469,7 @@ export function ResultsBlueprint({
           <div className="p-6 sm:p-8 lg:p-10">
             <div className="flex items-center gap-3 mb-6">
               <Icons.ClipboardList size={16} className="text-[#0A4682]" strokeWidth={1.5} />
-              <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#5C534E]/50 font-medium">Your Protocol — Exactly What to Do</span>
+              <span className="text-[10px] uppercase tracking-[0.15em] text-[#5C534E]/50 font-medium">Your Protocol — Exactly What to Do</span>
             </div>
             <div className="space-y-10">
               {priorityShift.protocolSteps.map((step: { reasoning: string; action: string; outcome: string }, i: number) => (
@@ -480,15 +480,15 @@ export function ResultsBlueprint({
                     </div>
                     <div className="flex-1 space-y-4">
                       <div className="space-y-2">
-                        <span className="font-mono text-[7.5px] uppercase tracking-[0.3em] text-[#5C534E]/50 font-medium">Why This Matters</span>
+                        <span className="text-[10px] uppercase tracking-[0.15em] text-[#5C534E]/50 font-medium">Why This Matters</span>
                         <p className="text-[#5C534E] leading-[1.8] font-light text-[14px]">{step.reasoning}</p>
                       </div>
                       <div className="space-y-2 bg-[#FDFBF7] border border-[#E8E2D9]/60 rounded-none p-4">
-                        <span className="font-mono text-[7.5px] uppercase tracking-[0.3em] text-[#2A2421] font-bold">The Action</span>
+                        <span className="text-[10px] uppercase tracking-[0.15em] text-[#2A2421] font-bold">The Action</span>
                         <p className="text-[#2A2421] leading-[1.8] font-normal text-[14.5px]">{step.action}</p>
                       </div>
                       <div className="space-y-2">
-                        <span className="font-mono text-[7.5px] uppercase tracking-[0.3em] text-[#0A4682] font-medium">Expected Outcome</span>
+                        <span className="text-[10px] uppercase tracking-[0.15em] text-[#0A4682] font-medium">Expected Outcome</span>
                         <p className="text-[#5C534E] leading-[1.8] font-light text-[14px] italic">{step.outcome}</p>
                       </div>
                     </div>
@@ -520,7 +520,7 @@ export function ResultsBlueprint({
               <div className="flex items-center gap-4">
                 <span className="text-2xl">{secondaryShift.emoji}</span>
                 <div>
-                  <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-white/40 font-medium block">{secondaryPillar.title} — Secondary Protocol</span>
+                  <span className="text-[10px] uppercase tracking-[0.15em] text-white/40 font-medium block">{secondaryPillar.title} — Secondary Protocol</span>
                   <h4 className="text-xl font-serif text-white leading-tight">{secondaryShift.protocolTitle}</h4>
                 </div>
               </div>
@@ -529,7 +529,7 @@ export function ResultsBlueprint({
             <div className="p-6 sm:p-8 border-b border-[#E8E2D9]">
               <div className="flex items-center gap-3 mb-4">
                 <Icons.FlaskConical size={16} className="text-[#0A4682]" strokeWidth={1.5} />
-                <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#5C534E]/50 font-medium">Why This System Matters</span>
+                <span className="text-[10px] uppercase tracking-[0.15em] text-[#5C534E]/50 font-medium">Why This System Matters</span>
               </div>
               <p className="text-[#5C534E] leading-[1.85] font-light text-[15px]">
                 {secondaryShift.biologicalWhy}
@@ -539,7 +539,7 @@ export function ResultsBlueprint({
             <div className="p-6 sm:p-8 bg-[#FDFBF7]/50 border-b border-[#E8E2D9]">
               <div className="flex items-center gap-3 mb-4">
                 <Icons.Heart size={16} className="text-[#0A4682]" strokeWidth={1.5} />
-                <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#5C534E]/50 font-medium">What This Means for {Name}</span>
+                <span className="text-[10px] uppercase tracking-[0.15em] text-[#5C534E]/50 font-medium">What This Means for {Name}</span>
               </div>
               <p className="text-[#5C534E] leading-[1.85] font-light text-[15px]">
                 {secondaryShift.compassionateWhat}
@@ -549,7 +549,7 @@ export function ResultsBlueprint({
             <div className="p-6 sm:p-8">
               <div className="flex items-center gap-3 mb-6">
                 <Icons.ClipboardList size={16} className="text-[#0A4682]" strokeWidth={1.5} />
-                <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#5C534E]/50 font-medium">Top 3 Actions</span>
+                <span className="text-[10px] uppercase tracking-[0.15em] text-[#5C534E]/50 font-medium">Top 3 Actions</span>
               </div>
               <div className="space-y-8">
                 {secondaryShift.protocolSteps.slice(0, 3).map((step: { reasoning: string; action: string; outcome: string }, i: number) => (
@@ -560,11 +560,11 @@ export function ResultsBlueprint({
                       </div>
                       <div className="flex-1 space-y-3">
                         <div className="space-y-2 bg-[#FDFBF7] border border-[#E8E2D9]/60 rounded-none p-4">
-                          <span className="font-mono text-[7.5px] uppercase tracking-[0.3em] text-[#2A2421] font-bold">The Action</span>
+                          <span className="text-[10px] uppercase tracking-[0.15em] text-[#2A2421] font-bold">The Action</span>
                           <p className="text-[#2A2421] leading-[1.8] font-normal text-[14px]">{step.action}</p>
                         </div>
                         <div className="space-y-2">
-                          <span className="font-mono text-[7.5px] uppercase tracking-[0.3em] text-[#0A4682] font-medium">Expected Outcome</span>
+                          <span className="text-[10px] uppercase tracking-[0.15em] text-[#0A4682] font-medium">Expected Outcome</span>
                           <p className="text-[#5C534E] leading-[1.8] font-light text-[13.5px] italic">{step.outcome}</p>
                         </div>
                       </div>
@@ -611,7 +611,7 @@ export function ResultsBlueprint({
               ]},
             ].map((block) => (
               <div key={block.day} className="p-6 sm:p-8">
-                <h5 className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#0A4682] font-bold mb-5">{block.day}</h5>
+                <h5 className="text-[10px] uppercase tracking-[0.15em] text-[#0A4682] font-bold mb-5">{block.day}</h5>
                 <ul className="space-y-3">
                   {block.items.map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
@@ -665,7 +665,7 @@ export function ResultsBlueprint({
                   <span className="text-white font-mono text-[10px] font-bold">{idx + 1}</span>
                 </div>
                 <div>
-                  <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#5C534E]/50 font-medium block">{phase.timeframe}</span>
+                  <span className="text-[10px] uppercase tracking-[0.15em] text-[#5C534E]/50 font-medium block">{phase.timeframe}</span>
                   <h5 className="text-lg font-serif text-[#2A2421]">{phase.label}</h5>
                 </div>
               </div>
@@ -741,7 +741,7 @@ export function ResultsBlueprint({
                         <span className={`text-sm font-medium flex-1 ${isPassed ? 'text-[#2A2421]' : 'text-[#5C534E]/60'}`}>
                           {r.label}
                         </span>
-                        <span className={`text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full ${isPassed ? 'bg-stone-100 text-[#5C534E]' : 'bg-stone-100 text-[#5C534E]/40'}`}>
+                        <span className={`text-[10px] uppercase tracking-[0.15em] px-2 py-0.5 rounded-full ${isPassed ? 'bg-stone-100 text-[#5C534E]' : 'bg-stone-100 text-[#5C534E]/40'}`}>
                           {freq.label}
                         </span>
                       </div>
@@ -914,7 +914,7 @@ export function ResultsBlueprint({
               <button
                 onClick={handleShareBadge}
                 disabled={isExportingBadge}
-                className="w-full bg-[#4A3C2F] text-[#F9F5ED] px-8 py-4 text-[8.5px] font-mono uppercase tracking-[0.35em] hover:bg-[#3A2E22] hover:-translate-y-0.5 transition-all flex items-center justify-center gap-3 rounded-none font-bold shadow-none disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-[#4A3C2F] text-[#F9F5ED] px-8 py-4 text-[10px] uppercase tracking-[0.15em] hover:bg-[#3A2E22] hover:-translate-y-0.5 transition-all flex items-center justify-center gap-3 rounded-none font-bold shadow-none disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isExportingBadge ? (
                   <>
@@ -931,7 +931,7 @@ export function ResultsBlueprint({
               <button
                 onClick={handleDownloadBadge}
                 disabled={isExportingBadge}
-                className="w-full flex items-center justify-center gap-3 border border-[#CDC2B0] text-[#4A3C2F] px-6 py-3.5 text-[8.5px] font-mono uppercase tracking-[0.3em] hover:border-[#B09469] hover:text-[#B09469] transition-all rounded-none font-bold disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full flex items-center justify-center gap-3 border border-[#CDC2B0] text-[#4A3C2F] px-6 py-3.5 text-[10px] uppercase tracking-[0.15em] hover:border-[#B09469] hover:text-[#B09469] transition-all rounded-none font-bold disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <Icons.Download size={15} />
                 Download Badge
@@ -945,7 +945,7 @@ export function ResultsBlueprint({
           {/* Share Actions */}
           <div className="flex-1 space-y-8 w-full">
             <div className="space-y-3">
-              <p className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#5C534E]/50 font-medium">
+              <p className="text-[10px] uppercase tracking-[0.15em] text-[#5C534E]/50 font-medium">
                 Ready-made caption
               </p>
               <div className="bg-[#FDFBF7] border border-[#E8E2D9]/60 rounded-none p-6 text-sm text-[#5C534E] leading-[1.8] font-light select-all">
@@ -959,7 +959,7 @@ export function ResultsBlueprint({
               </div>
               <button
                 onClick={handleShare}
-                className="w-full bg-[#0A4682] text-white px-8 py-4 text-[8.5px] font-mono uppercase tracking-[0.35em] hover:bg-[#083A6D] hover:-translate-y-0.5 transition-all flex items-center justify-center gap-3 rounded-none font-bold shadow-none"
+                className="w-full bg-[#0A4682] text-white px-8 py-4 text-[10px] uppercase tracking-[0.15em] hover:bg-[#083A6D] hover:-translate-y-0.5 transition-all flex items-center justify-center gap-3 rounded-none font-bold shadow-none"
               >
                 {shareCopied ? (
                   <>
@@ -977,7 +977,7 @@ export function ResultsBlueprint({
 
             <button
               onClick={handleShareAudit}
-              className="w-full flex items-center justify-center gap-3 border border-[#E8E2D9] text-[#5C534E] px-6 py-4 text-[8.5px] font-mono uppercase tracking-[0.3em] hover:border-[#0A4682] hover:text-[#0A4682] transition-all rounded-none font-bold"
+              className="w-full flex items-center justify-center gap-3 border border-[#E8E2D9] text-[#5C534E] px-6 py-4 text-[10px] uppercase tracking-[0.15em] hover:border-[#0A4682] hover:text-[#0A4682] transition-all rounded-none font-bold"
             >
               {auditShared ? (
                 <>

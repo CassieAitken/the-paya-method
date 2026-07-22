@@ -84,7 +84,7 @@ export function TierModal({ dogName, isProcessingPayment, selectedProduct: _sp, 
           <button
             onClick={onPurchase}
             disabled={isProcessingPayment}
-            className="w-full bg-stone-900 text-white py-6 font-mono text-[11px] tracking-widest font-bold hover:bg-stone-800 hover:-translate-y-1 transition-all active:scale-95 shadow-lg rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full bg-stone-900 text-white py-6 text-[11px] tracking-[0.15em] font-bold hover:bg-stone-800 hover:-translate-y-1 transition-all active:scale-95 shadow-lg rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isProcessingPayment ? (
               <>

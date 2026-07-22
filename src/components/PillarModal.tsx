@@ -52,7 +52,7 @@ export function PillarModal({ isOpen, pillar, onClose }: PillarModalProps) {
 
         <div className="p-8 space-y-10">
           <div className="space-y-4">
-            <h3 className="text-sm font-mono uppercase tracking-[0.35em] text-[#9AB8C4] font-medium">
+            <h3 className="text-sm uppercase tracking-[0.15em] text-[#9AB8C4] font-medium">
               What We Measure
             </h3>
             <p className="text-lg leading-[1.8] text-[#E4D9E8] font-light">
@@ -61,7 +61,7 @@ export function PillarModal({ isOpen, pillar, onClose }: PillarModalProps) {
           </div>
 
           <div className="border-t border-[#FDFBF7]/15 pt-8 space-y-4">
-            <h3 className="text-sm font-mono uppercase tracking-[0.35em] text-[#9AB8C4] font-medium">
+            <h3 className="text-sm uppercase tracking-[0.15em] text-[#9AB8C4] font-medium">
               The Human Bridge
             </h3>
             <p className="text-lg leading-[1.8] text-[#E4D9E8] font-light">
@@ -70,7 +70,7 @@ export function PillarModal({ isOpen, pillar, onClose }: PillarModalProps) {
           </div>
 
           <div className="border-t border-[#FDFBF7]/15 pt-8 space-y-4">
-            <h3 className="text-sm font-mono uppercase tracking-[0.35em] text-[#9AB8C4] font-medium">
+            <h3 className="text-sm uppercase tracking-[0.15em] text-[#9AB8C4] font-medium">
               The Vitality Opportunity
             </h3>
             <p className="text-base leading-[1.8] text-[#E4D9E8] font-light">

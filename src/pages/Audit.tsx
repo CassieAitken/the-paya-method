@@ -168,7 +168,7 @@ export function Audit({
           <div className="w-16 h-16 rounded-full bg-[#0A4682]/[0.03] flex items-center justify-center mx-auto mb-6">
             <Icons.Check size={28} strokeWidth={2} className="text-[#0A4682]" />
           </div>
-          <p className="text-[9px] font-mono uppercase tracking-[0.4em] text-[#0A4682] mb-3">
+          <p className="text-[10px] uppercase tracking-[0.15em] text-[#0A4682] mb-3">
             Phase {completedPhaseId} Complete
           </p>
           <h2 className="text-2xl sm:text-3xl font-serif text-[#2A2421] mb-3 tracking-tight">
@@ -178,7 +178,7 @@ export function Audit({
             {PHASE_CELEBRATIONS[completedPhaseId]}
           </p>
           <div className="border-t border-[#E8E2D9] pt-6 mb-6">
-            <p className="text-[9px] font-mono uppercase tracking-[0.3em] text-[#8A7F72]/40 mb-1">Up Next</p>
+            <p className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72]/40 mb-1">Up Next</p>
             <p className="text-lg font-serif text-[#2A2421]">{AUDIT_PHASES[nextPhaseId]?.name}</p>
             <p className="text-xs text-[#8A7F72]/50 font-light mt-1">{AUDIT_PHASES[nextPhaseId]?.desc}</p>
           </div>
@@ -189,7 +189,7 @@ export function Audit({
               if (nextFoundation !== -1) setCurrentFoundation(nextFoundation);
               window.scrollTo(0, 0);
             }}
-            className="bg-[#0A4682] text-white px-8 py-3.5 text-[10px] font-mono uppercase tracking-[0.25em] font-bold hover:bg-[#083A6D] transition-colors inline-flex items-center gap-2"
+            className="bg-[#0A4682] text-white px-8 py-3.5 text-[10px] uppercase tracking-[0.15em] font-bold hover:bg-[#083A6D] transition-colors inline-flex items-center gap-2"
           >
             Continue
             <Icons.ChevronRight size={16} strokeWidth={2} />
@@ -211,7 +211,7 @@ export function Audit({
               return (
                 <div
                   key={phaseId}
-                  className={`flex-1 flex items-center gap-2 px-3 py-1.5 rounded-full text-[9px] font-mono uppercase tracking-widest whitespace-nowrap transition-all duration-300 ${
+                  className={`flex-1 flex items-center gap-2 px-3 py-1.5 rounded-full text-[10px] uppercase tracking-[0.15em] whitespace-nowrap transition-all duration-300 ${
                     isActive
                       ? 'bg-[#4B1D5C] text-white'
                       : isComplete
@@ -244,13 +244,13 @@ export function Audit({
           {/* Phase header */}
           <div className="mb-6 sm:mb-8">
             <div className="flex items-center gap-2 mb-3">
-              <span className="flex items-center gap-1.5 text-[9px] font-mono uppercase tracking-[0.35em] text-[#8A7F72]">
+              <span className="flex items-center gap-1.5 text-[10px] uppercase tracking-[0.15em] text-[#8A7F72]">
                 <CurrentPhaseIcon size={11} strokeWidth={1.5} />
                 Phase {currentPhaseId} of 3 — {AUDIT_PHASES[currentPhaseId].name}
               </span>
             </div>
             <div className="bg-[#4B1D5C] text-white p-5 sm:p-7">
-              <p className="text-[9px] font-mono uppercase tracking-[0.35em] text-white/50 mb-3 flex items-center gap-2">
+              <p className="text-[10px] uppercase tracking-[0.15em] text-white/50 mb-3 flex items-center gap-2">
                 <Icons.Waves size={11} strokeWidth={1.5} /> The Soul Mirror
               </p>
               <p className="text-sm sm:text-base leading-[1.8] text-white/85 font-light">
@@ -351,7 +351,7 @@ export function Audit({
           <div className="flex items-center justify-between mt-6 pt-5 border-t border-[#E8E2D9]">
             <button
               onClick={() => advanceQuestion('back')}
-              className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.3em] text-[#8A7F72]/50 hover:text-[#2A2421] transition-colors py-2"
+              className="flex items-center gap-2 text-[10px] uppercase tracking-[0.15em] text-[#8A7F72]/50 hover:text-[#2A2421] transition-colors py-2"
             >
               <Icons.ChevronLeft size={14} strokeWidth={2} />
               Back
@@ -374,7 +374,7 @@ export function Audit({
                     setStep('reflection');
                     window.scrollTo(0, 0);
                   }}
-                  className="text-[9px] font-mono uppercase tracking-widest text-amber-600 border border-amber-300 px-3 py-1.5 rounded hover:bg-amber-50 transition-colors"
+                  className="text-[10px] uppercase tracking-[0.15em] text-amber-600 border border-amber-300 px-3 py-1.5 rounded hover:bg-amber-50 transition-colors"
                 >
                   Dev Skip
                 </button>
@@ -383,7 +383,7 @@ export function Audit({
               <button
                 onClick={() => canAdvanceManually && advanceQuestion('forward')}
                 disabled={!canAdvanceManually}
-                className={`flex items-center gap-2 px-6 py-3 text-[10px] font-mono uppercase tracking-[0.3em] font-medium transition-all ${
+                className={`flex items-center gap-2 px-6 py-3 text-[10px] uppercase tracking-[0.15em] font-medium transition-all ${
                   canAdvanceManually
                     ? 'bg-[#0A4682] text-white hover:bg-[#344a35] hover:-translate-y-0.5'
                     : 'bg-stone-100 text-[#8A7F72]/30 cursor-not-allowed'
@@ -397,7 +397,7 @@ export function Audit({
 
           {/* Biological insight — subtle footer */}
           <div className="mt-8 pl-4 border-l-2 border-[#0A4682]/20">
-            <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#8A7F72]/40 mb-1.5 flex items-center gap-1.5">
+            <p className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72]/40 mb-1.5 flex items-center gap-1.5">
               <Icons.Microscope size={10} strokeWidth={1.5} /> Biological Insight
             </p>
             <p className="text-xs text-[#8A7F72] leading-[1.7] font-light">
