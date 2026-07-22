@@ -123,7 +123,7 @@ export function Intake({
                     key={type}
                     onClick={() => setDogData({ ...dogData, gender: type })}
                     className={`py-5 px-5 text-[9px] font-mono uppercase tracking-[0.25em] transition-all ${
-                      dogData.gender === type ? 'bg-[#2A2421] text-white' : 'text-[#6B6159] hover:bg-[#E8E2D9]/30'
+                      dogData.gender === type ? 'bg-[#4B1D5C] text-white' : 'text-[#6B6159] hover:bg-[#E8E2D9]/30'
                     }`}
                   >
                     {type}
@@ -197,7 +197,7 @@ export function Intake({
           <button
             disabled={!dogData.name || (!dogData.age && !dogData.ageMonths) || !dogData.gender}
             onClick={handleProceed}
-            className={`bg-[#2A2421] text-white px-10 py-5 sm:px-14 sm:py-5 text-[10px] font-mono uppercase tracking-[0.25em] flex items-center gap-3 transition-all font-bold ${
+            className={`bg-[#0A4682] text-white px-10 py-5 sm:px-14 sm:py-5 text-[10px] font-mono uppercase tracking-[0.25em] flex items-center gap-3 transition-all font-bold ${
               !dogData.name || (!dogData.age && !dogData.ageMonths) || !dogData.gender ? 'opacity-25 cursor-not-allowed' : 'hover:bg-[#3A3330]'
             }`}
           >
@@ -266,7 +266,7 @@ export function Intake({
                     setStep('landing');
                     window.scrollTo(0, 0);
                   }}
-                  className="bg-[#2A2421] text-white px-8 py-3.5 text-[9px] font-mono uppercase tracking-[0.25em] hover:bg-[#3A3330] transition-all font-bold"
+                  className="bg-[#0A4682] text-white px-8 py-3.5 text-[9px] font-mono uppercase tracking-[0.25em] hover:bg-[#3A3330] transition-all font-bold"
                 >
                   Return Home
                 </button>

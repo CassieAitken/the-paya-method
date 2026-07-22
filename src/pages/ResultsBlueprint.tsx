@@ -436,7 +436,7 @@ export function ResultsBlueprint({
         </div>
 
         <div className="bg-white border border-[#E8E2D9] rounded-none shadow-none overflow-hidden">
-          <div className="bg-[#2A2421] text-white p-6 sm:p-8 lg:p-10">
+          <div className="bg-[#4B1D5C] text-white p-6 sm:p-8 lg:p-10">
             <div className="flex items-center gap-4 mb-6">
               <span className="text-3xl">{priorityShift.emoji}</span>
               <div>
@@ -475,7 +475,7 @@ export function ResultsBlueprint({
               {priorityShift.protocolSteps.map((step: { reasoning: string; action: string; outcome: string }, i: number) => (
                 <div key={i} className="space-y-5">
                   <div className="flex gap-4 items-start">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#2A2421] flex items-center justify-center text-white font-mono text-[10px] font-medium mt-0.5">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0A4682] flex items-center justify-center text-white font-mono text-[10px] font-medium mt-0.5">
                       {i + 1}
                     </div>
                     <div className="flex-1 space-y-4">
@@ -661,7 +661,7 @@ export function ResultsBlueprint({
           ].map((phase, idx) => (
             <div key={phase.timeframe} className={`bg-white border border-[#E8E2D9] p-6 sm:p-8 ${idx === 0 ? '' : 'border-t-0'}`}>
               <div className="flex items-center gap-4 mb-5">
-                <div className="w-10 h-10 rounded-full bg-[#2A2421] flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-[#0A4682] flex items-center justify-center flex-shrink-0">
                   <span className="text-white font-mono text-[10px] font-bold">{idx + 1}</span>
                 </div>
                 <div>
@@ -959,7 +959,7 @@ export function ResultsBlueprint({
               </div>
               <button
                 onClick={handleShare}
-                className="w-full bg-[#2A2421] text-white px-8 py-4 text-[8.5px] font-mono uppercase tracking-[0.35em] hover:bg-[#2A2421]/90 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-3 rounded-none font-bold shadow-none"
+                className="w-full bg-[#0A4682] text-white px-8 py-4 text-[8.5px] font-mono uppercase tracking-[0.35em] hover:bg-[#083A6D] hover:-translate-y-0.5 transition-all flex items-center justify-center gap-3 rounded-none font-bold shadow-none"
               >
                 {shareCopied ? (
                   <>

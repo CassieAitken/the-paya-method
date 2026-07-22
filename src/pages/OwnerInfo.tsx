@@ -88,7 +88,7 @@ export function OwnerInfo({
               setStep('analyzing');
               window.scrollTo(0, 0);
             }}
-            className={`bg-[#2A2421] text-white px-10 py-5 text-[10px] font-mono uppercase tracking-[0.25em] flex items-center gap-3 transition-all font-bold ${
+            className={`bg-[#0A4682] text-white px-10 py-5 text-[10px] font-mono uppercase tracking-[0.25em] flex items-center gap-3 transition-all font-bold ${
               !canProceed ? 'opacity-25 cursor-not-allowed' : 'hover:bg-[#3A3330]'
             }`}
           >

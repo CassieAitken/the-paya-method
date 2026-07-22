@@ -213,7 +213,7 @@ export function Audit({
                   key={phaseId}
                   className={`flex-1 flex items-center gap-2 px-3 py-1.5 rounded-full text-[9px] font-mono uppercase tracking-widest whitespace-nowrap transition-all duration-300 ${
                     isActive
-                      ? 'bg-[#2A2421] text-white'
+                      ? 'bg-[#4B1D5C] text-white'
                       : isComplete
                       ? 'bg-[#0A4682]/[0.03] text-[#0A4682] border border-[#0A4682]/30'
                       : 'bg-white text-[#8A7F72] border border-[#E8E2D9]'
@@ -249,7 +249,7 @@ export function Audit({
                 Phase {currentPhaseId} of 3 — {AUDIT_PHASES[currentPhaseId].name}
               </span>
             </div>
-            <div className="bg-[#2A2421] text-white p-5 sm:p-7">
+            <div className="bg-[#4B1D5C] text-white p-5 sm:p-7">
               <p className="text-[9px] font-mono uppercase tracking-[0.35em] text-white/50 mb-3 flex items-center gap-2">
                 <Icons.Waves size={11} strokeWidth={1.5} /> The Soul Mirror
               </p>
@@ -283,7 +283,7 @@ export function Audit({
                       i < currentQuestion
                         ? 'bg-[#0A4682] w-4'
                         : i === currentQuestion
-                        ? 'bg-[#2A2421] w-6'
+                        ? 'bg-[#4B1D5C] w-6'
                         : 'bg-stone-200/80 w-3'
                     }`}
                   />

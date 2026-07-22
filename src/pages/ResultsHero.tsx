@@ -227,7 +227,7 @@ export function ResultsHero({
 
                 {/* Protocol step preview */}
                 <div className="bg-white border border-[#E8E2D9] overflow-hidden">
-                  <div className="bg-[#2A2421] text-white p-4">
+                  <div className="bg-[#4B1D5C] text-white p-4">
                     <div className="flex items-center gap-3">
                       <span className="text-lg">{directives.priorityShift.emoji}</span>
                       <div>
@@ -256,7 +256,7 @@ export function ResultsHero({
 
         {/* 6. Unlock CTA — the money-maker */}
         <div className="max-w-2xl mx-auto text-center space-y-6 sm:space-y-8 pt-8 sm:pt-12">
-          <div className="bg-[#2A2421] rounded-none p-8 sm:p-12 shadow-none relative overflow-hidden">
+          <div className="bg-[#4B1D5C] rounded-none p-8 sm:p-12 shadow-none relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-[#0A4682]/5 to-transparent pointer-events-none" />
             <div className="relative z-10 space-y-6">
               <p className="text-white/50 text-[9px] font-mono uppercase tracking-[0.35em]">Unlock the Full Blueprint</p>
@@ -350,7 +350,7 @@ export function ResultsHero({
           {/* Score Display — Radial */}
           <div className="text-center space-y-10">
             <RadialScore score={results.score} />
-            <div className="inline-block bg-[#2A2421] text-white text-[8px] font-mono uppercase tracking-[0.3em] px-4 py-1.5 rounded-full shadow-none">
+            <div className="inline-block bg-[#4B1D5C] text-white text-[8px] font-mono uppercase tracking-[0.3em] px-4 py-1.5 rounded-full shadow-none">
               Founding Member
             </div>
             <div className="space-y-3 text-left max-w-md mx-auto">
