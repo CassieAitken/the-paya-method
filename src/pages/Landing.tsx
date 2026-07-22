@@ -44,34 +44,34 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
 
       {/* ===== HERO ===== */}
       <section className="relative left-1/2 right-1/2 -mx-[50vw] w-screen min-h-[90vh] flex flex-col items-center justify-center text-center px-6 sm:px-8 py-20 md:py-32 bg-[#4B1D5C]">
-        <div className="max-w-4xl mx-auto space-y-8 sm:space-y-12 hero-stagger">
+        <div className="max-w-4xl mx-auto hero-stagger">
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[7rem] font-serif leading-[0.88] sm:leading-[0.85] text-[#FDFBF7] tracking-[-0.02em]">
             Your dog's lifespan<br className="hidden sm:block" /> is not pre-written.<br />
             <span className="font-serif italic text-[#9AB8C4]">Their vitality is yours<br className="hidden sm:block" /> to protect.</span>
           </h1>
 
-          <div className="w-16 h-[0.5px] bg-[#9AB8C4]/50 mx-auto"></div>
+          <div className="w-16 h-[0.5px] bg-[#9AB8C4]/50 mx-auto mt-5 sm:mt-6"></div>
 
-          <p className="text-base sm:text-xl font-serif italic text-[#E4D9E8] leading-[1.9] sm:leading-[1.8] font-light max-w-xs sm:max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl font-serif italic text-[#E4D9E8] leading-[1.9] sm:leading-[1.8] font-light max-w-xs sm:max-w-[650px] mx-auto mt-5 sm:mt-6">
             You know the exact spot they love to be scratched, the unique cadence of their bark, and the gentle sigh they make when they finally settle against your feet. PayaLabs translates 50 carefully selected biological questions into a personalized Dog Biology Blueprint™ — a gentle, science-backed roadmap that uncovers what's quietly working against them, so you can protect their comfort and keep them moving, playing, and thriving for as long as possible.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[10px] sm:text-[11px] uppercase tracking-[0.15em] text-[#9AB8C4]">
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[11px] sm:text-[13px] font-medium uppercase tracking-[0.15em] text-[#EDE6E9] mt-3 sm:mt-4">
             <span>10-Minute Assessment</span>
-            <span className="w-1 h-1 rounded-full bg-[#9AB8C4]/40" />
+            <span className="w-1 h-1 rounded-full bg-[#EDE6E9]/40" />
             <span>Personalized Dog Biology Blueprint™</span>
-            <span className="w-1 h-1 rounded-full bg-[#9AB8C4]/40" />
+            <span className="w-1 h-1 rounded-full bg-[#EDE6E9]/40" />
             <span>Science-Backed Guidance</span>
           </div>
 
-          <div className="flex flex-col items-center justify-center gap-3 w-full max-w-sm mx-auto">
+          <div className="flex flex-col items-center justify-center gap-3 w-full max-w-sm mx-auto mt-6 sm:mt-8">
             <button
               type="button"
               onClick={() => {
                 const el = document.getElementById('how-it-works');
                 el?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="inline-flex items-center gap-1.5 text-[13px] sm:text-[14px] font-serif italic text-[#9AB8C4] underline underline-offset-4 decoration-[#9AB8C4]/40 hover:decoration-[#9AB8C4] transition-colors cursor-pointer"
+              className="inline-flex items-center gap-1.5 text-[13px] sm:text-[14px] font-serif italic text-[#9AB8C4] underline underline-offset-4 decoration-[#9AB8C4]/40 hover:decoration-[#9AB8C4] hover:text-[#FDFBF7] hover:bg-[#FDFBF7]/[0.06] transition-all cursor-pointer px-4 py-2 rounded-full"
             >
               See what you get
               <Icons.ChevronDown size={13} strokeWidth={1.5} className="text-[#9AB8C4]/70" />
@@ -84,11 +84,11 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
               }}
               className="group bg-[#0A4682] hover:bg-[#083A6D] text-white py-5 px-10 tracking-[0.22em] uppercase font-bold w-full transition-all duration-300 flex items-center justify-center gap-3"
             >
-              <span>Begin the 10-Minute Assessment</span>
+              <span>Begin Assessment</span>
               <Icons.ArrowRight size={16} className="transition-transform group-hover:translate-x-1" strokeWidth={1.5} />
             </button>
-            <span className="text-[10px] tracking-[0.2em] uppercase text-[#9AB8C4] font-bold mt-1 block w-full text-center">
-              $49 &bull; Personalized to your dog &bull; Instant results
+            <span className="text-[10px] tracking-[0.2em] uppercase text-[#EDE6E9] font-bold mt-1 block w-full text-center">
+              $49 &bull; 10 Minutes &bull; Instant Results
             </span>
           </div>
 
