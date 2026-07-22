@@ -1,0 +1,218 @@
+import { Icons } from '../components/Icons';
+
+export type FrequencyLevel = 'never' | 'rarely' | 'sometimes' | 'often' | 'daily';
+
+export const frequencyLabels: Record<FrequencyLevel, string> = {
+  never: 'Not Currently',
+  rarely: 'Occasionally',
+  sometimes: 'Sometimes',
+  often: 'Often',
+  daily: 'Regularly'
+};
+
+export const frequencyWeights: Record<FrequencyLevel, number> = {
+  never: 0,
+  rarely: 0.25,
+  sometimes: 0.5,
+  often: 0.75,
+  daily: 1.0
+};
+
+export interface Ritual {
+  id: string;
+  label: string;
+  weight: number;
+  desc: (dogName: string) => string;
+}
+
+// @ts-nocheck
+export const foundations: any[] = [
+  {
+    id: 'metabolic',
+    title: "The Internal Battery",
+    label: "The Internal Battery",
+    Icon: Icons.Activity,
+    categoryWeight: 1.5,
+    tagline: "Fueling the Spark.",
+    guidance: "Food is the foundation of everything we measure. We're looking at what goes in, how it goes in, and whether your dog's body can actually use it.",
+    insight: "When you slow down at mealtimes, your dog's nervous system gets a clear signal: safe. That calm shifts their body from stress mode into digest-and-absorb mode. The food matters. The energy around the food matters just as much.",
+    endpointDesc: "What goes into the bowl — and the energy around the bowl — shapes every other pillar we measure.",
+    dogNote: (name: string) => `A Note from ${name}: I notice when the colorful things from the earth land on your plate, too. When we're both nourished by nature, you move lighter. You laugh more. I love what this does for us.`,
+    rituals: [
+      { id: 'n1', label: 'Fresh, Real Food', weight: 2.0, desc: (name: string) => `${name}'s meals include real, whole ingredients -- fresh vegetables, organ meats, or bone broth alongside their regular food.` },
+      { id: 'n2', label: 'Rest Around Meals', weight: 1.8, desc: (name: string) => `${name} gets a window of calm before and after eating -- no intense play or exercise within an hour or two of mealtime.` },
+      { id: 'n3', label: 'Predictable Mealtimes', weight: 1.9, desc: (name: string) => `${name} eats at roughly the same times each day, so their body knows when to expect food.` },
+      { id: 'n4', label: 'Relaxed Around Food', weight: 1.9, desc: (name: string) => `${name} can eat comfortably with people or other animals nearby -- no guarding, tension, or stress.` },
+      { id: 'n5', label: 'Real Food Treats', weight: 1.6, desc: (name: string) => `${name}'s treats are real food -- bits of meat, raw bones, or vegetables rather than processed snacks.` },
+      { id: 'n6', label: 'Clean, Fresh Water', weight: 1.8, desc: (name: string) => `${name} has access to clean, filtered water in a bowl that is washed and refilled at least twice a day.` },
+      { id: 'n7', label: 'Moisture in Meals', weight: 1.7, desc: (name: string) => `${name}'s food has real moisture in it -- bone broth, wet food, or a splash of water mixed in.` },
+      { id: 'n8', label: 'Healthy Fats', weight: 1.9, desc: (name: string) => `${name}'s diet includes foods rich in healthy fats -- like fish, eggs, or seeds.` },
+      { id: 'n9', label: 'Rotating Proteins', weight: 1.7, desc: (name: string) => `${name}'s main protein source changes every month or so -- cycling through beef, chicken, fish, or game.` },
+      { id: 'n10', label: 'Safe Food Bowls', weight: 1.5, desc: (name: string) => `${name} eats from stainless steel, ceramic, or glass -- not plastic.` },
+      { id: 'n11', label: 'Thoughtful Portions', weight: 1.8, desc: (name: string) => `${name}'s portions are adjusted based on how their body looks and feels rather than just a fixed measurement.` },
+      { id: 'n12', label: 'Healthy, Consistent Stools', weight: 2.0, desc: (name: string) => `${name}'s stools are consistently firm, uniform in color, and easy to pick up.`, legacySignal: true },
+      { id: 'n13', label: 'Comfortable Eating Position', weight: 1.6, desc: (name: string) => `${name} eats from a surface height that feels natural for their body -- elevated for larger or older dogs so they don't strain.`, legacySignal: true },
+      { id: 'n14', label: 'Overnight Fasting Window', weight: 1.7, desc: (name: string) => `${name} has at least a 10-12 hour window between the last meal of the day and the first of the next -- giving their gut time to rest.` }
+    ]
+  },
+  {
+    id: 'repair',
+    title: "The Restorative Cycle",
+    label: "The Restorative Cycle",
+    Icon: Icons.Moon,
+    categoryWeight: 1.4,
+    tagline: "The Art of Stillness.",
+    guidance: "Cellular recovery happens when the world goes quiet. We're measuring sleep quality, recovery speed, and whether your dog's body gets the stillness it needs to repair.",
+    insight: "When your dog feels safe and the house goes quiet, their body drops into deep restoration -- repairing what each day wears down. No safety signal, no repair. It's that simple.",
+    endpointDesc: "How well your dog rests — and whether their body gets the deep quiet it needs to heal.",
+    dogNote: (name: string) => `A Note from ${name}: The air feels different when your spirit is calm. I notice when you breathe deeper. Your peace heals and strengthens me in ways you might not see, but I feel all of it.`,
+    rituals: [
+      { id: 's1', label: 'Dark, Restful Sleep Space', weight: 1.1, desc: (name: string) => `${name}'s sleeping area is genuinely dark at night -- minimal light from windows, electronics, or hallways creeping in.` },
+      { id: 's2', label: 'Steady Sleep Rhythm', weight: 1.2, desc: (name: string) => `${name} goes to bed and wakes up at roughly the same time each day -- their body thrives on that predictability.` },
+      { id: 's3', label: 'Sleeping Near Their People', weight: 1.0, desc: (name: string) => `${name} sleeps near someone they trust -- you, another pet, or in a secure spot within earshot of the family.` },
+      { id: 's4', label: 'Easy Morning Movement', weight: 1.3, desc: (name: string) => `${name} moves easily when they wake up -- no lingering stiffness, "walking it off," or reluctance to stand and stretch.`, legacySignal: true },
+      { id: 's5', label: 'Evening Wind-Down Lighting', weight: 0.9, desc: (name: string) => `${name}'s evening environment shifts toward calm -- you dim the lights and reduce screen glare to help their brain ease toward sleep.` },
+      { id: 's6', label: 'A Supportive Bed', weight: 1.0, desc: (name: string) => `${name} has a quality bed that supports their size and age -- cushioning their joints instead of pressing on them.` },
+      { id: 's7', label: 'Catching Their Breath', weight: 0.9, desc: (name: string) => `${name} bounces back to calm, easy breathing within 15-20 minutes after a hard run or intense play.` },
+      { id: 's8', label: 'Comfortable Sleeping Temperature', weight: 0.7, desc: (name: string) => `${name}'s sleeping spot stays comfortable -- no cold drafts or hot spots that make them pant or pace at night.` },
+      { id: 's9', label: 'Deep, Dreamy Sleep', weight: 1.1, desc: (name: string) => `${name} shows signs of truly deep sleep -- dreaming, soft little vocalizations, or those adorable "running" paws during naps.` },
+      { id: 's10', label: 'Sleeping Through the Night', weight: 1.2, desc: (name: string) => `${name} sleeps through the night without frequent repositioning, pacing, or searching for a new spot.`, legacySignal: true },
+      { id: 's11', label: 'Their Own Quiet Spot', weight: 0.8, desc: (name: string) => `${name} has a dedicated retreat -- a crate, a tucked-away bed -- where they can go for undisturbed downtime whenever they need it.` },
+      { id: 's12', label: 'Morning Sunlight for Better Sleep', weight: 1.0, desc: (name: string) => `${name} gets natural morning sunlight early in the day, which helps set their internal clock for deeper sleep later.` }
+    ]
+  },
+  {
+    id: 'environmental',
+    title: "The Biological Shield",
+    label: "The Biological Shield",
+    Icon: Icons.Home,
+    categoryWeight: 1.3,
+    tagline: "Designing for Purity.",
+    guidance: "Your home is either supporting your dog's immune system or quietly working against it. We're measuring the invisible exposures -- the ones they absorb before you even notice.",
+    insight: "Dogs live closer to the ground. They breathe faster than you. They're the first to absorb what's in the air, on the floor, and in the water. Creating a pure environment isn't extra -- it's foundational.",
+    endpointDesc: "Your home either supports their immune system or slowly wears it down. We measure which one.",
+    dogNote: (name: string) => `A Note from ${name}: When the air feels fresh and clean, my whole being feels lighter. Thank you for making our home a sanctuary.`,
+    rituals: [
+      { id: 'e1', label: 'Natural Pest Control', weight: 1.6, desc: (name: string) => `${name}'s home uses natural or pet-safe solutions for pest control rather than harsh chemical sprays or synthetic traps.` },
+      { id: 'e2', label: 'Clean, Natural Scents', weight: 1.5, desc: (name: string) => `${name}'s home favors natural scents -- essential oils, fresh air -- over synthetic plug-ins, paraffin candles, or chemical room sprays.` },
+      { id: 'e3', label: 'Gentle Floor Cleaning', weight: 1.3, desc: (name: string) => `${name}'s floors and surfaces are cleaned with gentle, natural products -- like vinegar or castile soap -- keeping the chemical load off their paws.` },
+      { id: 'e4', label: 'Fresh Air Flow', weight: 0.9, desc: (name: string) => `${name}'s home breathes -- through open windows, good air filtration, or a consistent flow of fresh air throughout the day.` },
+      { id: 'e5', label: 'Secure Footing', weight: 1.0, desc: (name: string) => `${name} has secure footing -- rugs or mats -- in the areas they walk most, so there's no slipping on hard floors.`, legacySignal: true },
+      { id: 'e6', label: 'A Chemical-Free Yard', weight: 1.6, desc: (name: string) => `${name}'s outdoor spaces are managed without synthetic weed killers or pesticides -- you favor hand-weeding or organic methods.` },
+      { id: 'e7', label: 'Regular Deep Cleaning', weight: 0.8, desc: (name: string) => `${name}'s bedding and living spaces get regular vacuuming and deep cleaning to keep dust, mites, and allergens in check.` },
+      { id: 'e8', label: 'A Quiet Space', weight: 1.0, desc: (name: string) => `${name} has at least one truly quiet space in the home -- free from constant TV noise, speakers, or loud electronic hums.` },
+      { id: 'e9', label: 'Electronics Away from Sleep', weight: 0.7, desc: (name: string) => `${name}'s primary sleep and rest zones are kept away from Wi-Fi routers and heavy electronics.` },
+      { id: 'e10', label: 'Natural Toys', weight: 1.0, desc: (name: string) => `${name}'s toys are made from natural materials -- leather, hemp, wood, or natural rubber -- rather than cheap plastics that break down.` },
+      { id: 'e11', label: 'Gentle Grooming Products', weight: 1.0, desc: (name: string) => `${name}'s shampoos and balms are free from artificial fragrances, sulfates, and harsh detergents.` },
+      { id: 'e12', label: 'Natural Bedding', weight: 1.0, desc: (name: string) => `${name}'s bed is made from natural fibers -- cotton, wool, or latex -- rather than synthetic foams that can off-gas.` },
+      { id: 'e13', label: 'Clean, Filtered Water', weight: 1.1, desc: (name: string) => `${name} drinks filtered or purified water -- treated to remove chlorine, fluoride, and heavy metals.` }
+    ]
+  },
+  {
+    id: 'sync',
+    title: "The Pack Bond",
+    label: "The Pack Bond",
+    Icon: Icons.Heart,
+    categoryWeight: 1.6,
+    tagline: "The Architecture of Belonging.",
+    guidance: "Your presence -- real presence, not distracted -- is the most powerful input in your dog's biology. We're measuring the quality of your shared time and the nervous system conversation between you.",
+    insight: "When you're grounded, their inflammation drops. When you're scattered, their repair systems downshift. Your calm isn't metaphor. It's measurable biology.",
+    endpointDesc: "Your nervous system is their anchor. We measure how well it's holding.",
+    dogNote: (name: string) => `A Note from ${name}: When you put the glowing rectangle away and your eyes find mine, I feel your heart slow down. In those moments, I know I'm not alone. That's when I feel safe enough to truly heal and recover.`,
+    rituals: [
+      { id: 'pb1', label: 'Undivided Presence', weight: 1.2, desc: (name: string) => `${name} gets 15-30 minutes of your full attention every day -- no phones, no screens, no mental to-do lists. Just you and them.` },
+      { id: 'pb2', label: 'The Homecoming Ritual', weight: 1.0, desc: (name: string) => `${name}'s greeting when you come home is met with calm energy -- you let the excitement settle before jumping into intense play.` },
+      { id: 'pb3', label: 'Just Being Together', weight: 1.0, desc: (name: string) => `${name} naturally spends a good part of the day in the same room as you -- not necessarily playing, just quietly sharing space.` },
+      { id: 'pb4', label: 'Doing Things Together', weight: 0.9, desc: (name: string) => `${name} and you share a specific activity together -- a walk, a game, a short training session -- something that asks you both to be present.` },
+      { id: 'pb5', label: 'The Midday Check-In', weight: 0.8, desc: (name: string) => `${name} gets a short reconnection break during the day, especially after they've been alone -- even just a few minutes of your attention.` },
+      { id: 'pb6', label: 'Managing Your Own Stress', weight: 1.2, desc: (name: string) => `${name}'s human is aware of their own stress levels and actively works to keep that energy from spilling over into their time together.` },
+      { id: 'pb7', label: 'Touch for No Reason', weight: 0.9, desc: (name: string) => `${name} gets gentle touch throughout the day -- pets, scratches, a little massage -- not as a reward, but just because you love them.` },
+      { id: 'pb8', label: 'A Calm Voice', weight: 0.9, desc: (name: string) => `${name} hears soft, steady vocal tones from you rather than sharp or high-pitched commands -- your voice is their anchor.` },
+      { id: 'pb9', label: 'Patience Over Punishment', weight: 1.1, desc: (name: string) => `When ${name}'s behavior is challenging, you guide and teach rather than react with frustration or punishment.` },
+      { id: 'pb10', label: 'They Come to You', weight: 1.1, desc: (name: string) => `${name} frequently approaches you on their own to start a game or ask for attention -- a sign of deep relational trust.`, legacySignal: true },
+      { id: 'pb11', label: 'Soft, Relaxed Greetings', weight: 1.0, desc: (name: string) => `${name} greets you with a soft body -- loose wagging, soft eyes, relaxed face. That's the look of a dog who feels safe.`, legacySignal: true },
+      { id: 'pb12', label: 'The Long Gaze', weight: 1.0, desc: (name: string) => `${name} and you share relaxed, unhurried eye contact during quiet moments -- the kind that makes both of your hearts slow down.` },
+      { id: 'pb13', label: 'When You Breathe, They Breathe', weight: 1.0, desc: (name: string) => `${name} mirrors your calm -- when you take a deep breath or consciously relax, they settle right with you.` }
+    ]
+  },
+  {
+    id: 'cognitive',
+    title: "Ancestral Cognition",
+    label: "Ancestral Cognition",
+    Icon: Icons.Brain,
+    categoryWeight: 1.0,
+    tagline: "Activating the Instinctual Mind.",
+    guidance: "Mental stagnation ages a dog faster than most physical ailments. We're measuring how often your dog's ancestral senses -- scent, problem-solving, and exploration -- get activated.",
+    insight: "When you invite your dog to use their nose or explore new terrain, you're not just entertaining them. You're activating neural pathways that keep their mind sharp and their body resilient.",
+    endpointDesc: "A stimulated mind protects the body. We measure how often those ancestral circuits fire.",
+    dogNote: (name: string) => `A Note from ${name}: When you hide my toys and ask me to use my nose, I remember what it feels like to be fully alive. Every puzzle you give me keeps my mind young.`,
+    rituals: [
+      { id: 'c1', label: 'Nose Games', weight: 0.7, desc: (name: string) => `A few times a week, you hide treats or toys and let ${name} use their nose to find them -- turning sniffing into a game.` },
+      { id: 'c2', label: 'Working for Meals', weight: 0.6, desc: (name: string) => `${name} works for at least some meals -- through slow feeders, snuffle mats, or kibble scattered in the grass -- instead of eating from a plain bowl.` },
+      { id: 'c3', label: 'Always Learning Something New', weight: 0.6, desc: (name: string) => `You teach ${name} new words, tricks, or skills -- not just maintaining the basics, but giving their brain something fresh to chew on.` },
+      { id: 'c4', label: 'Digging, Sniffing, Exploring', weight: 0.5, desc: (name: string) => `${name} has access to safe areas where they can sniff, dig, and explore the ground -- tapping into their primal foraging instincts.` },
+      { id: 'c5', label: 'Sniff Walks', weight: 0.7, desc: (name: string) => `${name} gets to lead the walk -- following their nose at their own pace, no destination required.` },
+      { id: 'c6', label: 'New Places', weight: 0.6, desc: (name: string) => `${name} visits genuinely new locations -- a different park, trail, or neighborhood -- to feed their natural curiosity.` },
+      { id: 'c7', label: 'Varied Terrain', weight: 0.6, desc: (name: string) => `${name}'s outings include varied ground -- hills, logs, sand, or water -- that asks their body and brain to work together.` },
+      { id: 'c8', label: 'Knows Their People', weight: 0.6, desc: (name: string) => `${name} recognizes the names of family members or close friends and can "find" them on command.`, legacySignal: true },
+      { id: 'c9', label: 'Patience Practice', weight: 0.5, desc: (name: string) => `You practice real-life patience -- ${name} waits before meals, pauses at doors -- keeping that steady, thinking part of the brain engaged.` },
+      { id: 'c10', label: 'Sticks With It', weight: 0.6, desc: (name: string) => `When faced with a tricky puzzle or challenge, ${name} shows the focus to keep trying rather than giving up right away.`, legacySignal: true },
+      { id: 'c11', label: 'Breed-Specific Play', weight: 0.6, desc: (name: string) => `You give ${name} outlets for their breed instincts -- whether that's retrieving, chasing, herding, or guarding-style play.` },
+      { id: 'c12', label: 'The Power of Choice', weight: 0.5, desc: (name: string) => `On walks or at home, ${name} gets to make real choices -- which direction to turn, which toy to pick, which path to follow.` },
+      { id: 'c13', label: 'New Smells and Sounds', weight: 0.5, desc: (name: string) => `You intentionally introduce new safe smells or sounds into ${name}'s world -- keeping their senses sharp and curious.` }
+    ]
+  },
+  {
+    id: 'biomechanical',
+    title: "Biomechanical Flow",
+    label: "Biomechanical Flow",
+    Icon: Icons.Compass,
+    categoryWeight: 1.2,
+    tagline: "The Dialogue of Motion.",
+    guidance: "Movement is the most honest signal your dog sends. We're measuring gait quality, joint freedom, recovery speed, and whether their body moves the way nature designed it to.",
+    insight: "The way your dog moves is a dialogue between muscles, joints, and the earth they stand on. Stiffness isn't just stiffness -- it's a signal. Fluid motion isn't luck -- it's the result of the right inputs.",
+    endpointDesc: "How freely they move reveals how well the whole system works. We measure the signal.",
+    dogNote: (name: string) => `A Note from ${name}: When we walk at my pace through the dirt instead of hard concrete, my whole body feels lighter. I remember what it feels like to move freely.`,
+    rituals: [
+      { id: 'bf1', label: 'Knowing Their Body', weight: 1.6, desc: (name: string) => `You run your hands over ${name}'s body to check for heat, tension, or new lumps, and you can easily feel their ribs without pressing hard.` },
+      { id: 'bf2', label: 'Walking at Their Pace', weight: 1.3, desc: (name: string) => `On walks, ${name} sets the rhythm on a loose leash, moving at their natural pace without being rushed or pulled.` },
+      { id: 'bf3', label: 'Smooth, Balanced Movement', weight: 1.6, desc: (name: string) => `${name} moves fluidly and looks balanced from side to side -- no limping, favoring a leg, or "bunny hopping" with the back legs.` },
+      { id: 'bf4', label: 'Morning Sunlight', weight: 1.5, desc: (name: string) => `${name} gets real, unfiltered morning sunlight within the first hour of waking -- even just 10-15 minutes outside to help their body find its rhythm.` },
+      { id: 'bf5', label: 'Walking on Natural Ground', weight: 1.3, desc: (name: string) => `A good portion of ${name}'s walking happens on natural surfaces -- dirt, grass, or sand -- rather than all pavement.` },
+      { id: 'bf6', label: 'Free Running Time', weight: 1.6, desc: (name: string) => `${name} gets regular chances to run freely off-leash in a safe space -- really stretching out and moving without restriction.` },
+      { id: 'bf7', label: 'Comfortable with Stairs & Jumps', weight: 1.4, desc: (name: string) => `${name} handles stairs and getting on or off furniture with confidence -- no hesitation, stutter-stepping, or signs of discomfort.`, legacySignal: true },
+      { id: 'bf8', label: 'Getting Up Easily', weight: 1.3, desc: (name: string) => `${name} gets up from rest easily and moves without stiffness in their back end, even after a long nap.`, legacySignal: true },
+      { id: 'bf9', label: 'Natural Stretching', weight: 1.1, desc: (name: string) => `${name} does full-body stretches on their own throughout the day -- those big "play bows" and long hind-leg stretches that dogs do when they feel good.` },
+      { id: 'bf10', label: 'Good Muscle Tone', weight: 1.5, desc: (name: string) => `${name} looks fit and solid -- you can see healthy muscle definition in their shoulders and hind legs, not too soft and not overdone.` },
+      { id: 'bf11', label: 'The Shake-Off', weight: 1.0, desc: (name: string) => `${name} frequently does that full-body "shake off" -- like a wet dog shake -- after a stressful moment, a deep sleep, or a burst of excitement. It's their reset button.` },
+      { id: 'bf12', label: 'Standing Square', weight: 1.0, desc: (name: string) => `When standing still, ${name} naturally plants their paws squarely under their body rather than leaning to one side or splaying their legs.` }
+    ]
+  },
+  {
+    id: 'baseline',
+    title: "Physiological Harmony",
+    label: "Physiological Harmony",
+    Icon: Icons.Thermometer,
+    categoryWeight: 1.4,
+    tagline: "Reading the Biological Map.",
+    guidance: "Clear eyes. A shiny coat. Easy breathing. These aren't cosmetic -- they're your dog's early warning system. We're measuring the physical markers that signal shifts before anything goes clinically wrong.",
+    insight: "The body communicates health through visible, tangible signs every day, in plain sight. These markers are the first to shift when something's off, and the first to improve when you get the inputs right.",
+    endpointDesc: "The visible markers that tell you everything before anything goes wrong. We read them for you.",
+    dogNote: (name: string) => `A Note from ${name}: When you check my paws and look closely into my eyes, I feel seen. Thank you for noticing the quiet things my body is trying to tell you.`,
+    rituals: [
+      { id: 'v1', label: 'Healthy Weight', weight: 2.1, desc: (name: string) => `${name} carries a healthy weight -- you can feel their ribs easily, see a defined waist, and there's no belly sag or heavy fat pad at the base of the tail.` },
+      { id: 'v2', label: 'Bright, Clear Eyes', weight: 1.9, desc: (name: string) => `${name}'s eyes are clear, bright, and alert -- no persistent cloudiness, redness, or excessive discharge.`, legacySignal: true },
+      { id: 'v3', label: 'Comfortable Skin', weight: 2.1, desc: (name: string) => `${name}'s skin looks calm and healthy -- no persistent redness, hot spots, scabs, or constant scratching in one spot.` },
+      { id: 'v4', label: 'Healthy Mouth', weight: 1.9, desc: (name: string) => `${name}'s gums are a healthy pink, teeth are free of heavy tartar, and breath is neutral rather than offensive.` },
+      { id: 'v5', label: 'Soft, Shiny Coat', weight: 1.7, desc: (name: string) => `${name}'s coat has a natural shine and softness to it -- shedding follows normal seasonal patterns rather than being constant or patchy.` },
+      { id: 'v6', label: 'Healthy Paw Pads', weight: 1.7, desc: (name: string) => `${name}'s paw pads are smooth and intact -- no deep cracks, peeling, or rough overgrowth.` },
+      { id: 'v7', label: 'Clean, Healthy Ears', weight: 1.7, desc: (name: string) => `${name}'s ears are clean and odor-free -- no dark buildup, yeasty smell, or flinching when you rub the base of the ear.` },
+      { id: 'v8', label: 'Predictable Digestion', weight: 2.1, desc: (name: string) => `${name}'s bathroom habits are predictable -- firm, consistent stools that don't vary wildly in color or frequency.` },
+      { id: 'v9', label: 'Easy, Quiet Breathing', weight: 1.9, desc: (name: string) => `At rest, ${name} breathes easily and quietly through the nose -- no heavy panting, wheezing, or labored effort when they should be relaxed.`, legacySignal: true },
+      { id: 'v10', label: 'Right Energy for Their Age', weight: 2.1, desc: (name: string) => `${name}'s energy fits where they are in life -- retaining that "spark" and desire to engage with the world around them.` },
+      { id: 'v11', label: 'The Hydration Snap', weight: 1.5, desc: (name: string) => `When you gently pinch the skin between ${name}'s shoulder blades, it snaps back into place right away -- a sign of deep, healthy hydration.` },
+      { id: 'v12', label: 'Short, Healthy Nails', weight: 1.3, desc: (name: string) => `${name}'s nails are kept short enough that they don't click on the floor when standing -- preventing quiet strain on the toes and wrists over time.` },
+      { id: 'v13', label: 'Vivid Gums and Tongue', weight: 1.5, desc: (name: string) => `When you look at ${name}'s tongue and gums, they appear vivid and rich in color -- a sign of strong circulation and healthy oxygenation.` }
+    ]
+  }
+];

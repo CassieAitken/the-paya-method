@@ -1,0 +1,204 @@
+import { useState, useEffect } from 'react';
+import { Icons } from './Icons';
+
+interface CheckinData {
+  energyLevel: number;
+  digestion: number;
+  mobility: number;
+  notes: string;
+}
+
+export function CheckinModal({
+  checkinNumber,
+  dogName,
+  onSubmit,
+  onClose,
+  isLoading
+}: {
+  checkinNumber: number;
+  dogName: string;
+  onSubmit: (data: CheckinData) => Promise<void>;
+  onClose: () => void;
+  isLoading: boolean;
+}) {
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', onKey);
+    };
+  }, [onClose]);
+
+  const [formData, setFormData] = useState<CheckinData>({
+    energyLevel: 3,
+    digestion: 3,
+    mobility: 3,
+    notes: ''
+  });
+  const [error, setError] = useState('');
+
+  const handleSubmit = async () => {
+    try {
+      setError('');
+      await onSubmit(formData);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to submit check-in');
+    }
+  };
+
+  const dayNumber = checkinNumber === 1 ? 30 : checkinNumber === 2 ? 60 : 90;
+
+  return (
+    <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-[9999] flex items-center justify-center p-6" onClick={onClose}>
+      <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+        <div className="bg-gradient-to-b from-stone-50 to-white p-8 lg:p-12 space-y-8">
+          <div className="flex items-start justify-between">
+            <div className="space-y-2">
+              <span className="text-sm font-mono text-stone-600 uppercase tracking-wider">Day {dayNumber} Check-In</span>
+              <h3 className="text-4xl lg:text-5xl font-serif text-stone-900 leading-tight">
+                How's {dogName} doing?
+              </h3>
+              <p className="text-stone-600 text-lg mt-4 font-light">
+                Share observations about {dogName}'s vitality progress over the past month.
+              </p>
+            </div>
+            <button
+              onClick={onClose}
+              className="ml-4 p-2 hover:bg-stone-100 rounded-lg transition-colors flex-shrink-0"
+            >
+              <Icons.X size={24} className="text-stone-700" />
+            </button>
+          </div>
+
+          <div className="space-y-8">
+            {/* Energy Level */}
+            <div className="space-y-4">
+              <label className="block">
+                <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-stone-700 font-medium">
+                  Energy Level
+                </span>
+                <p className="text-stone-600 text-sm mt-1 font-light">
+                  How energized does {dogName} seem compared to the start?
+                </p>
+              </label>
+              <div className="flex gap-2 justify-center">
+                {[1, 2, 3, 4, 5].map((num) => (
+                  <button
+                    key={num}
+                    onClick={() => setFormData(prev => ({ ...prev, energyLevel: num }))}
+                    className={`w-12 h-12 rounded-lg font-serif text-lg transition-all ${
+                      formData.energyLevel === num
+                        ? 'bg-stone-900 text-white'
+                        : 'bg-stone-100 text-stone-700 hover:bg-stone-200'
+                    }`}
+                  >
+                    {num}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Digestion */}
+            <div className="space-y-4">
+              <label className="block">
+                <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-stone-700 font-medium">
+                  Digestion & Gut Health
+                </span>
+                <p className="text-stone-600 text-sm mt-1 font-light">
+                  Any changes in digestion, stool quality, or appetite?
+                </p>
+              </label>
+              <div className="flex gap-2 justify-center">
+                {[1, 2, 3, 4, 5].map((num) => (
+                  <button
+                    key={num}
+                    onClick={() => setFormData(prev => ({ ...prev, digestion: num }))}
+                    className={`w-12 h-12 rounded-lg font-serif text-lg transition-all ${
+                      formData.digestion === num
+                        ? 'bg-stone-900 text-white'
+                        : 'bg-stone-100 text-stone-700 hover:bg-stone-200'
+                    }`}
+                  >
+                    {num}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Mobility */}
+            <div className="space-y-4">
+              <label className="block">
+                <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-stone-700 font-medium">
+                  Mobility & Movement
+                </span>
+                <p className="text-stone-600 text-sm mt-1 font-light">
+                  How freely and easily does {dogName} move now?
+                </p>
+              </label>
+              <div className="flex gap-2 justify-center">
+                {[1, 2, 3, 4, 5].map((num) => (
+                  <button
+                    key={num}
+                    onClick={() => setFormData(prev => ({ ...prev, mobility: num }))}
+                    className={`w-12 h-12 rounded-lg font-serif text-lg transition-all ${
+                      formData.mobility === num
+                        ? 'bg-stone-900 text-white'
+                        : 'bg-stone-100 text-stone-700 hover:bg-stone-200'
+                    }`}
+                  >
+                    {num}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Notes */}
+            <div className="space-y-4">
+              <label className="block">
+                <span className="font-mono text-[8px] uppercase tracking-[0.35em] text-stone-700 font-medium">
+                  Additional Observations (Optional)
+                </span>
+                <p className="text-stone-600 text-sm mt-1 font-light">
+                  Any other changes you've noticed? What's standing out?
+                </p>
+              </label>
+              <textarea
+                value={formData.notes}
+                onChange={(e) => setFormData(prev => ({ ...prev, notes: e.target.value }))}
+                placeholder="Share what you've noticed in the past month..."
+                className="w-full bg-stone-50 border border-stone-200 rounded-lg p-4 text-sm text-stone-800 placeholder-stone-500 focus:outline-none focus:ring-2 focus:ring-stone-900 focus:border-transparent font-light"
+                rows={5}
+              />
+            </div>
+          </div>
+
+          {error && (
+            <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
+              {error}
+            </div>
+          )}
+
+          <div className="flex gap-4 pt-4">
+            <button
+              onClick={onClose}
+              disabled={isLoading}
+              className="flex-1 border-2 border-stone-300 text-stone-700 py-4 rounded-lg font-mono text-[11px] tracking-widest font-bold hover:bg-stone-50 transition-colors disabled:opacity-50"
+            >
+              CANCEL
+            </button>
+            <button
+              onClick={handleSubmit}
+              disabled={isLoading}
+              className="flex-1 bg-stone-900 text-white py-4 rounded-lg font-mono text-[11px] tracking-widest font-bold hover:bg-stone-800 transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
+            >
+              {isLoading && <Icons.Loader className="animate-spin" size={16} />}
+              SUBMIT CHECK-IN
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
