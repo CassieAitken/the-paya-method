@@ -76,7 +76,7 @@ export function CheckinModal({
             {/* Energy Level */}
             <div className="space-y-4">
               <label className="block">
-                <span className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium font-medium">
+                <span className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium font-medium">
                   Energy Level
                 </span>
                 <p className="text-[#6B6159] text-sm mt-1 font-light">
@@ -103,7 +103,7 @@ export function CheckinModal({
             {/* Digestion */}
             <div className="space-y-4">
               <label className="block">
-                <span className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium font-medium">
+                <span className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium font-medium">
                   Digestion & Gut Health
                 </span>
                 <p className="text-[#6B6159] text-sm mt-1 font-light">
@@ -130,7 +130,7 @@ export function CheckinModal({
             {/* Mobility */}
             <div className="space-y-4">
               <label className="block">
-                <span className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium font-medium">
+                <span className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium font-medium">
                   Mobility & Movement
                 </span>
                 <p className="text-[#6B6159] text-sm mt-1 font-light">
@@ -157,7 +157,7 @@ export function CheckinModal({
             {/* Notes */}
             <div className="space-y-4">
               <label className="block">
-                <span className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium font-medium">
+                <span className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium font-medium">
                   Additional Observations (Optional)
                 </span>
                 <p className="text-[#6B6159] text-sm mt-1 font-light">

@@ -200,7 +200,7 @@ export function BookConsultationModal({
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-3">
-                  <label className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium font-medium block">
+                  <label className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium font-medium block">
                     Date
                   </label>
                   <div className="grid grid-cols-2 gap-2 max-h-64 overflow-y-auto">
@@ -222,7 +222,7 @@ export function BookConsultationModal({
                 </div>
 
                 <div className="space-y-3">
-                  <label className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium font-medium block">
+                  <label className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium font-medium block">
                     Time {isEastern ? '(EST)' : `(${userTzAbbr})`}
                   </label>
                   <div className="grid grid-cols-2 gap-2 max-h-64 overflow-y-auto">
@@ -256,7 +256,7 @@ export function BookConsultationModal({
               <div className="bg-stone-50 border border-stone-200 rounded-lg p-6">
                 {selectedDate && selectedTime ? (
                   <div className="space-y-2">
-                    <p className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium font-medium">
+                    <p className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium font-medium">
                       Selected Time
                     </p>
                     <p className="text-lg text-[#2A2421] font-serif">
@@ -288,7 +288,7 @@ export function BookConsultationModal({
             <div className="space-y-8">
               <div className="space-y-5">
                 <div>
-                  <label className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium font-medium block mb-3">
+                  <label className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium font-medium block mb-3">
                     Email Address
                   </label>
                   <input
@@ -301,7 +301,7 @@ export function BookConsultationModal({
                 </div>
 
                 <div>
-                  <label className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium font-medium block mb-3">
+                  <label className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium font-medium block mb-3">
                     Dog's Name (Optional)
                   </label>
                   <input
@@ -322,7 +322,7 @@ export function BookConsultationModal({
                     className="w-5 h-5 cursor-pointer"
                   />
                   <label htmlFor="bring-dog" className="flex-1 cursor-pointer">
-                    <p className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium font-medium">
+                    <p className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium font-medium">
                       Will your dog be joining us?
                     </p>
                     <p className="text-sm text-[#6B6159] font-light mt-1">
@@ -336,7 +336,7 @@ export function BookConsultationModal({
                 <div className="flex items-start gap-3">
                   <Icons.CheckCircle size={16} className="text-[#8A7F72] flex-shrink-0 mt-1" />
                   <div className="space-y-2">
-                    <p className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium font-medium">
+                    <p className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium font-medium">
                       What You Get
                     </p>
                     <ul className="text-sm text-[#8A7F72] space-y-1 font-light">
@@ -394,7 +394,7 @@ export function BookConsultationModal({
                 </div>
 
                 <div className="bg-white border border-stone-200 rounded-lg p-6">
-                  <p className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium font-medium mb-3">
+                  <p className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium font-medium mb-3">
                     To Schedule
                   </p>
                   <p className="text-sm text-[#8A7F72] font-light text-left leading-relaxed">

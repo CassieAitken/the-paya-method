@@ -92,7 +92,7 @@ export function AnalysisLoader({
         {/* Top branding */}
         <div className="flex items-center gap-3 mb-6">
           <Icons.Leaf size={18} className="text-[#8A7F72]" strokeWidth={1.5} />
-          <span className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium font-medium">
+          <span className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium font-medium">
             PayaLabs Bio-Audit
           </span>
         </div>

@@ -639,7 +639,7 @@ The part that got me? How much my own habits are showing up in their biology.`;
           <span className="font-serif font-medium text-lg sm:text-xl tracking-tight text-[#FDFBF7]">The Paya Method</span>
           <span className="hidden sm:inline-flex items-center gap-3 ml-3">
             <span className="w-px h-4 bg-[#FDFBF7]/20"></span>
-            <span className="text-[10px] uppercase tracking-[0.15em] text-[#9AB8C4]">Love Them Longer</span>
+            <span className="text-[10px] uppercase tracking-[0.15em] text-[#B09469]">Love Them Longer</span>
           </span>
         </button>
         <div className="flex items-center gap-6 sm:gap-8">
@@ -681,7 +681,7 @@ The part that got me? How much my own habits are showing up in their biology.`;
               </button>
               <button
                 onClick={() => { setStep('intake'); window.scrollTo(0, 0); }}
-                className="ml-2 sm:ml-4 text-[10px] sm:text-[10px] uppercase tracking-[0.15em] sm:tracking-[0.15em] text-white bg-[#0A4682] hover:bg-[#083A6D] px-4 py-2.5 sm:px-5 transition-all duration-300 whitespace-nowrap rounded-sm"
+                className="ml-2 sm:ml-4 text-[10px] sm:text-[10px] uppercase tracking-[0.15em] sm:tracking-[0.15em] text-white bg-[#2A2421] hover:bg-[#3A3330] px-4 py-2.5 sm:px-5 transition-all duration-300 whitespace-nowrap rounded-sm"
               >
                 Begin
               </button>

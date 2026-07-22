@@ -144,7 +144,7 @@ export const Icons = {
     <svg width={size} height={size} viewBox="0 0 120 140" fill="none" className={className}>
       <defs>
         <linearGradient id="payaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style={{ stopColor: '#0A4682', stopOpacity: 1 }} />
+          <stop offset="0%" style={{ stopColor: '#2A2421', stopOpacity: 1 }} />
           <stop offset="100%" style={{ stopColor: '#115e59', stopOpacity: 1 }} />
         </linearGradient>
       </defs>
@@ -152,18 +152,18 @@ export const Icons = {
       <circle cx="60" cy="60" r="55" fill="none" stroke="url(#payaGradient)" strokeWidth="1.5" opacity="0.2"/>
 
       <g>
-        <path d="M40 50 Q55 40 70 50" stroke="#0A4682" strokeWidth="3" fill="none" strokeLinecap="round"/>
-        <circle cx="50" cy="58" r="3" fill="#0A4682"/>
-        <circle cx="70" cy="58" r="3" fill="#0A4682"/>
-        <path d="M48 68 Q60 75 72 68" stroke="#0A4682" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+        <path d="M40 50 Q55 40 70 50" stroke="#2A2421" strokeWidth="3" fill="none" strokeLinecap="round"/>
+        <circle cx="50" cy="58" r="3" fill="#2A2421"/>
+        <circle cx="70" cy="58" r="3" fill="#2A2421"/>
+        <path d="M48 68 Q60 75 72 68" stroke="#2A2421" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
       </g>
 
       <g opacity="0.4">
-        <path d="M48 85 L52 92 M60 85 L60 93 M72 85 L68 92" stroke="#0A4682" strokeWidth="1.5" strokeLinecap="round"/>
+        <path d="M48 85 L52 92 M60 85 L60 93 M72 85 L68 92" stroke="#2A2421" strokeWidth="1.5" strokeLinecap="round"/>
       </g>
 
-      <text x="60" y="115" fontFamily="system-ui, -apple-system, sans-serif" fontSize="16" fontWeight="600" textAnchor="middle" fill="#0A4682" letterSpacing="0.5">PayaLabs</text>
-      <text x="60" y="130" fontFamily="system-ui, -apple-system, sans-serif" fontSize="9" fontWeight="500" textAnchor="middle" fill="#0A4682" opacity="0.7" letterSpacing="1">VITALITY</text>
+      <text x="60" y="115" fontFamily="system-ui, -apple-system, sans-serif" fontSize="16" fontWeight="600" textAnchor="middle" fill="#2A2421" letterSpacing="0.5">PayaLabs</text>
+      <text x="60" y="130" fontFamily="system-ui, -apple-system, sans-serif" fontSize="9" fontWeight="500" textAnchor="middle" fill="#2A2421" opacity="0.7" letterSpacing="1">VITALITY</text>
     </svg>
   ),
 };

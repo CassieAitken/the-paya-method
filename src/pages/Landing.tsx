@@ -47,10 +47,10 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
         <div className="max-w-4xl mx-auto hero-stagger">
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[7rem] font-serif leading-[0.88] sm:leading-[0.85] text-[#FDFBF7] tracking-[-0.02em]">
             Your dog's lifespan<br className="hidden sm:block" /> is not pre-written.<br />
-            <span className="font-serif italic text-[#9AB8C4]">Their vitality is yours<br className="hidden sm:block" /> to protect.</span>
+            <span className="font-serif italic text-[#B09469]">Their vitality is yours<br className="hidden sm:block" /> to protect.</span>
           </h1>
 
-          <div className="w-16 h-[0.5px] bg-[#9AB8C4]/50 mx-auto mt-5 sm:mt-6"></div>
+          <div className="w-16 h-[0.5px] bg-[#B09469]/50 mx-auto mt-5 sm:mt-6"></div>
 
           <p className="text-base sm:text-xl font-serif italic text-[#E4D9E8] leading-[1.9] sm:leading-[1.8] font-light max-w-xs sm:max-w-[650px] mx-auto mt-5 sm:mt-6">
             You know the exact spot they love to be scratched, the unique cadence of their bark, and the gentle sigh they make when they finally settle against your feet. PayaLabs translates 50 carefully selected biological questions into a personalized Dog Biology Blueprint™ — a gentle, science-backed roadmap that uncovers what's quietly working against them, so you can protect their comfort and keep them moving, playing, and thriving for as long as possible.
@@ -71,10 +71,10 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
                 const el = document.getElementById('how-it-works');
                 el?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="inline-flex items-center gap-1.5 text-[13px] sm:text-[14px] font-serif italic text-[#9AB8C4] underline underline-offset-4 decoration-[#9AB8C4]/40 hover:decoration-[#9AB8C4] hover:text-[#FDFBF7] hover:bg-[#FDFBF7]/[0.06] transition-all cursor-pointer px-4 py-2 rounded-full"
+              className="inline-flex items-center gap-1.5 text-[13px] sm:text-[14px] font-serif italic text-[#B09469] underline underline-offset-4 decoration-[#B09469]/40 hover:decoration-[#B09469] hover:text-[#FDFBF7] hover:bg-[#FDFBF7]/[0.06] transition-all cursor-pointer px-4 py-2 rounded-full"
             >
               See what you get
-              <Icons.ChevronDown size={13} strokeWidth={1.5} className="text-[#9AB8C4]/70" />
+              <Icons.ChevronDown size={13} strokeWidth={1.5} className="text-[#B09469]/70" />
             </button>
             <button
               type="button"
@@ -82,7 +82,7 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
                 setStep('intake');
                 window.scrollTo(0, 0);
               }}
-              className="group bg-[#0A4682] hover:bg-[#083A6D] text-white py-5 px-10 tracking-[0.22em] uppercase font-bold w-full transition-all duration-300 flex items-center justify-center gap-3"
+              className="group bg-[#2A2421] hover:bg-[#3A3330] text-white py-5 px-10 tracking-[0.22em] uppercase font-bold w-full transition-all duration-300 flex items-center justify-center gap-3"
             >
               <span>Begin Assessment</span>
               <Icons.ArrowRight size={16} className="transition-transform group-hover:translate-x-1" strokeWidth={1.5} />
@@ -102,7 +102,7 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#FDFBF7] leading-[1.05] tracking-tight mb-4">
               The 7 Biology Markers
             </h2>
-            <p className="text-[10px] uppercase tracking-[0.15em] text-[#9AB8C4]">
+            <p className="text-[10px] uppercase tracking-[0.15em] text-[#B09469]">
               50 Markers &middot; 7 Biology Markers &middot; One Score out of 100
             </p>
           </div>
@@ -117,7 +117,7 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
                   key={f.id}
                   className={`group relative border rounded-lg transition-all duration-300 cursor-pointer ${
                     isOpen
-                      ? 'border-[#9AB8C4]/40 bg-[#FDFBF7]/[0.06] shadow-sm'
+                      ? 'border-[#B09469]/40 bg-[#FDFBF7]/[0.06] shadow-sm'
                       : 'border-[#FDFBF7]/15 hover:border-[#FDFBF7]/30 hover:bg-[#FDFBF7]/[0.03]'
                   } ${i === 6 ? 'sm:col-span-2 sm:max-w-[calc(50%-0.625rem)] sm:mx-auto' : ''}`}
                   onClick={() => setOpenPillar(isOpen ? null : i)}
@@ -125,9 +125,9 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
                   <div className="p-5 sm:p-6">
                     <div className="flex items-start gap-4">
                       <div className={`w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 transition-colors ${
-                        isOpen ? 'bg-[#9AB8C4]/15' : 'bg-[#FDFBF7]/10'
+                        isOpen ? 'bg-[#B09469]/15' : 'bg-[#FDFBF7]/10'
                       }`}>
-                        <Icon size={16} strokeWidth={1.4} className="transition-colors text-[#9AB8C4]" />
+                        <Icon size={16} strokeWidth={1.4} className="transition-colors text-[#B09469]" />
                       </div>
                       <div className="flex-1 min-w-0">
                         <h3 className="font-serif text-base sm:text-lg tracking-tight transition-colors leading-tight text-[#FDFBF7]">
@@ -147,7 +147,7 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
                       </p>
                       <button
                         onClick={(e) => { e.stopPropagation(); onSelectPillar(f); }}
-                        className="text-[10px] uppercase tracking-[0.15em] text-[#9AB8C4] hover:text-[#FDFBF7] transition-colors font-bold mt-3 pl-[52px]"
+                        className="text-[10px] uppercase tracking-[0.15em] text-[#B09469] hover:text-[#FDFBF7] transition-colors font-bold mt-3 pl-[52px]"
                       >
                         Explore Full Detail
                       </button>
@@ -164,7 +164,7 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
       <section id="how-it-works" className="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#4B1D5C] py-16 sm:py-24 lg:py-32 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="mb-14 sm:mb-20 text-center space-y-4">
-            <p className="text-[10px] uppercase tracking-[0.15em] text-[#9AB8C4]">Delivered instantly. Personalized to your dog.</p>
+            <p className="text-[10px] uppercase tracking-[0.15em] text-[#B09469]">Delivered instantly. Personalized to your dog.</p>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#FDFBF7] leading-[1.05] tracking-tight">
               The Dog Biology Blueprint™<br className="hidden sm:block" /> Includes
             </h2>
@@ -200,15 +200,15 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
               const Icon = item.icon;
               return (
                 <div key={item.title} className="bg-[#4B1D5C] p-8 sm:p-10 space-y-4">
-                  <Icon size={20} className="text-[#9AB8C4]" strokeWidth={1.2} />
-                  <h3 className="text-[10px] uppercase tracking-[0.15em] text-[#9AB8C4] font-bold">{item.title}</h3>
+                  <Icon size={20} className="text-[#B09469]" strokeWidth={1.2} />
+                  <h3 className="text-[10px] uppercase tracking-[0.15em] text-[#B09469] font-bold">{item.title}</h3>
                   <p className="text-[13px] text-[#E4D9E8] leading-[1.8] font-light">{item.desc}</p>
                 </div>
               );
             })}
             <div className="bg-[#4B1D5C] p-8 sm:p-10 space-y-4 md:col-span-2">
-              <Icons.Mail size={20} className="text-[#9AB8C4]" strokeWidth={1.2} />
-              <h3 className="text-[10px] uppercase tracking-[0.15em] text-[#9AB8C4] font-bold">Personalized Delivery</h3>
+              <Icons.Mail size={20} className="text-[#B09469]" strokeWidth={1.2} />
+              <h3 className="text-[10px] uppercase tracking-[0.15em] text-[#B09469] font-bold">Personalized Delivery</h3>
               <p className="text-[13px] text-[#E4D9E8] leading-[1.8] font-light max-w-2xl">
                 Your Dog Biology Blueprint™ is delivered as two detailed personalized reports with individualized findings, explanations, recommendations, and a practical action plan tailored specifically to your dog.
               </p>
@@ -226,7 +226,7 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
         <div className="max-w-3xl mx-auto text-center space-y-10 sm:space-y-14">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#FDFBF7] leading-[1.1] tracking-tight">
             Your dog is already telling you everything.{' '}
-            <em className="text-[#9AB8C4]">The Dog Biology Blueprint™ teaches you how to listen.</em>
+            <em className="text-[#B09469]">The Dog Biology Blueprint™ teaches you how to listen.</em>
           </h2>
           <div className="flex flex-col items-center gap-6">
             <button
@@ -235,14 +235,14 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
                 setStep('intake');
                 window.scrollTo(0, 0);
               }}
-              className="group bg-[#0A4682] hover:bg-[#083A6D] text-white py-5 px-10 sm:px-14 tracking-[0.2em] uppercase text-[10px] font-bold transition-all duration-300 flex items-center justify-center gap-3 w-full sm:w-auto"
+              className="group bg-[#2A2421] hover:bg-[#3A3330] text-white py-5 px-10 sm:px-14 tracking-[0.2em] uppercase text-[10px] font-bold transition-all duration-300 flex items-center justify-center gap-3 w-full sm:w-auto"
             >
               <span>Begin the Assessment &middot; $49</span>
               <Icons.ArrowRight size={14} className="transition-transform group-hover:translate-x-1" strokeWidth={1.5} />
             </button>
             <button
               onClick={onShowFounderMessage}
-              className="text-[10px] uppercase tracking-[0.15em] text-[#9AB8C4] hover:text-[#FDFBF7] transition-colors"
+              className="text-[10px] uppercase tracking-[0.15em] text-[#B09469] hover:text-[#FDFBF7] transition-colors"
             >
               Meet the Founder →
             </button>

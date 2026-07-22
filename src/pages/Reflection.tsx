@@ -25,7 +25,7 @@ export function Reflection({
     <div className="min-h-screen bg-[#FDFBF7] flex flex-col items-center justify-center px-6 py-16 sm:py-24">
       <div className="max-w-2xl w-full space-y-12 sm:space-y-16 animate-in">
         <div className="space-y-6">
-          <p className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium">The Mirror</p>
+          <p className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium">The Mirror</p>
           <h2 className="text-4xl sm:text-5xl font-serif text-[#2A2421] tracking-tight leading-[1.05]">One observation.</h2>
           <p className="text-[#6B6159] text-base sm:text-lg leading-[1.85] font-light max-w-lg">
             When does {dogData.name || 'your companion'} mirror something from <strong className="font-medium text-[#2A2421]">your</strong> energy or rhythm? This shapes our analysis more than you'd expect.
@@ -80,9 +80,9 @@ export function Reflection({
               setStep('ownerInfo');
               window.scrollTo(0, 0);
             }}
-            className={`bg-[#0A4682] text-white px-12 py-5 text-[10px] uppercase tracking-[0.15em] font-bold transition-all duration-300 ${
+            className={`bg-[#2A2421] text-white px-12 py-5 text-[10px] uppercase tracking-[0.15em] font-bold transition-all duration-300 ${
               isValid
-                ? 'hover:bg-[#083A6D] cursor-pointer'
+                ? 'hover:bg-[#3A3330] cursor-pointer'
                 : 'opacity-25 cursor-not-allowed'
             }`}
           >
