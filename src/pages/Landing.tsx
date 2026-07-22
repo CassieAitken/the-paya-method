@@ -43,7 +43,7 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
     <div className="animate-in-slow bg-[#FDFBF7]">
 
       {/* ===== HERO ===== */}
-      <section className="min-h-[90vh] flex flex-col items-center justify-center text-center px-6 sm:px-8 py-20 md:py-32 bg-[#4B1D5C]">
+      <section className="relative left-1/2 right-1/2 -mx-[50vw] w-screen min-h-[90vh] flex flex-col items-center justify-center text-center px-6 sm:px-8 py-20 md:py-32 bg-[#4B1D5C]">
         <div className="max-w-4xl mx-auto space-y-8 sm:space-y-12 hero-stagger">
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[7rem] font-serif leading-[0.88] sm:leading-[0.85] text-[#FDFBF7] tracking-[-0.02em]">
             Your dog's lifespan<br className="hidden sm:block" /> is not pre-written.<br />
