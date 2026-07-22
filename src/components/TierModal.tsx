@@ -53,7 +53,7 @@ export function TierModal({ dogName, isProcessingPayment, selectedProduct: _sp, 
         <div className="bg-gradient-to-b from-stone-50 to-white p-8 lg:p-10 space-y-6">
           <div className="flex items-start justify-between">
             <div>
-              <h3 className="text-4xl lg:text-5xl font-serif text-stone-900 leading-tight tracking-tight">
+              <h3 className="text-4xl lg:text-5xl font-serif text-[#2A2421] leading-tight tracking-tight">
                 Unlock the Blueprint
               </h3>
               <p className="text-[#6B6159] text-base mt-3 font-light leading-relaxed">
@@ -71,11 +71,11 @@ export function TierModal({ dogName, isProcessingPayment, selectedProduct: _sp, 
           <div className="rounded-xl p-5 border-2 border-stone-900 bg-stone-50">
             <div className="flex items-start justify-between gap-4">
               <div className="flex-1 min-w-0">
-                <p className="font-serif text-lg text-stone-900 leading-tight mb-1">{product.title}</p>
+                <p className="font-serif text-lg text-[#2A2421] leading-tight mb-1">{product.title}</p>
                 <p className="text-sm text-[#C4B9A8] font-light leading-relaxed">{product.description}</p>
               </div>
               <div className="text-right flex-shrink-0">
-                <span className="text-2xl font-serif text-stone-900">${product.price}</span>
+                <span className="text-2xl font-serif text-[#2A2421]">${product.price}</span>
                 <p className="text-[9px] text-[#C4B9A8] font-light whitespace-nowrap">Founding Member Price</p>
               </div>
             </div>

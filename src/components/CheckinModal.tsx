@@ -57,7 +57,7 @@ export function CheckinModal({
           <div className="flex items-start justify-between">
             <div className="space-y-2">
               <span className="text-sm font-mono text-[#6B6159] uppercase tracking-wider">Day {dayNumber} Check-In</span>
-              <h3 className="text-4xl lg:text-5xl font-serif text-stone-900 leading-tight">
+              <h3 className="text-4xl lg:text-5xl font-serif text-[#2A2421] leading-tight">
                 How's {dogName} doing?
               </h3>
               <p className="text-[#6B6159] text-lg mt-4 font-light">

@@ -63,7 +63,7 @@ export function Waitlist({ onContinue }: WaitlistProps) {
           <div className="inline-flex items-center justify-center w-20 h-20 bg-stone-900 rounded-full mb-6">
             <Icons.Leaf className="w-10 h-10 text-stone-50" strokeWidth={1.5} />
           </div>
-          <h1 className="font-serif text-5xl tracking-tight text-stone-900 mb-4">
+          <h1 className="font-serif text-5xl tracking-tight text-[#2A2421] mb-4">
             Early Access
           </h1>
           <p className="text-lg text-[#8A7F72] max-w-lg mx-auto leading-relaxed">
@@ -141,7 +141,7 @@ export function Waitlist({ onContinue }: WaitlistProps) {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
                   <Icons.Check className="w-8 h-8 text-green-600" strokeWidth={2} />
                 </div>
-                <p className="text-lg font-medium text-stone-900 mb-2">You're on the list!</p>
+                <p className="text-lg font-medium text-[#2A2421] mb-2">You're on the list!</p>
                 <p className="text-sm text-[#8A7F72]">Redirecting...</p>
               </div>
             )}
@@ -155,7 +155,7 @@ export function Waitlist({ onContinue }: WaitlistProps) {
         <div className="text-center">
           <button
             onClick={handleSkip}
-            className="text-sm text-[#8A7F72] hover:text-stone-900 transition-colors underline"
+            className="text-sm text-[#8A7F72] hover:text-[#2A2421] transition-colors underline"
           >
             I have early access
           </button>

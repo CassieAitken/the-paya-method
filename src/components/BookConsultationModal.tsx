@@ -157,19 +157,19 @@ export function BookConsultationModal({
             <div className="space-y-2 flex-1">
               {step === 'slots' && (
                 <div>
-                  <h3 className="text-4xl lg:text-5xl font-serif text-stone-900 leading-tight">Practitioner Deep-Dive</h3>
+                  <h3 className="text-4xl lg:text-5xl font-serif text-[#2A2421] leading-tight">Practitioner Deep-Dive</h3>
                   <p className="text-[#6B6159] text-lg mt-2 font-light">Professional consultation upgrade — valid 90 days from purchase</p>
                 </div>
               )}
               {step === 'details' && (
-                <h3 className="text-4xl lg:text-5xl font-serif text-stone-900 leading-tight">Your Details</h3>
+                <h3 className="text-4xl lg:text-5xl font-serif text-[#2A2421] leading-tight">Your Details</h3>
               )}
               {step === 'confirmation' && (
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-stone-700 flex items-center justify-center">
                     <Icons.Check size={24} className="text-white" />
                   </div>
-                  <h3 className="text-4xl lg:text-5xl font-serif text-stone-900 leading-tight">Booked!</h3>
+                  <h3 className="text-4xl lg:text-5xl font-serif text-[#2A2421] leading-tight">Booked!</h3>
                 </div>
               )}
             </div>
@@ -259,7 +259,7 @@ export function BookConsultationModal({
                     <p className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#8A7F72] font-medium">
                       Selected Time
                     </p>
-                    <p className="text-lg text-stone-900 font-serif">
+                    <p className="text-lg text-[#2A2421] font-serif">
                       {availableDates.find(d => d.date === selectedDate)?.display} at {selectedTime} EST
                     </p>
                     {!isEastern && (
@@ -372,7 +372,7 @@ export function BookConsultationModal({
             <div className="space-y-8">
               <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 space-y-6 text-center">
                 <div>
-                  <h4 className="text-2xl font-serif text-stone-900 mb-2">We are so excited to meet {dogNameInput || dogName || 'your dog'}!</h4>
+                  <h4 className="text-2xl font-serif text-[#2A2421] mb-2">We are so excited to meet {dogNameInput || dogName || 'your dog'}!</h4>
                   <p className="text-[#6B6159] font-light">A confirmation receipt has been sent to {email}</p>
                 </div>
 
@@ -381,7 +381,7 @@ export function BookConsultationModal({
                     <p className="font-mono text-[8px] uppercase tracking-[0.35em] text-[#6B6159] font-medium mb-2">
                       Session Type
                     </p>
-                    <p className="text-lg text-stone-900 font-serif">
+                    <p className="text-lg text-[#2A2421] font-serif">
                       Practitioner Deep-Dive Consultation
                     </p>
                   </div>

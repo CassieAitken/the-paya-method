@@ -189,7 +189,7 @@ export function Audit({
               if (nextFoundation !== -1) setCurrentFoundation(nextFoundation);
               window.scrollTo(0, 0);
             }}
-            className="bg-[#2A2421] text-white px-8 py-3.5 text-[10px] font-mono uppercase tracking-[0.25em] font-bold hover:bg-[#3A3330] transition-colors inline-flex items-center gap-2"
+            className="bg-[#0A4682] text-white px-8 py-3.5 text-[10px] font-mono uppercase tracking-[0.25em] font-bold hover:bg-[#083A6D] transition-colors inline-flex items-center gap-2"
           >
             Continue
             <Icons.ChevronRight size={16} strokeWidth={2} />

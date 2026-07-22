@@ -14,7 +14,7 @@ export function Profile({
     <div className="py-10 sm:py-28 lg:py-40 space-y-8 sm:space-y-24 lg:space-y-28 animate-in max-w-5xl mx-auto px-6">
       <div className="space-y-9">
         <div className="editorial-divider max-w-sm"></div>
-        <h2 className="text-5xl sm:text-6xl lg:text-7xl font-serif text-stone-900 tracking-tight leading-[1.05]">Pack Profile</h2>
+        <h2 className="text-5xl sm:text-6xl lg:text-7xl font-serif text-[#2A2421] tracking-tight leading-[1.05]">Pack Profile</h2>
       </div>
       <div className="space-y-8 sm:space-y-24">
         <div className="space-y-8">
@@ -63,7 +63,7 @@ export function Profile({
               setStep('intake');
               window.scrollTo(0, 0);
             }}
-            className="text-[8.5px] font-mono uppercase tracking-[0.35em] text-[#8A7F72] hover:text-stone-900 transition-colors font-medium"
+            className="text-[8.5px] font-mono uppercase tracking-[0.35em] text-[#8A7F72] hover:text-[#2A2421] transition-colors font-medium"
           >
             Back
           </button>

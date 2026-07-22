@@ -25,26 +25,26 @@ export function PillarModal({ isOpen, pillar, onClose }: PillarModalProps) {
 
   return (
     <div
-      className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-stone-900/30 backdrop-blur-sm"
+      className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
       onClick={onClose}
     >
       <div
-        className="bg-white rounded-none shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+        className="bg-[#4B1D5C] rounded-none shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="sticky top-0 bg-white border-b border-stone-200/50 p-6 flex items-start justify-between">
+        <div className="sticky top-0 bg-[#4B1D5C] border-b border-[#FDFBF7]/15 p-6 flex items-start justify-between">
           <div className="flex items-start gap-4">
-            <div className="w-12 h-12 flex items-center justify-center border border-stone-200/50 bg-stone-50 rounded-lg">
-              <Icon size={24} strokeWidth={1.2} className="text-[#8A7F72]" />
+            <div className="w-12 h-12 flex items-center justify-center border border-[#FDFBF7]/15 bg-[#FDFBF7]/10 rounded-lg">
+              <Icon size={24} strokeWidth={1.2} className="text-[#9AB8C4]" />
             </div>
             <div>
-              <h2 className="text-2xl font-serif text-stone-900">{pillar.title}</h2>
-              <p className="text-sm text-[#C4B9A8] mt-1">The Seven Pillars of Vitality</p>
+              <h2 className="text-2xl font-serif text-[#FDFBF7]">{pillar.title}</h2>
+              <p className="text-sm text-[#C9B9CE] mt-1">The Seven Pillars of Vitality</p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="text-[#C4B9A8] hover:text-[#8A7F72] transition-colors"
+            className="text-[#9AB8C4] hover:text-[#FDFBF7] transition-colors"
           >
             <Icons.X size={24} strokeWidth={1.5} />
           </button>
@@ -52,28 +52,28 @@ export function PillarModal({ isOpen, pillar, onClose }: PillarModalProps) {
 
         <div className="p-8 space-y-10">
           <div className="space-y-4">
-            <h3 className="text-sm font-mono uppercase tracking-[0.35em] text-[#6B6159] font-medium">
+            <h3 className="text-sm font-mono uppercase tracking-[0.35em] text-[#9AB8C4] font-medium">
               What We Measure
             </h3>
-            <p className="text-lg leading-[1.8] text-[#5C534E] font-light">
+            <p className="text-lg leading-[1.8] text-[#E4D9E8] font-light">
               {pillar.guidance}
             </p>
           </div>
 
-          <div className="border-t border-stone-200/50 pt-8 space-y-4">
-            <h3 className="text-sm font-mono uppercase tracking-[0.35em] text-[#6B6159] font-medium">
+          <div className="border-t border-[#FDFBF7]/15 pt-8 space-y-4">
+            <h3 className="text-sm font-mono uppercase tracking-[0.35em] text-[#9AB8C4] font-medium">
               The Human Bridge
             </h3>
-            <p className="text-lg leading-[1.8] text-[#8A7F72] font-light">
+            <p className="text-lg leading-[1.8] text-[#E4D9E8] font-light">
               {pillar.insight}
             </p>
           </div>
 
-          <div className="border-t border-stone-200/50 pt-8 space-y-4">
-            <h3 className="text-sm font-mono uppercase tracking-[0.35em] text-[#6B6159] font-medium">
+          <div className="border-t border-[#FDFBF7]/15 pt-8 space-y-4">
+            <h3 className="text-sm font-mono uppercase tracking-[0.35em] text-[#9AB8C4] font-medium">
               The Vitality Opportunity
             </h3>
-            <p className="text-base leading-[1.8] text-[#8A7F72] font-light">
+            <p className="text-base leading-[1.8] text-[#E4D9E8] font-light">
               {pillar.endpointDesc}
             </p>
           </div>

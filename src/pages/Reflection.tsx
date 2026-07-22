@@ -80,9 +80,9 @@ export function Reflection({
               setStep('ownerInfo');
               window.scrollTo(0, 0);
             }}
-            className={`bg-[#2A2421] text-white px-12 py-5 text-[10px] font-mono uppercase tracking-[0.25em] font-bold transition-all duration-300 ${
+            className={`bg-[#0A4682] text-white px-12 py-5 text-[10px] font-mono uppercase tracking-[0.25em] font-bold transition-all duration-300 ${
               isValid
-                ? 'hover:bg-[#3A3330] cursor-pointer'
+                ? 'hover:bg-[#083A6D] cursor-pointer'
                 : 'opacity-25 cursor-not-allowed'
             }`}
           >
