@@ -130,10 +130,10 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
                         <Icon size={16} strokeWidth={1.4} className="transition-colors text-[#9AB8C4]" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="font-serif text-base sm:text-lg tracking-tight transition-colors leading-tight text-[#9AB8C4]">
+                        <h3 className="font-serif text-base sm:text-lg tracking-tight transition-colors leading-tight text-[#FDFBF7]">
                           {f.title}
                         </h3>
-                        <p className="text-[10px] uppercase tracking-[0.15em] text-[#9AB8C4] mt-1.5">
+                        <p className="text-[10px] uppercase tracking-[0.15em] text-[#EDE6E9]/80 mt-1.5">
                           {desc.focus}
                         </p>
                       </div>
