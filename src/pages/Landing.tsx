@@ -127,12 +127,10 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
                       <div className={`w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 transition-colors ${
                         isOpen ? 'bg-[#9AB8C4]/15' : 'bg-[#FDFBF7]/10'
                       }`}>
-                        <Icon size={16} strokeWidth={1.4} className={`transition-colors ${isOpen ? 'text-[#9AB8C4]' : 'text-[#C9B9CE]'}`} />
+                        <Icon size={16} strokeWidth={1.4} className="transition-colors text-[#9AB8C4]" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className={`font-serif text-base sm:text-lg tracking-tight transition-colors leading-tight ${
-                          isOpen ? 'text-[#FDFBF7]' : 'text-[#EDE6E9]'
-                        }`}>
+                        <h3 className="font-serif text-base sm:text-lg tracking-tight transition-colors leading-tight text-[#9AB8C4]">
                           {f.title}
                         </h3>
                         <p className="font-mono text-[8px] uppercase tracking-[0.25em] text-[#C9B9CE] mt-1.5">
@@ -224,11 +222,11 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
       </section>
 
       {/* ===== FINAL CTA ===== */}
-      <section ref={ctaReveal.ref as React.RefObject<HTMLElement>} className={`border-t border-[#E8E2D9] py-20 sm:py-32 lg:py-40 px-6 bg-[#FAF8F3] ${ctaReveal.className}`}>
+      <section ref={ctaReveal.ref as React.RefObject<HTMLElement>} className={`relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#4B1D5C] py-20 sm:py-32 lg:py-40 px-6 ${ctaReveal.className}`}>
         <div className="max-w-3xl mx-auto text-center space-y-10 sm:space-y-14">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#2A2421] leading-[1.1] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#FDFBF7] leading-[1.1] tracking-tight">
             Your dog is already telling you everything.{' '}
-            <em className="text-[#0A4682]">The Dog Biology Blueprint™ teaches you how to listen.</em>
+            <em className="text-[#9AB8C4]">The Dog Biology Blueprint™ teaches you how to listen.</em>
           </h2>
           <div className="flex flex-col items-center gap-6">
             <button
@@ -237,14 +235,14 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
                 setStep('intake');
                 window.scrollTo(0, 0);
               }}
-              className="group bg-[#2A2421] hover:bg-[#3A3330] text-white py-5 px-10 sm:px-14 tracking-[0.2em] uppercase text-[10px] font-bold transition-all duration-300 flex items-center justify-center gap-3 w-full sm:w-auto"
+              className="group bg-[#0A4682] hover:bg-[#083A6D] text-white py-5 px-10 sm:px-14 tracking-[0.2em] uppercase text-[10px] font-bold transition-all duration-300 flex items-center justify-center gap-3 w-full sm:w-auto"
             >
               <span>Begin the Assessment &middot; $49</span>
               <Icons.ArrowRight size={14} className="transition-transform group-hover:translate-x-1" strokeWidth={1.5} />
             </button>
             <button
               onClick={onShowFounderMessage}
-              className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#8A7F72] hover:text-[#0A4682] transition-colors"
+              className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#C9B9CE] hover:text-[#9AB8C4] transition-colors"
             >
               Meet the Founder →
             </button>
