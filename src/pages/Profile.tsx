@@ -63,7 +63,7 @@ export function Profile({
               setStep('intake');
               window.scrollTo(0, 0);
             }}
-            className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72] hover:text-[#2A2421] transition-colors font-medium"
+            className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium hover:text-[#2A2421] transition-colors font-medium"
           >
             Back
           </button>

@@ -44,13 +44,13 @@ export function Intake({
     <div className="w-full bg-[#FDFBF7]">
       <div className="py-12 sm:py-24 lg:py-36 max-w-4xl mx-auto px-6 space-y-16 sm:space-y-24 lg:space-y-32">
         <div className="space-y-4">
-          <p className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72]">The Assessment</p>
+          <p className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium">The Assessment</p>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif text-[#2A2421] tracking-tight leading-[1.05]">Tell Us About Your Companion</h2>
         </div>
 
         <div className="space-y-16 sm:space-y-24 lg:space-y-32">
           <div className="space-y-6">
-            <label className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72] block">
+            <label className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium block">
               Dog's Name
             </label>
             <input
@@ -63,7 +63,7 @@ export function Intake({
           </div>
 
           <div className="space-y-6">
-            <label className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72] block">
+            <label className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium block">
               Photo <span className="text-[#C4B9A8]">(optional)</span>
             </label>
             <div className="flex items-center gap-6">
@@ -114,7 +114,7 @@ export function Intake({
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 sm:gap-20 lg:gap-28">
             <div className="space-y-6">
-              <label className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72] block">
+              <label className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium block">
                 Sex
               </label>
               <div className="grid grid-cols-2 border border-[#E8E2D9] overflow-hidden">
@@ -132,7 +132,7 @@ export function Intake({
               </div>
             </div>
             <div className="space-y-6">
-              <label className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72] block">
+              <label className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium block">
                 Age
               </label>
               <div className="flex gap-8">
@@ -222,7 +222,7 @@ export function Intake({
 
             <div className="p-10 sm:p-12 space-y-8">
               <div className="space-y-4">
-                <p className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72]">The Growth Phase</p>
+                <p className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium">The Growth Phase</p>
                 <h3 className="text-3xl sm:text-4xl font-serif text-[#2A2421] tracking-tight leading-[1.1]">
                   Under 18 months
                 </h3>
@@ -256,7 +256,7 @@ export function Intake({
               <div className="flex items-center gap-4 pt-4">
                 <button
                   onClick={() => setShowGrowthGate(false)}
-                  className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72] hover:text-[#2A2421] transition-colors px-4 py-3"
+                  className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium hover:text-[#2A2421] transition-colors px-4 py-3"
                 >
                   Adjust Age
                 </button>

@@ -178,7 +178,7 @@ export function Audit({
             {PHASE_CELEBRATIONS[completedPhaseId]}
           </p>
           <div className="border-t border-[#E8E2D9] pt-6 mb-6">
-            <p className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72]/40 mb-1">Up Next</p>
+            <p className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium/40 mb-1">Up Next</p>
             <p className="text-lg font-serif text-[#2A2421]">{AUDIT_PHASES[nextPhaseId]?.name}</p>
             <p className="text-xs text-[#8A7F72]/50 font-light mt-1">{AUDIT_PHASES[nextPhaseId]?.desc}</p>
           </div>
@@ -244,7 +244,7 @@ export function Audit({
           {/* Phase header */}
           <div className="mb-6 sm:mb-8">
             <div className="flex items-center gap-2 mb-3">
-              <span className="flex items-center gap-1.5 text-[10px] uppercase tracking-[0.15em] text-[#8A7F72]">
+              <span className="flex items-center gap-1.5 text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium">
                 <CurrentPhaseIcon size={11} strokeWidth={1.5} />
                 Phase {currentPhaseId} of 3 — {AUDIT_PHASES[currentPhaseId].name}
               </span>
@@ -351,7 +351,7 @@ export function Audit({
           <div className="flex items-center justify-between mt-6 pt-5 border-t border-[#E8E2D9]">
             <button
               onClick={() => advanceQuestion('back')}
-              className="flex items-center gap-2 text-[10px] uppercase tracking-[0.15em] text-[#8A7F72]/50 hover:text-[#2A2421] transition-colors py-2"
+              className="flex items-center gap-2 text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium/50 hover:text-[#2A2421] transition-colors py-2"
             >
               <Icons.ChevronLeft size={14} strokeWidth={2} />
               Back
@@ -397,7 +397,7 @@ export function Audit({
 
           {/* Biological insight — subtle footer */}
           <div className="mt-8 pl-4 border-l-2 border-[#0A4682]/20">
-            <p className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72]/40 mb-1.5 flex items-center gap-1.5">
+            <p className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium/40 mb-1.5 flex items-center gap-1.5">
               <Icons.Microscope size={10} strokeWidth={1.5} /> Biological Insight
             </p>
             <p className="text-xs text-[#8A7F72] leading-[1.7] font-light">

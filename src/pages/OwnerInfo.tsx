@@ -16,7 +16,7 @@ export function OwnerInfo({
     <div className="min-h-screen bg-[#FDFBF7] flex flex-col items-center justify-center px-6 py-16 sm:py-24">
       <div className="max-w-2xl w-full space-y-12 sm:space-y-16 animate-in">
         <div className="space-y-6">
-          <p className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72]">Almost There</p>
+          <p className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium">Almost There</p>
           <h2 className="text-4xl sm:text-5xl font-serif text-[#2A2421] tracking-tight leading-[1.05]">
             One Last Thing
           </h2>
@@ -27,7 +27,7 @@ export function OwnerInfo({
 
         <div className="space-y-10">
           <div className="space-y-4">
-            <label className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72] block">
+            <label className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium block">
               Breed <span className="text-[#C4B9A8]">(optional)</span>
             </label>
             <input
@@ -41,7 +41,7 @@ export function OwnerInfo({
 
           <div className="border border-[#E8E2D9] bg-white/60 p-6 sm:p-8 lg:p-10 space-y-10">
             <div className="space-y-4">
-              <label className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72] block">
+              <label className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium block">
                 Your Name
               </label>
               <input
@@ -55,7 +55,7 @@ export function OwnerInfo({
             </div>
 
             <div className="space-y-4">
-              <label className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72] block">
+              <label className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium block">
                 Email Address
               </label>
               <input
@@ -78,7 +78,7 @@ export function OwnerInfo({
               setStep('reflection');
               window.scrollTo(0, 0);
             }}
-            className="text-[10px] uppercase tracking-[0.15em] text-[#8A7F72] hover:text-[#2A2421] transition-colors"
+            className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium hover:text-[#2A2421] transition-colors"
           >
             Back
           </button>
