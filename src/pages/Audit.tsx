@@ -327,12 +327,12 @@ export function Audit({
                       </div>
                       <div>
                         <p className={`font-medium text-sm transition-colors ${
-                          isSelected ? 'text-[#2A2421]' : 'text-[#2A2421]/80'
+                          isSelected ? 'text-[#2A2421]' : 'text-[#2A2421]'
                         }`}>
                           {label}
                         </p>
                         <p className={`text-xs font-light mt-0.5 transition-colors ${
-                          isSelected ? 'text-[#8A7F72]' : 'text-[#8A7F72]/50'
+                          isSelected ? 'text-[#5C534E]' : 'text-[#6B6159]'
                         }`}>
                           {scale[level]}
                         </p>
