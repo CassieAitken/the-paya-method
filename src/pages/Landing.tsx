@@ -56,7 +56,7 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
             You know the exact spot they love to be scratched, the unique cadence of their bark, and the gentle sigh they make when they finally settle against your feet. PayaLabs translates 50 carefully selected biological questions into a personalized Dog Biology Blueprint™ — a gentle, science-backed roadmap that uncovers what's quietly working against them, so you can protect their comfort and keep them moving, playing, and thriving for as long as possible.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[10px] sm:text-[11px] font-mono uppercase tracking-[0.25em] text-[#C9B9CE]">
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[10px] sm:text-[11px] font-mono uppercase tracking-[0.25em] text-[#9AB8C4]">
             <span>10-Minute Assessment</span>
             <span className="w-1 h-1 rounded-full bg-[#9AB8C4]/40" />
             <span>Personalized Dog Biology Blueprint™</span>
@@ -87,7 +87,7 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
               <span>Begin the 10-Minute Assessment</span>
               <Icons.ArrowRight size={16} className="transition-transform group-hover:translate-x-1" strokeWidth={1.5} />
             </button>
-            <span className="text-[10px] tracking-[0.2em] uppercase text-[#C9B9CE] font-bold mt-1 block w-full text-center">
+            <span className="text-[10px] tracking-[0.2em] uppercase text-[#9AB8C4] font-bold mt-1 block w-full text-center">
               $49 &bull; Personalized to your dog &bull; Instant results
             </span>
           </div>
@@ -102,7 +102,7 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#FDFBF7] leading-[1.05] tracking-tight mb-4">
               The 7 Biology Markers
             </h2>
-            <p className="font-mono text-[9px] uppercase tracking-[0.3em] text-[#C9B9CE]">
+            <p className="font-mono text-[9px] uppercase tracking-[0.3em] text-[#9AB8C4]">
               50 Markers &middot; 7 Biology Markers &middot; One Score out of 100
             </p>
           </div>
@@ -133,7 +133,7 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
                         <h3 className="font-serif text-base sm:text-lg tracking-tight transition-colors leading-tight text-[#9AB8C4]">
                           {f.title}
                         </h3>
-                        <p className="font-mono text-[8px] uppercase tracking-[0.25em] text-[#C9B9CE] mt-1.5">
+                        <p className="font-mono text-[8px] uppercase tracking-[0.25em] text-[#9AB8C4] mt-1.5">
                           {desc.focus}
                         </p>
                       </div>
@@ -164,7 +164,7 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
       <section id="how-it-works" className="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#4B1D5C] py-16 sm:py-24 lg:py-32 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="mb-14 sm:mb-20 text-center space-y-4">
-            <p className="font-mono text-[8px] uppercase tracking-[0.3em] text-[#C9B9CE]">Delivered instantly. Personalized to your dog.</p>
+            <p className="font-mono text-[8px] uppercase tracking-[0.3em] text-[#9AB8C4]">Delivered instantly. Personalized to your dog.</p>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#FDFBF7] leading-[1.05] tracking-tight">
               The Dog Biology Blueprint™<br className="hidden sm:block" /> Includes
             </h2>
@@ -201,14 +201,14 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
               return (
                 <div key={item.title} className="bg-[#4B1D5C] p-8 sm:p-10 space-y-4">
                   <Icon size={20} className="text-[#9AB8C4]" strokeWidth={1.2} />
-                  <h3 className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#FDFBF7] font-bold">{item.title}</h3>
+                  <h3 className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#9AB8C4] font-bold">{item.title}</h3>
                   <p className="text-[13px] text-[#E4D9E8] leading-[1.8] font-light">{item.desc}</p>
                 </div>
               );
             })}
             <div className="bg-[#4B1D5C] p-8 sm:p-10 space-y-4 md:col-span-2">
               <Icons.Mail size={20} className="text-[#9AB8C4]" strokeWidth={1.2} />
-              <h3 className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#FDFBF7] font-bold">Personalized Delivery</h3>
+              <h3 className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#9AB8C4] font-bold">Personalized Delivery</h3>
               <p className="text-[13px] text-[#E4D9E8] leading-[1.8] font-light max-w-2xl">
                 Your Dog Biology Blueprint™ is delivered as two detailed personalized reports with individualized findings, explanations, recommendations, and a practical action plan tailored specifically to your dog.
               </p>
@@ -242,7 +242,7 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
             </button>
             <button
               onClick={onShowFounderMessage}
-              className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#C9B9CE] hover:text-[#9AB8C4] transition-colors"
+              className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#9AB8C4] hover:text-[#FDFBF7] transition-colors"
             >
               Meet the Founder →
             </button>

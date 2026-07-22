@@ -726,7 +726,7 @@ The part that got me? How much my own habits are showing up in their biology.`;
         </div>
       </nav>
 
-      <main className="max-w-7xl mx-auto px-8 lg:px-12 pb-40">
+      <main className={`max-w-7xl mx-auto px-8 lg:px-12 ${step === 'landing' ? '' : 'pb-40'}`}>
         {step === 'landing' && (
           <Landing
             setStep={setStep}
