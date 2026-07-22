@@ -636,8 +636,11 @@ The part that got me? How much my own habits are showing up in their biology.`;
       <nav className={`sticky top-0 z-50 w-full bg-[#4B1D5C] border-b border-[#FDFBF7]/10 ${step === 'analyzing' ? 'hidden' : ''}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-4 sm:py-5 flex justify-between items-center">
         <button onClick={() => { setStep('landing'); window.scrollTo(0, 0); }} className="flex items-center gap-2.5 sm:gap-3 hover:opacity-80 transition-opacity flex-shrink-0">
-          <Icons.Leaf size={18} className="text-[#9AB8C4] sm:w-5 sm:h-5" strokeWidth={1.5} />
-          <span className="font-serif text-lg sm:text-xl tracking-tight text-[#FDFBF7]">The Paya Method</span>
+          <span className="font-serif font-medium text-lg sm:text-xl tracking-tight text-[#FDFBF7]">The Paya Method</span>
+          <span className="hidden sm:inline-flex items-center gap-3 ml-3">
+            <span className="w-px h-4 bg-[#FDFBF7]/20"></span>
+            <span className="text-[10px] uppercase tracking-[0.15em] text-[#9AB8C4]">Love Them Longer</span>
+          </span>
         </button>
         <div className="flex items-center gap-6 sm:gap-8">
           {step === 'landing' && (
