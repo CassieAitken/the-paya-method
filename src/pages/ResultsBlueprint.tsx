@@ -1,8 +1,7 @@
-import { useState, useRef } from 'react';
-import html2canvas from 'html2canvas';
 import { Icons } from '../components/Icons';
 import { foundations } from '../data/foundations';
 import { BlueprintSummaryPoster } from '../components/BlueprintSummaryPoster';
+import { VitalityBadge } from '../components/VitalityBadge';
 
 function getAscentPillarBridge(score: number, label: string, name: string, pPoss: string, pillarId: string): string {
   const bridges: Record<string, Record<string, string>> = {
@@ -188,65 +187,11 @@ export function ResultsBlueprint({
   dogPhoto: string | null;
   dogNumber?: number | null;
 }) {
-  const [isExportingBadge, setIsExportingBadge] = useState(false);
-  const badgeRef = useRef<HTMLDivElement>(null);
-
   const name = dogData.name || 'your companion';
   const Name = dogData.name || 'Your Companion';
   const { pPoss } = results.pronouns;
 
   const { topPillar, bottomPillar, secondaryPillar, priorityShift, secondaryShift } = directives;
-
-  const captureBadge = async (): Promise<Blob | null> => {
-    if (!badgeRef.current) return null;
-    const canvas = await html2canvas(badgeRef.current, {
-      backgroundColor: '#F9F5ED',
-      scale: 3,
-      useCORS: true,
-      logging: false,
-    });
-    return new Promise((resolve) => canvas.toBlob((blob) => resolve(blob), 'image/png'));
-  };
-
-  const handleShareBadge = async () => {
-    setIsExportingBadge(true);
-    try {
-      const blob = await captureBadge();
-      if (!blob) return;
-      const file = new File([blob], `${dogData.name || 'dog'}-vitality-badge.png`, { type: 'image/png' });
-      if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
-        await navigator.share({
-          files: [file],
-          title: `${dogData.name || 'My dog'}'s Vitality Score`,
-          text: `${dogData.name || 'My dog'} scored ${results.score}/100 on the Dog Biology Blueprint™.`,
-        });
-      } else {
-        handleDownloadBadge();
-      }
-    } catch (err: any) {
-      if (err.name !== 'AbortError') handleDownloadBadge();
-    } finally {
-      setIsExportingBadge(false);
-    }
-  };
-
-  const handleDownloadBadge = async () => {
-    setIsExportingBadge(true);
-    try {
-      const blob = await captureBadge();
-      if (!blob) return;
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `${dogData.name || 'dog'}-vitality-badge.png`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    } finally {
-      setIsExportingBadge(false);
-    }
-  };
 
   const mirrorBridgeContent = () => {
     const score = results.score;
@@ -768,201 +713,21 @@ export function ResultsBlueprint({
         </div>
 
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start">
-          {/* Social-Ready Vitality Badge */}
+          {/* Vitality Badge (shared component, quick share) */}
           <div className="w-full max-w-md mx-auto lg:mx-0 flex-shrink-0">
-            <div
-              ref={badgeRef}
-              id="share-badge"
-              style={{
-                backgroundColor: '#F9F5ED',
-                width: '100%',
-                maxWidth: '340px',
-                aspectRatio: '9/16',
-                margin: '0 auto',
-                position: 'relative',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                overflow: 'hidden',
-              }}
-            >
-              {/* Inset border */}
-              <div style={{
-                position: 'absolute',
-                top: '14px',
-                left: '14px',
-                right: '14px',
-                bottom: '14px',
-                border: '2px solid #CDC2B0',
-                pointerEvents: 'none',
-              }} />
-
-              {/* Photo panel - reduced height */}
-              <div style={{
-                width: 'calc(100% - 40px)',
-                height: '214px',
-                marginTop: '20px',
-                borderRadius: '12px',
-                border: '3px solid #B09469',
-                overflow: 'hidden',
-                position: 'relative',
-                backgroundColor: dogPhoto ? undefined : '#F2EBDC',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexDirection: 'column',
-              }}>
-                {dogPhoto ? (
-                  <img
-                    src={dogPhoto}
-                    alt={Name}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 25%' }}
-                  />
-                ) : (
-                  <>
-                    <div style={{
-                      width: '80px',
-                      height: '80px',
-                      borderRadius: '50%',
-                      border: '2px solid #B09469',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      position: 'relative',
-                    }}>
-                      <div style={{ position: 'absolute', inset: '-6px', borderRadius: '50%', border: '1px solid #CDC2B0' }} />
-                      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#B09469" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-                        <circle cx="11" cy="4" r="2" />
-                        <circle cx="4.5" cy="8.5" r="2" />
-                        <circle cx="17.5" cy="8.5" r="2" />
-                        <circle cx="7" cy="13" r="1.5" />
-                        <circle cx="17" cy="13" r="1.5" />
-                        <path d="M12 17c-3.5 0-5.5 2-5.5 3.5 0 1 1.5 1.5 3 1.5 1 0 1.8-.5 2.5-1.2.7.7 1.5 1.2 2.5 1.2 1.5 0 3-.5 3-1.5 0-1.5-2-3.5-5.5-3.5z" />
-                      </svg>
-                    </div>
-                    <p style={{ marginTop: '10px', fontSize: '10px', letterSpacing: '0.3em', color: '#867766', fontFamily: "'Montserrat', sans-serif", fontWeight: 300 }}>
-                      EVERY DOG IS A GOOD DOG
-                    </p>
-                  </>
-                )}
-              </div>
-
-              {/* DOG BIOLOGY BLUEPRINT */}
-              <p style={{ fontSize: '11px', letterSpacing: '0.3em', color: '#867766', fontFamily: "'Montserrat', sans-serif", fontWeight: 300, marginTop: '12px', marginBottom: '2px' }}>
-                DOG BIOLOGY BLUEPRINT™
-              </p>
-
-              {/* Dog name */}
-              <p style={{
-                fontSize: (dogData.name || 'Your Companion').length > 12 ? '30px' : '43px',
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontWeight: 400,
-                color: '#4A3C2F',
-                margin: '0',
-                lineHeight: 1.1,
-                maxWidth: 'calc(100% - 40px)',
-                overflowWrap: 'break-word',
-                wordBreak: 'break-word',
-                textAlign: 'center',
-              }}>
-                {dogData.name || 'Your Companion'}
-              </p>
-
-              {/* Archetype */}
-              <p style={{
-                fontSize: '19px',
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontStyle: 'italic',
-                fontWeight: 300,
-                color: '#867766',
-                margin: '2px 0 0',
-                maxWidth: 'calc(100% - 40px)',
-                overflowWrap: 'break-word',
-                textAlign: 'center',
-              }}>
-                {results.archetype.name}
-              </p>
-
-              {/* Score */}
-              <div style={{ display: 'flex', alignItems: 'baseline', marginTop: '6px' }}>
-                <span style={{ fontSize: '85px', fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 400, color: '#4A3C2F', lineHeight: 1 }}>
-                  {results.score}
-                </span>
-                <span style={{ fontSize: '29px', fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 300, color: '#867766', marginLeft: '2px' }}>
-                  /100
-                </span>
-              </div>
-
-              {/* VITALITY INDEX */}
-              <p style={{ fontSize: '10px', letterSpacing: '0.3em', color: '#867766', fontFamily: "'Montserrat', sans-serif", fontWeight: 300, margin: '0 0 8px' }}>
-                VITALITY INDEX
-              </p>
-
-              {/* Pillar bars */}
-              {results.phaseScores && results.phaseScores.length >= 7 && (
-                <>
-                  <div style={{ display: 'flex', gap: '4px', width: 'calc(100% - 50px)', alignItems: 'flex-end', height: '47px', marginBottom: '3px' }}>
-                    {['BATTERY', 'REST', 'SHIELD', 'BOND', 'MIND', 'MOTION', 'HARMONY'].map((label, i) => {
-                      const pct = results.phaseScores[i] ?? 0;
-                      const barHeight = Math.max(8, (pct / 100) * 47);
-                      return (
-                        <div key={label} style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-end', height: '100%' }}>
-                          <div style={{ width: '21px', height: `${barHeight}px`, borderRadius: '4.5px', border: '1px solid #CDC2B0', position: 'relative', overflow: 'hidden' }}>
-                            <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: `${pct}%`, backgroundColor: '#B09469', borderRadius: '3.5px' }} />
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                  <div style={{ display: 'flex', gap: '4px', width: 'calc(100% - 50px)', marginBottom: '10px' }}>
-                    {['BATTERY', 'REST', 'SHIELD', 'BOND', 'MIND', 'MOTION', 'HARMONY'].map((label) => (
-                      <div key={label} style={{ flex: 1, textAlign: 'center' }}>
-                        <span style={{ fontSize: '8px', letterSpacing: '0.05em', color: '#867766', fontFamily: "'Montserrat', sans-serif", fontWeight: 300 }}>
-                          {label}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </>
-              )}
-
-              {/* Single consolidated bottom line */}
-              <p style={{ position: 'absolute', bottom: '35px', left: 0, right: 0, textAlign: 'center', fontSize: '10px', letterSpacing: '0.25em', color: '#4A3C2F', fontFamily: "'Montserrat', sans-serif", fontWeight: 300, margin: 0 }}>
-                DOG #{dogNumber ? String(dogNumber).padStart(3, '0') : '001'} &middot; {new Date().toLocaleString('default', { month: 'long' }).toUpperCase()} {new Date().getFullYear()}
-              </p>
-            </div>
-
-            <div className="mt-6 space-y-3">
-              <button
-                onClick={handleShareBadge}
-                disabled={isExportingBadge}
-                className="w-full bg-[#4A3C2F] text-[#F9F5ED] px-8 py-4 text-[10px] uppercase tracking-[0.15em] hover:bg-[#3A2E22] hover:-translate-y-0.5 transition-all flex items-center justify-center gap-3 rounded-none font-bold shadow-none disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isExportingBadge ? (
-                  <>
-                    <Icons.Loader className="animate-spin" size={15} />
-                    Preparing...
-                  </>
-                ) : (
-                  <>
-                    <Icons.Share size={15} />
-                    Share to Instagram
-                  </>
-                )}
-              </button>
-              <button
-                onClick={handleDownloadBadge}
-                disabled={isExportingBadge}
-                className="w-full flex items-center justify-center gap-3 border border-[#CDC2B0] text-[#4A3C2F] px-6 py-3.5 text-[10px] uppercase tracking-[0.15em] hover:border-[#B09469] hover:text-[#B09469] transition-all rounded-none font-bold disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                <Icons.Download size={15} />
-                Download Badge
-              </button>
-              <p className="text-[10px] text-[#5C534E]/40 font-light leading-[1.6] text-center pt-2">
-                By completing this Blueprint, your results may be anonymously featured on our social channels (first name + breed only).
-              </p>
-            </div>
+            <VitalityBadge
+              dogName={dogData.name || 'Your Companion'}
+              score={results.score}
+              dogPhoto={dogPhoto}
+              phaseScores={results.phaseScores}
+              archetypeName={results.archetype.name}
+              dogNumber={dogNumber || undefined}
+            />
+            <p className="text-[10px] text-[#5C534E]/40 font-light leading-[1.6] text-center pt-4">
+              By completing this Blueprint, your results may be anonymously featured on our social channels (first name + breed only).
+            </p>
           </div>
+
 
           {/* Share Actions */}
           <div className="flex-1 space-y-8 w-full">
