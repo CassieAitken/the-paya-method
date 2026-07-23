@@ -308,8 +308,8 @@ function generateEmailHTML(dogData: any, results: any, directives: DirectivesPay
       <tr><td style="padding:16px 32px ${isLast ? '28px' : '0'};">
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
           <tr>
-            <td style="width:34px;vertical-align:top;padding-top:2px;">
-              <span style="display:inline-block;width:26px;height:26px;background:#4B1D5C;border-radius:50%;text-align:center;line-height:26px;font-family:'Inter',Helvetica,sans-serif;font-size:11px;color:#9AB8C4;font-weight:600;">${i + 1}</span>
+            <td style="width:34px;vertical-align:top;padding-top:0px;">
+              <span style="display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;color:#C9C4B8;line-height:1;">${i + 1}</span>
             </td>
             <td>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
@@ -360,7 +360,7 @@ function generateEmailHTML(dogData: any, results: any, directives: DirectivesPay
                 <tr><td style="padding:36px 32px 28px;">
                   <p style="text-align:center;font-family:'Inter',Helvetica,sans-serif;font-size:11px;letter-spacing:0.15em;color:#9AB8C4;text-transform:uppercase;font-weight:600;margin:0 0 4px;">DOG BIOLOGY BLUEPRINT™</p>
                   <p style="text-align:center;font-family:'Inter',Helvetica,sans-serif;font-size:10px;letter-spacing:0.05em;color:#C9B9CE;margin:0 0 4px;">Created using The Paya Method™</p>
-                  <p style="text-align:center;font-family:'Inter',Helvetica,sans-serif;font-size:10px;letter-spacing:0.05em;color:#C9B9CE;margin:0 0 24px;">PL-${String(Math.floor(Math.random() * 9000) + 1000).padStart(4, '0')}</p>
+                  <p style="text-align:center;font-family:'Inter',Helvetica,sans-serif;font-size:10px;letter-spacing:0.05em;color:#C9B9CE;margin:0 0 24px;">PM-${String(Math.floor(Math.random() * 9000) + 1000).padStart(4, '0')}</p>
 
                   <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
                     <tr>
@@ -448,20 +448,18 @@ function generateEmailHTML(dogData: any, results: any, directives: DirectivesPay
                   <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
                     <tr>
                       <td width="50%" style="vertical-align:top;padding-right:8px;">
-                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F8F5EE;border-radius:10px;">
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;border-top:2px solid #166534;">
                           <tr><td style="padding:18px 18px 20px;">
-                            <div style="width:30px;height:30px;border-radius:50%;background:#166534;text-align:center;line-height:30px;margin-bottom:10px;"><span style="color:#ffffff;font-size:13px;">&#9679;</span></div>
-                            <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:#166534;font-weight:700;margin:0 0 4px;">Strength</p>
+                            <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:#166534;font-weight:700;margin:0 0 6px;">Strength</p>
                             <p style="font-size:14px;color:#2A2421;font-weight:600;margin:0 0 2px;">${directives.topPillar.title}</p>
                             <p style="font-size:12px;color:#8A7F72;margin:0;">${directives.topPillar.score}/100</p>
                           </td></tr>
                         </table>
                       </td>
                       <td width="50%" style="vertical-align:top;padding-left:8px;">
-                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F8F5EE;border-radius:10px;">
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;border-top:2px solid #0A4682;">
                           <tr><td style="padding:18px 18px 20px;">
-                            <div style="width:30px;height:30px;border-radius:50%;background:#0A4682;text-align:center;line-height:30px;margin-bottom:10px;"><span style="color:#ffffff;font-size:13px;">&#9650;</span></div>
-                            <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:#0A4682;font-weight:700;margin:0 0 4px;">Top Priority</p>
+                            <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:#0A4682;font-weight:700;margin:0 0 6px;">Top Priority</p>
                             <p style="font-size:14px;color:#2A2421;font-weight:600;margin:0 0 2px;">${directives.bottomPillar.title}</p>
                             <p style="font-size:12px;color:#8A7F72;margin:0;">${directives.bottomPillar.score}/100</p>
                           </td></tr>
@@ -596,9 +594,9 @@ function generateEmailHTML(dogData: any, results: any, directives: DirectivesPay
 
           <!-- Protocol notice -->
           <tr>
-            <td style="text-align:center;padding:32px 28px;background:#4B1D5C;border-radius:12px;">
-              <p style="font-size:16px;color:#FDFBF7;line-height:1.8;margin:0 0 10px;font-weight:300;">Your 30-Day Protocol is being prepared.</p>
-              <p style="font-family:'Inter',Helvetica,sans-serif;font-size:10px;color:#9AB8C4;margin:0;letter-spacing:1px;text-transform:uppercase;">Arriving in your inbox within 24 hours</p>
+            <td style="text-align:center;padding:32px 28px;background:#ffffff;border:1px solid #E8E2D9;border-left:3px solid #4B1D5C;border-radius:4px;">
+              <p style="font-size:16px;color:#2A2421;line-height:1.8;margin:0 0 10px;font-weight:300;">Your 30-Day Protocol is being prepared.</p>
+              <p style="font-family:'Inter',Helvetica,sans-serif;font-size:10px;color:#8A7F72;margin:0;letter-spacing:1px;text-transform:uppercase;">Arriving in your inbox within 24 hours</p>
             </td>
           </tr>
           <tr><td style="height:32px;"></td></tr>

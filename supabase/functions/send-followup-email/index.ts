@@ -144,7 +144,7 @@ function generateFollowupEmail(row: QueueRow): string {
               <table role="presentation" cellpadding="0" cellspacing="0">
                 <tr>
                   <td style="width:44px;vertical-align:top;">
-                    <span style="display:inline-block;width:36px;height:36px;background:#4B1D5C;border-radius:50%;text-align:center;line-height:36px;font-family:'Cormorant Garamond',Georgia,serif;font-size:17px;color:#FDFBF7;">${weekNum}</span>
+                    <span style="display:block;width:44px;font-family:'Cormorant Garamond',Georgia,serif;font-size:34px;color:#C9C4B8;line-height:1;">${weekNum}</span>
                   </td>
                   <td style="vertical-align:top;padding-top:4px;">
                     <h2 style="font-size:20px;color:#2A2421;margin:0 0 4px;font-weight:400;">${title}</h2>
@@ -179,13 +179,13 @@ function generateFollowupEmail(row: QueueRow): string {
     dayCounter += dayTitles.length;
     const rows = dayTitles.map((t, i) => `
                 <tr>
-                  <td style="padding:3px 0;width:36px;font-family:'Inter',Helvetica,sans-serif;font-size:11px;color:#9AB8C4;vertical-align:top;">Day ${startDay + i}</td>
-                  <td style="padding:3px 0;font-size:13px;color:#E4D9E8;vertical-align:top;">${t}</td>
+                  <td style="padding:3px 0;width:36px;font-family:'Inter',Helvetica,sans-serif;font-size:11px;color:#0A4682;vertical-align:top;">Day ${startDay + i}</td>
+                  <td style="padding:3px 0;font-size:13px;color:#2A2421;vertical-align:top;">${t}</td>
                 </tr>`).join('');
     return `
                 <tr>
                   <td style="padding:${isLast ? '0 32px 28px' : '0 32px 20px'};">
-                    <p style="font-family:'Inter',Helvetica,sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:#FDFBF7;font-weight:600;margin:0 0 8px;">${weekLabel} &mdash; ${weekTheme}</p>
+                    <p style="font-family:'Inter',Helvetica,sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:#4B1D5C;font-weight:600;margin:0 0 8px;">${weekLabel} &mdash; ${weekTheme}</p>
                     <table role="presentation" width="100%" cellpadding="0" cellspacing="0">${rows}
                     </table>
                   </td>
@@ -260,12 +260,12 @@ function generateFollowupEmail(row: QueueRow): string {
           <!-- ==================== MONTH AT A GLANCE ==================== -->
           <tr><td style="height:32px;"></td></tr>
           <tr>
-            <td style="background:#4B1D5C;border-radius:12px;overflow:hidden;">
+            <td style="background:#ffffff;border:1px solid #E8E2D9;border-left:3px solid #4B1D5C;border-radius:4px;overflow:hidden;">
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
                 <tr>
                   <td style="padding:28px 32px 8px;">
-                    <p style="font-family:'Inter',Helvetica,sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:0.15em;color:#9AB8C4;font-weight:600;margin:0 0 4px;">Month at a Glance</p>
-                    <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;color:#FDFBF7;font-style:italic;margin:0 0 20px;">The whole shape of the next 30 days, before you begin.</p>
+                    <p style="font-family:'Inter',Helvetica,sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:0.15em;color:#0A4682;font-weight:600;margin:0 0 4px;">Month at a Glance</p>
+                    <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;color:#2A2421;font-style:italic;margin:0 0 20px;">The whole shape of the next 30 days, before you begin.</p>
                   </td>
                 </tr>
                 ${glanceWeek("Week 1", "Build the Foundation", ["Set the Feeding Clock", "Audit the Floor", "Create the Sleep Sanctuary", "The Body Scan", "Introduce the Fasting Window", "The Sniff Walk", "Week 1 Check-In"])}

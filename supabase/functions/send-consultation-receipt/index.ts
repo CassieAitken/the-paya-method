@@ -135,11 +135,11 @@ function generateReceiptHTML(dogName: string, purchaseDate: string, expiryDate: 
 
                 <!-- How to Schedule -->
                 <tr><td style="padding:28px 32px 24px;">
-                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#4B1D5C;border-radius:10px;">
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;border:1px solid #E8E2D9;border-left:3px solid #4B1D5C;border-radius:4px;">
                     <tr><td style="padding:28px 24px;text-align:center;">
-                      <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2.5px;color:#9AB8C4;margin:0 0 14px;">How to Schedule Your Session</p>
-                      <p style="font-size:16px;line-height:1.8;color:#E4D9E8;margin:0 0 14px;font-weight:300;">Reply to this email with <strong style="color:#FDFBF7;">3 preferred dates and times</strong> that work for you.</p>
-                      <p style="font-size:14px;line-height:1.7;color:#C9B9CE;margin:0;">I will personally get back to you within 24 hours to lock in our time.</p>
+                      <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2.5px;color:#0A4682;margin:0 0 14px;">How to Schedule Your Session</p>
+                      <p style="font-size:16px;line-height:1.8;color:#2A2421;margin:0 0 14px;font-weight:300;">Reply to this email with <strong style="color:#2A2421;">3 preferred dates and times</strong> that work for you.</p>
+                      <p style="font-size:14px;line-height:1.7;color:#8A7F72;margin:0;">I will personally get back to you within 24 hours to lock in our time.</p>
                     </td></tr>
                   </table>
                 </td></tr>
