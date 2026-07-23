@@ -640,8 +640,9 @@ The part that got me? How much my own habits are showing up in their biology.`;
           <span className="font-serif font-medium text-lg sm:text-xl tracking-tight text-[#2A2A28]">The Paya Method</span>
         </button>
         </div>
+        <div className="w-full flex flex-wrap items-center justify-center sm:justify-between gap-y-2 order-3 sm:w-auto sm:order-none">
         {step === 'landing' && (
-          <div className="flex items-center gap-1 order-3 w-full justify-center sm:w-auto sm:order-none sm:justify-start">
+          <div className="flex items-center gap-1 justify-center">
             <span className="text-[10px] uppercase tracking-[0.15em] text-[#9AB8C4] mr-3">Love Them Longer</span>
             <button
               onClick={() => {
@@ -726,6 +727,7 @@ The part that got me? How much my own habits are showing up in their biology.`;
               <Icons.ArrowLeft size={15} strokeWidth={1.5} /> Back
             </button>
           )}
+        </div>
         </div>
         </div>
       </nav>
