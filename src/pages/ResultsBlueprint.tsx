@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import html2canvas from 'html2canvas';
 import { Icons } from '../components/Icons';
 import { foundations } from '../data/foundations';
+import { BlueprintSummaryPoster } from '../components/BlueprintSummaryPoster';
 
 function getAscentPillarBridge(score: number, label: string, name: string, pPoss: string, pillarId: string): string {
   const bridges: Record<string, Record<string, string>> = {
@@ -1000,6 +1001,25 @@ export function ResultsBlueprint({
             </div>
           </div>
         </div>
+      </div>
+
+      {/* ===== FULL SUMMARY (ONE-PAGE) ===== */}
+      <div className="space-y-10 sm:space-y-14 lg:space-y-16 pt-12 border-t border-[#E8E2D9]">
+        <div className="border-b border-[#E8E2D9] pb-8">
+          <h3 className="text-4xl lg:text-5xl font-serif text-[#2A2421] tracking-tight leading-[1.08]">
+            Your Full Summary
+          </h3>
+          <p className="text-[#5C534E]/60 text-sm mt-4 leading-[1.8] font-light">
+            Everything in {Name}'s Blueprint — score, all 7 Biology Markers, and priority protocol — in one image you can save, print, or bring to the vet.
+          </p>
+        </div>
+        <BlueprintSummaryPoster
+          dogData={dogData}
+          results={results}
+          directives={directives}
+          dogPhoto={dogPhoto}
+          dogNumber={dogNumber}
+        />
       </div>
     </div>
   );
