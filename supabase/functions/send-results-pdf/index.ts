@@ -308,15 +308,24 @@ function generateEmailHTML(dogData: any, results: any, directives: DirectivesPay
       <tr><td style="padding:16px 32px ${isLast ? '28px' : '0'};">
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
           <tr>
-            <td><h4 style="font-size:16px;color:#2A2421;margin:0;font-weight:400;">${f.title}${badge}</h4></td>
-            <td style="text-align:right;font-family:'Inter',Helvetica,sans-serif;font-size:18px;font-weight:600;color:${score >= 70 ? '#166534' : score >= 45 ? '#92400e' : '#991b1b'};">${score}<span style="font-size:11px;color:#8A7F72;">/100</span></td>
+            <td style="width:34px;vertical-align:top;padding-top:2px;">
+              <span style="display:inline-block;width:26px;height:26px;background:#4B1D5C;border-radius:50%;text-align:center;line-height:26px;font-family:'Inter',Helvetica,sans-serif;font-size:11px;color:#9AB8C4;font-weight:600;">${i + 1}</span>
+            </td>
+            <td>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td><h4 style="font-size:16px;color:#2A2421;margin:0;font-weight:400;">${f.title}${badge}</h4></td>
+                  <td style="text-align:right;font-family:'Inter',Helvetica,sans-serif;font-size:18px;font-weight:600;color:${score >= 70 ? '#166534' : score >= 45 ? '#92400e' : '#991b1b'};">${score}<span style="font-size:11px;color:#8A7F72;">/100</span></td>
+                </tr>
+              </table>
+            </td>
           </tr>
         </table>
         <div style="width:100%;height:5px;background:#E8E2D9;border-radius:3px;margin:10px 0 12px;overflow:hidden;">
           <div style="width:${score}%;height:100%;background:${score >= 70 ? '#166534' : score >= 45 ? '#d97706' : '#dc2626'};border-radius:3px;"></div>
         </div>
-        <p style="font-size:13.5px;color:#5C534E;line-height:1.75;margin:0 0 14px;">${narrative}</p>
-        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F8F5EE;border-radius:6px;overflow:hidden;">
+        <p style="font-size:13.5px;color:#5C534E;line-height:1.75;margin:0 0 14px;padding-left:34px;">${narrative}</p>
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F8F5EE;border-radius:6px;overflow:hidden;margin-left:34px;width:calc(100% - 34px);">
           ${ritualRows}
         </table>
       </td></tr>
@@ -430,6 +439,40 @@ function generateEmailHTML(dogData: any, results: any, directives: DirectivesPay
 
                 <!-- Divider -->
                 <tr><td style="padding:0 32px;">
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="border-top:1px solid #E8E2D9;"></td></tr></table>
+                </td></tr>
+
+                <!-- Quick Take -->
+                <tr><td style="padding:24px 32px 8px;">
+                  <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2.5px;color:#8A7F72;margin:0 0 14px;">Quick Take</p>
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td width="50%" style="vertical-align:top;padding-right:8px;">
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F8F5EE;border-radius:10px;">
+                          <tr><td style="padding:18px 18px 20px;">
+                            <div style="width:30px;height:30px;border-radius:50%;background:#166534;text-align:center;line-height:30px;margin-bottom:10px;"><span style="color:#ffffff;font-size:13px;">&#9679;</span></div>
+                            <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:#166534;font-weight:700;margin:0 0 4px;">Strength</p>
+                            <p style="font-size:14px;color:#2A2421;font-weight:600;margin:0 0 2px;">${directives.topPillar.title}</p>
+                            <p style="font-size:12px;color:#8A7F72;margin:0;">${directives.topPillar.score}/100</p>
+                          </td></tr>
+                        </table>
+                      </td>
+                      <td width="50%" style="vertical-align:top;padding-left:8px;">
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F8F5EE;border-radius:10px;">
+                          <tr><td style="padding:18px 18px 20px;">
+                            <div style="width:30px;height:30px;border-radius:50%;background:#0A4682;text-align:center;line-height:30px;margin-bottom:10px;"><span style="color:#ffffff;font-size:13px;">&#9650;</span></div>
+                            <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:#0A4682;font-weight:700;margin:0 0 4px;">Top Priority</p>
+                            <p style="font-size:14px;color:#2A2421;font-weight:600;margin:0 0 2px;">${directives.bottomPillar.title}</p>
+                            <p style="font-size:12px;color:#8A7F72;margin:0;">${directives.bottomPillar.score}/100</p>
+                          </td></tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td></tr>
+
+                <!-- Divider -->
+                <tr><td style="padding:20px 32px 0;">
                   <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="border-top:1px solid #E8E2D9;"></td></tr></table>
                 </td></tr>
 

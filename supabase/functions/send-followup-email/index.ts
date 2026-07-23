@@ -134,15 +134,24 @@ function generateFollowupEmail(row: QueueRow): string {
 
   const p = (text: string) => `<p style="font-size:15px;color:#5C534E;line-height:1.85;margin:0 0 16px;">${text}</p>`;
   const pItalic = (text: string) => `<p style="font-size:13px;color:#0A4682;line-height:1.8;margin:0;font-style:italic;padding-left:14px;border-left:2px solid #E8E2D9;">${text}</p>`;
-  const weekHeader = (title: string, theme: string) => `
+  const weekHeader = (weekNum: number, title: string, theme: string) => `
     <tr><td style="height:32px;"></td></tr>
     <tr>
       <td style="background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.05);">
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
           <tr>
             <td style="padding:32px 32px 0;">
-              <h2 style="font-size:20px;color:#2A2421;margin:0 0 4px;font-weight:400;">${title}</h2>
-              <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#0A4682;margin:0 0 18px;">Theme: ${theme}</p>
+              <table role="presentation" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="width:44px;vertical-align:top;">
+                    <span style="display:inline-block;width:36px;height:36px;background:#4B1D5C;border-radius:50%;text-align:center;line-height:36px;font-family:'Cormorant Garamond',Georgia,serif;font-size:17px;color:#FDFBF7;">${weekNum}</span>
+                  </td>
+                  <td style="vertical-align:top;padding-top:4px;">
+                    <h2 style="font-size:20px;color:#2A2421;margin:0 0 4px;font-weight:400;">${title}</h2>
+                    <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#0A4682;margin:0 0 18px;">Theme: ${theme}</p>
+                  </td>
+                </tr>
+              </table>
             </td>
           </tr>`;
   const weekFooter = `
@@ -158,7 +167,7 @@ function generateFollowupEmail(row: QueueRow): string {
           </tr>
           <tr>
             <td style="padding:20px 32px 0;">
-              <h3 style="font-size:16px;color:#2A2421;margin:0 0 3px;font-weight:500;">Day ${day} &mdash; ${title}</h3>
+              <h3 style="font-size:16px;color:#2A2421;margin:0 0 3px;font-weight:500;"><span style="color:#0A4682;font-weight:700;">Day ${day}</span> &mdash; ${title}</h3>
               <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#8A7F72;margin:0 0 14px;">${pillar}</p>
               ${p(body)}
               ${pItalic("This week: " + thisWeek)}
@@ -268,7 +277,7 @@ function generateFollowupEmail(row: QueueRow): string {
           </tr>
 
           <!-- ==================== WEEK 1 ==================== -->
-          ${weekHeader("WEEK 1 &mdash; Build the Foundation", "Rhythm and Environment")}
+          ${weekHeader(1, "WEEK 1 &mdash; Build the Foundation", "Rhythm and Environment")}
           <tr>
             <td style="padding:0 32px 8px;">
               ${p(`The first thing ${dog_name}'s biology needs is predictability. Before anything else can shift &mdash; sleep, energy, inflammation &mdash; the nervous system needs to feel safe. Safety comes from rhythm. This week is about establishing the anchors.`)}
@@ -298,7 +307,7 @@ function generateFollowupEmail(row: QueueRow): string {
           ${weekFooter}
 
           <!-- ==================== WEEK 2 ==================== -->
-          ${weekHeader("WEEK 2 &mdash; Activate the Body", "Movement and Physical Vitality")}
+          ${weekHeader(2, "WEEK 2 &mdash; Activate the Body", "Movement and Physical Vitality")}
           <tr>
             <td style="padding:0 32px 8px;">
               ${p(`With rhythm established, ${dog_name}'s body is now ready to move. This week focuses on the quality of physical life &mdash; not how much they move, but how well. Fluid, free, joyful movement is one of the strongest longevity signals we measure.`)}
@@ -328,7 +337,7 @@ function generateFollowupEmail(row: QueueRow): string {
           ${weekFooter}
 
           <!-- ==================== WEEK 3 ==================== -->
-          ${weekHeader("WEEK 3 &mdash; Deepen the Bond", "Connection and the Human-Dog Sync")}
+          ${weekHeader(3, "WEEK 3 &mdash; Deepen the Bond", "Connection and the Human-Dog Sync")}
           <tr>
             <td style="padding:0 32px 8px;">
               ${p(`This is the week most protocols skip entirely. But ${dog_name}'s biology cannot reach its ceiling without this. The quality of your presence &mdash; not the quantity of your time &mdash; is the most powerful vitality input in this entire protocol.`)}
@@ -358,7 +367,7 @@ function generateFollowupEmail(row: QueueRow): string {
           ${weekFooter}
 
           <!-- ==================== WEEK 4 ==================== -->
-          ${weekHeader("WEEK 4 &mdash; Lock It In", "Making Vitality Permanent")}
+          ${weekHeader(4, "WEEK 4 &mdash; Lock It In", "Making Vitality Permanent")}
           <tr>
             <td style="padding:0 32px 8px;">
               ${p(`The biology has shifted. The rhythms are established. The bond is deeper. This final week is about making everything you've built into a permanent operating system &mdash; for both of you.`)}
