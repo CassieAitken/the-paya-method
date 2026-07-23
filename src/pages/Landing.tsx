@@ -106,7 +106,7 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
 
       {/* ===== SEVEN PILLARS (Editorial List) ===== */}
       <section ref={pillarsReveal.ref as React.RefObject<HTMLElement>} className={`relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#FDFBF7] py-16 sm:py-24 lg:py-32 px-6 ${pillarsReveal.className}`} data-section="pillars">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="mb-14 sm:mb-20 text-center">
             <div className="flex items-center justify-center gap-3 mb-5">
               <div className="w-8 h-px bg-[#9AB8C4]"></div>
@@ -121,48 +121,44 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-10">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-10 gap-y-14">
             {foundations.map((f, i) => {
               const isOpen = openPillar === i;
               const desc = pillarDescriptions[i];
               return (
                 <div
                   key={f.id}
-                  className="group cursor-pointer py-6 border-b border-[#E8E2D9]"
+                  className="group cursor-pointer"
                   onClick={() => setOpenPillar(isOpen ? null : i)}
                 >
-                  <div className="flex items-start gap-5 sm:gap-6">
-                    <span className="font-serif text-2xl sm:text-3xl text-[#C9C4B8] tracking-tight flex-shrink-0 leading-none pt-1">
-                      {String(i + 1).padStart(2, '0')}
-                    </span>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-baseline justify-between gap-4">
-                        <h3 className="font-serif text-lg sm:text-xl tracking-tight leading-tight text-[#2A2A28] group-hover:text-[#4B1D5C] transition-colors">
-                          {f.title}
-                        </h3>
-                        <Icons.ChevronDown size={14} strokeWidth={1.5} className={`text-[#8A8A86] flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
-                      </div>
-                      <p className="text-[10px] uppercase tracking-[0.15em] text-[#8A8A86] mt-1.5">
-                        {desc.focus}
-                      </p>
-                      <p className="text-[13px] font-serif italic text-[#5C534E] mt-1.5">
-                        {desc.teaser}
-                      </p>
+                  <span className="font-serif text-3xl text-[#C9C4B8] tracking-tight leading-none block mb-3">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <div className="flex items-baseline justify-between gap-3">
+                    <h3 className="font-serif text-xl tracking-tight leading-tight text-[#2A2A28] group-hover:text-[#4B1D5C] transition-colors">
+                      {f.title}
+                    </h3>
+                    <Icons.ChevronDown size={14} strokeWidth={1.5} className={`text-[#8A8A86] flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+                  </div>
+                  <p className="text-[10px] uppercase tracking-[0.15em] text-[#8A8A86] mt-1.5">
+                    {desc.focus}
+                  </p>
+                  <p className="text-[13px] font-serif italic text-[#5C534E] mt-2 leading-[1.6]">
+                    {desc.teaser}
+                  </p>
 
-                      <div className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                        isOpen ? 'max-h-64 opacity-100 mt-4' : 'max-h-0 opacity-0 mt-0'
-                      }`}>
-                        <p className="text-[#5C534E] leading-[1.8] font-light text-[13px] sm:text-[14px]">
-                          {desc.definition}
-                        </p>
-                        <button
-                          onClick={(e) => { e.stopPropagation(); onSelectPillar(f); }}
-                          className="text-[10px] uppercase tracking-[0.15em] text-[#9AB8C4] hover:text-[#4B1D5C] transition-colors font-bold mt-3"
-                        >
-                          Explore Full Detail
-                        </button>
-                      </div>
-                    </div>
+                  <div className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                    isOpen ? 'max-h-64 opacity-100 mt-4' : 'max-h-0 opacity-0 mt-0'
+                  }`}>
+                    <p className="text-[#5C534E] leading-[1.8] font-light text-[13px]">
+                      {desc.definition}
+                    </p>
+                    <button
+                      onClick={(e) => { e.stopPropagation(); onSelectPillar(f); }}
+                      className="text-[10px] uppercase tracking-[0.15em] text-[#9AB8C4] hover:text-[#4B1D5C] transition-colors font-bold mt-3"
+                    >
+                      Explore Full Detail
+                    </button>
                   </div>
                 </div>
               );
@@ -173,7 +169,7 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
 
       {/* ===== YOUR DOG BIOLOGY BLUEPRINT INCLUDES (Editorial List) ===== */}
       <section id="how-it-works" className="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#FDFBF7] py-16 sm:py-24 lg:py-32 px-6 border-t border-[#E8E2D9]">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="mb-14 sm:mb-20 text-center">
             <div className="flex items-center justify-center gap-3 mb-5">
               <div className="w-8 h-px bg-[#9AB8C4]"></div>
@@ -188,7 +184,7 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-10">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-10 gap-y-14">
             {[
               {
                 title: 'Vitality Score',
@@ -211,20 +207,16 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
                 desc: 'Your Dog Biology Blueprint™ is delivered as two detailed personalized reports with individualized findings, explanations, recommendations, and a practical action plan tailored specifically to your dog.',
               },
             ].map((item, i) => (
-              <div key={item.title} className="py-6 border-b border-[#E8E2D9]">
-                <div className="flex items-start gap-5 sm:gap-6">
-                  <span className="font-serif text-2xl sm:text-3xl text-[#C9C4B8] tracking-tight flex-shrink-0 leading-none pt-1">
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="font-serif text-lg sm:text-xl tracking-tight leading-tight text-[#2A2A28]">
-                      {item.title}
-                    </h3>
-                    <p className="text-[13px] sm:text-[14px] text-[#5C534E] leading-[1.8] font-light mt-2">
-                      {item.desc}
-                    </p>
-                  </div>
-                </div>
+              <div key={item.title}>
+                <span className="font-serif text-3xl text-[#C9C4B8] tracking-tight leading-none block mb-3">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <h3 className="font-serif text-xl tracking-tight leading-tight text-[#2A2A28]">
+                  {item.title}
+                </h3>
+                <p className="text-[13px] text-[#5C534E] leading-[1.8] font-light mt-2">
+                  {item.desc}
+                </p>
               </div>
             ))}
           </div>
