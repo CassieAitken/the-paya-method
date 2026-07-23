@@ -140,7 +140,7 @@ export const Icons = {
   ClipboardList: ({ size = 24, className = "", strokeWidth = 1.5 }: { size?: number; className?: string; strokeWidth?: number }) => (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" className={className}><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
   ),
-  PayaLabsLogo: ({ size = 120, className = "" }: { size?: number; className?: string }) => (
+  PayaMethodLogo: ({ size = 120, className = "" }: { size?: number; className?: string }) => (
     <svg width={size} height={size} viewBox="0 0 120 140" fill="none" className={className}>
       <defs>
         <linearGradient id="payaGradient" x1="0%" y1="0%" x2="100%" y2="100%">

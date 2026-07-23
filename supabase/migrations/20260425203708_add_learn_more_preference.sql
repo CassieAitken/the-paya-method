@@ -3,12 +3,12 @@
 
   1. Modified Tables
     - `email_signups`
-      - `learn_more` (boolean) - User consent to learn more about Paya Labs
+      - `learn_more` (boolean) - User consent to learn more about The Paya Method
       - `owner_name` (text, optional) - Name of the dog owner
       - `dog_name` (text, optional) - Name of the dog (for personalization)
       
   2. Purpose
-    - Track which users are interested in learning more about Paya Labs
+    - Track which users are interested in learning more about The Paya Method
     - Store owner/dog names for personalization and follow-up communication
     - Optional fields for non-intrusive data capture
 */

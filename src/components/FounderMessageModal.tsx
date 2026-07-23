@@ -39,7 +39,7 @@ export function FounderMessageModal({ isOpen, onClose }: { isOpen: boolean; onCl
               The science tells us something different: vitality doesn't start at the vet's office. It starts now. In your living room. In the rhythm of your mornings.
             </p>
             <p>
-              Paya Labs was built in collaboration with a small group of veterinary researchers, canine biologists, and wellness scientists who believed the same thing — that the markers of decline are visible long before decline arrives, and that the people best positioned to act on them are the ones who love these animals most.
+              The Paya Method was built in collaboration with a small group of veterinary researchers, canine biologists, and wellness scientists who believed the same thing — that the markers of decline are visible long before decline arrives, and that the people best positioned to act on them are the ones who love these animals most.
             </p>
             <p>
               Your dog doesn't need more things. They need you to understand them at the cellular level. They need rhythm. They need to know you see them — not as a pet, but as a being whose nervous system is wired to yours. When you sleep well, they heal better. When you're calm, their inflammation drops. This isn't metaphor. This is biology.

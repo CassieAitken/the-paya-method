@@ -245,7 +245,7 @@ export function Intake({
                 <p className="text-[#5C534E] text-[14px] leading-[1.85] font-light">
                   In the meantime — reach out to{' '}
                   <a
-                    href={`mailto:payalabs01@gmail.com?subject=${encodeURIComponent((dogData.name || 'My dog') + ' — Growth Phase Question')}&body=${encodeURIComponent(`Hi Paya Labs,\n\nMy dog ${dogData.name || ''} is currently in the growth phase and I'd love some guidance.\n\n`)}`}
+                    href={`mailto:payalabs01@gmail.com?subject=${encodeURIComponent((dogData.name || 'My dog') + ' — Growth Phase Question')}&body=${encodeURIComponent(`Hi The Paya Method,\n\nMy dog ${dogData.name || ''} is currently in the growth phase and I'd love some guidance.\n\n`)}`}
                     className="underline underline-offset-2 text-[#2A2421] hover:text-[#0A4682] transition-colors"
                   >
                     payalabs01@gmail.com
