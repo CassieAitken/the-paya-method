@@ -654,18 +654,18 @@ The part that got me? How much my own habits are showing up in their biology.`;
                     window.scrollTo({ top, behavior: 'smooth' });
                   }
                 }}
-                className="text-[10px] font-semibold sm:font-medium tracking-[0.06em] sm:tracking-[0.12em] text-[#2A2A28] sm:text-[#8A8A86] hover:text-[#2A2A28] transition-colors px-2 sm:px-3 py-1.5"
+                className="hidden sm:inline-block text-[10px] font-semibold sm:font-medium tracking-[0.06em] sm:tracking-[0.12em] text-[#2A2A28] sm:text-[#8A8A86] hover:text-[#2A2A28] transition-colors px-2 sm:px-3 py-1.5"
               >
                 Markers
               </button>
-              <span className="text-[#8A8A86]/40 text-[10px] select-none">&middot;</span>
+              <span className="hidden sm:inline text-[#8A8A86]/40 text-[10px] select-none">&middot;</span>
               <button
                 onClick={() => setShowFounderMessage(true)}
-                className="text-[10px] font-semibold sm:font-medium tracking-[0.06em] sm:tracking-[0.12em] text-[#2A2A28] sm:text-[#8A8A86] hover:text-[#2A2A28] transition-colors px-2 sm:px-3 py-1.5"
+                className="hidden sm:inline-block text-[10px] font-semibold sm:font-medium tracking-[0.06em] sm:tracking-[0.12em] text-[#2A2A28] sm:text-[#8A8A86] hover:text-[#2A2A28] transition-colors px-2 sm:px-3 py-1.5"
               >
                 Founder
               </button>
-              <span className="text-[#8A8A86]/40 text-[10px] select-none">&middot;</span>
+              <span className="hidden sm:inline text-[#8A8A86]/40 text-[10px] select-none">&middot;</span>
               <button
                 onClick={() => {
                   const el = document.getElementById('how-it-works');
@@ -675,7 +675,7 @@ The part that got me? How much my own habits are showing up in their biology.`;
                     window.scrollTo({ top, behavior: 'smooth' });
                   }
                 }}
-                className="text-[10px] font-semibold sm:font-medium tracking-[0.06em] sm:tracking-[0.12em] text-[#2A2A28] sm:text-[#8A8A86] hover:text-[#2A2A28] transition-colors px-2 sm:px-3 py-1.5"
+                className="hidden sm:inline-block text-[10px] font-semibold sm:font-medium tracking-[0.06em] sm:tracking-[0.12em] text-[#2A2A28] sm:text-[#8A8A86] hover:text-[#2A2A28] transition-colors px-2 sm:px-3 py-1.5"
               >
                 Preview
               </button>
