@@ -853,12 +853,33 @@ export function ResultsBlueprint({
               </p>
 
               {/* Dog name */}
-              <p style={{ fontSize: '43px', fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 400, color: '#4A3C2F', margin: '0', lineHeight: 1.1 }}>
+              <p style={{
+                fontSize: (dogData.name || 'Your Companion').length > 12 ? '30px' : '43px',
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontWeight: 400,
+                color: '#4A3C2F',
+                margin: '0',
+                lineHeight: 1.1,
+                maxWidth: 'calc(100% - 40px)',
+                overflowWrap: 'break-word',
+                wordBreak: 'break-word',
+                textAlign: 'center',
+              }}>
                 {dogData.name || 'Your Companion'}
               </p>
 
               {/* Archetype */}
-              <p style={{ fontSize: '19px', fontFamily: "'Cormorant Garamond', Georgia, serif", fontStyle: 'italic', fontWeight: 300, color: '#867766', margin: '2px 0 0' }}>
+              <p style={{
+                fontSize: '19px',
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontStyle: 'italic',
+                fontWeight: 300,
+                color: '#867766',
+                margin: '2px 0 0',
+                maxWidth: 'calc(100% - 40px)',
+                overflowWrap: 'break-word',
+                textAlign: 'center',
+              }}>
                 {results.archetype.name}
               </p>
 

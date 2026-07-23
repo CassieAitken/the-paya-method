@@ -102,8 +102,26 @@ export function BlueprintSummaryPoster({
               <span style={{ fontSize: '32px' }}>🐾</span>
             </div>
           )}
-          <p style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: '32px', color: '#2A2421', margin: '0 0 2px', fontWeight: 500 }}>{name}</p>
-          <p style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: '15px', fontStyle: 'italic', color: '#5C534E', margin: '0 0 18px' }}>{results.archetype?.name}</p>
+          <p style={{
+            fontFamily: "'Cormorant Garamond', Georgia, serif",
+            fontSize: name.length > 14 ? '24px' : '32px',
+            color: '#2A2421',
+            margin: '0 0 2px',
+            fontWeight: 500,
+            maxWidth: '100%',
+            overflowWrap: 'break-word',
+            wordBreak: 'break-word',
+            lineHeight: 1.15,
+          }}>{name}</p>
+          <p style={{
+            fontFamily: "'Cormorant Garamond', Georgia, serif",
+            fontSize: '15px',
+            fontStyle: 'italic',
+            color: '#5C534E',
+            margin: '0 0 18px',
+            maxWidth: '100%',
+            overflowWrap: 'break-word',
+          }}>{results.archetype?.name}</p>
 
           <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'center' }}>
             <span style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: '64px', color: '#4B1D5C', fontWeight: 500, lineHeight: 1 }}>{results.score}</span>
@@ -134,13 +152,13 @@ export function BlueprintSummaryPoster({
 
         {/* Quick Take chips */}
         <div style={{ padding: '0 36px 24px', display: 'flex', gap: '10px' }}>
-          <div style={{ flex: 1, backgroundColor: '#F8F5EE', borderRadius: '10px', padding: '14px 16px' }}>
+          <div style={{ flex: 1, backgroundColor: '#F8F5EE', borderRadius: '10px', padding: '14px 16px', minWidth: 0 }}>
             <p style={{ fontSize: '9px', letterSpacing: '0.1em', color: '#166534', textTransform: 'uppercase', fontWeight: 700, margin: '0 0 4px' }}>Strength</p>
-            <p style={{ fontSize: '13px', color: '#2A2421', fontWeight: 600, margin: 0 }}>{topPillar?.title}</p>
+            <p style={{ fontSize: '13px', color: '#2A2421', fontWeight: 600, margin: 0, overflowWrap: 'break-word' }}>{topPillar?.title}</p>
           </div>
-          <div style={{ flex: 1, backgroundColor: '#F8F5EE', borderRadius: '10px', padding: '14px 16px' }}>
+          <div style={{ flex: 1, backgroundColor: '#F8F5EE', borderRadius: '10px', padding: '14px 16px', minWidth: 0 }}>
             <p style={{ fontSize: '9px', letterSpacing: '0.1em', color: '#0A4682', textTransform: 'uppercase', fontWeight: 700, margin: '0 0 4px' }}>Priority</p>
-            <p style={{ fontSize: '13px', color: '#2A2421', fontWeight: 600, margin: 0 }}>{bottomPillar?.title}</p>
+            <p style={{ fontSize: '13px', color: '#2A2421', fontWeight: 600, margin: 0, overflowWrap: 'break-word' }}>{bottomPillar?.title}</p>
           </div>
         </div>
 
@@ -149,7 +167,7 @@ export function BlueprintSummaryPoster({
           <div style={{ padding: '0 36px 28px' }}>
             <div style={{ backgroundColor: '#4B1D5C', borderRadius: '12px', padding: '20px 22px' }}>
               <p style={{ fontSize: '9px', letterSpacing: '0.15em', color: '#9AB8C4', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 8px' }}>Your Priority Protocol</p>
-              <p style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: '17px', color: '#FDFBF7', margin: '0 0 8px', fontWeight: 500 }}>{priorityShift.protocolTitle}</p>
+              <p style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: '17px', color: '#FDFBF7', margin: '0 0 8px', fontWeight: 500, overflowWrap: 'break-word' }}>{priorityShift.protocolTitle}</p>
               <p style={{ fontSize: '12px', color: '#E4D9E8', lineHeight: 1.6, margin: 0 }}>{priorityShift.compassionateWhat}</p>
             </div>
           </div>

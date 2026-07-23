@@ -226,12 +226,16 @@ export function VitalityBadge({
 
           {/* Dog name */}
           <p style={{
-            fontSize: '36px',
+            fontSize: dogName.length > 12 ? '26px' : '36px',
             fontFamily: "'Cormorant Garamond', Georgia, serif",
             fontWeight: 400,
             color: COLORS.primary,
             margin: '0',
             lineHeight: 1.15,
+            maxWidth: 'calc(100% - 16px)',
+            overflowWrap: 'break-word',
+            wordBreak: 'break-word',
+            textAlign: 'center',
           }}>
             {dogName}
           </p>
@@ -245,6 +249,9 @@ export function VitalityBadge({
               fontWeight: 300,
               color: COLORS.secondary,
               margin: '1px 0 0',
+              maxWidth: 'calc(100% - 16px)',
+              overflowWrap: 'break-word',
+              textAlign: 'center',
             }}>
               {archetypeName}
             </p>
