@@ -661,7 +661,7 @@ The part that got me? How much my own habits are showing up in their biology.`;
               <span className="hidden sm:inline text-[#8A8A86]/40 text-[10px] select-none">&middot;</span>
               <button
                 onClick={() => setShowFounderMessage(true)}
-                className="hidden sm:inline-block text-[10px] font-semibold sm:font-medium tracking-[0.06em] sm:tracking-[0.12em] text-[#2A2A28] sm:text-[#8A8A86] hover:text-[#2A2A28] transition-colors px-2 sm:px-3 py-1.5"
+                className="text-[10px] font-semibold sm:font-medium tracking-[0.06em] sm:tracking-[0.12em] text-[#2A2A28] sm:text-[#8A8A86] hover:text-[#2A2A28] transition-colors px-2 sm:px-3 py-1.5"
               >
                 Founder
               </button>
