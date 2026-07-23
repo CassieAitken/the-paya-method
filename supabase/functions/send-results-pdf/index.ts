@@ -68,7 +68,7 @@ Deno.serve(async (req: Request) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Paya Labs <cassie@send.payalabs.net>",
+        from: "The Paya Method <cassie@send.payalabs.net>",
         reply_to: "Cassie <payalabs01@gmail.com>",
         to: [dogData.ownerEmail],
         bcc: ["payalabs01@gmail.com"],
@@ -214,8 +214,8 @@ function getFrequencyLabel(freq: string): string {
 }
 
 function getFrequencyColor(freq: string): string {
-  const map: Record<string, string> = { daily: "#166534", often: "#166534", sometimes: "#92400e", rarely: "#92400e", never: "#a8a29e" };
-  return map[freq] || "#a8a29e";
+  const map: Record<string, string> = { daily: "#166534", often: "#166534", sometimes: "#92400e", rarely: "#92400e", never: "#8A7F72" };
+  return map[freq] || "#8A7F72";
 }
 
 // ─── EMAIL GENERATION ─────────────────────────────────────────────────────────
@@ -232,15 +232,15 @@ function generateEmailHTML(dogData: any, results: any, directives: DirectivesPay
     const outcome = typeof step === "object" ? step.outcome || "" : "";
     return `
       <tr>
-        <td style="padding:20px 0;border-bottom:${i < directives.priorityShift.protocolSteps.length - 1 ? '1px solid #f5f5f4' : 'none'};">
+        <td style="padding:20px 0;border-bottom:${i < directives.priorityShift.protocolSteps.length - 1 ? '1px solid #E8E2D9' : 'none'};">
           <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
             <tr>
               <td style="width:36px;vertical-align:top;">
-                <span style="display:inline-block;width:26px;height:26px;background:#1c1917;border-radius:50%;text-align:center;line-height:26px;font-family:'SF Mono',Menlo,monospace;font-size:11px;color:#ffffff;font-weight:700;">${i + 1}</span>
+                <span style="display:inline-block;width:26px;height:26px;background:#0A4682;border-radius:50%;text-align:center;line-height:26px;font-family:'Inter',Helvetica,sans-serif;font-size:11px;color:#ffffff;font-weight:700;">${i + 1}</span>
               </td>
               <td style="padding-left:4px;">
-                ${reasoning ? `<p style="font-size:12.5px;color:#78716c;line-height:1.7;margin:0 0 10px;font-style:italic;">${reasoning}</p>` : ''}
-                <p style="font-size:14px;color:#1c1917;line-height:1.75;margin:0 0 10px;font-weight:500;">${action}</p>
+                ${reasoning ? `<p style="font-size:12.5px;color:#0A4682;line-height:1.7;margin:0 0 10px;font-style:italic;">${reasoning}</p>` : ''}
+                <p style="font-size:14px;color:#2A2421;line-height:1.75;margin:0 0 10px;font-weight:500;">${action}</p>
                 ${outcome ? `<p style="font-size:12.5px;color:#166534;line-height:1.6;margin:0;"><strong>Expected:</strong> ${outcome}</p>` : ''}
               </td>
             </tr>
@@ -253,21 +253,21 @@ function generateEmailHTML(dogData: any, results: any, directives: DirectivesPay
   const secondaryInlineHtml = directives.secondaryPillar && directives.secondaryShift && directives.secondaryPillar.id !== directives.bottomPillar.id ? `
     <!-- Secondary Focus divider -->
     <tr><td style="padding:32px 32px 0;">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="border-top:1px solid #e7e5e4;"></td></tr></table>
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="border-top:1px solid #E8E2D9;"></td></tr></table>
     </td></tr>
     <tr><td style="padding:28px 32px 16px;">
-      <p style="font-family:'SF Mono',Menlo,monospace;font-size:9px;text-transform:uppercase;letter-spacing:2.5px;color:#78716c;margin:0 0 12px;">Secondary Focus</p>
-      <h3 style="font-size:20px;color:#1c1917;margin:0 0 4px;font-weight:400;">${directives.secondaryShift.protocolTitle}</h3>
-      <p style="font-size:12px;color:#a8a29e;margin:0 0 16px;">Targeting ${directives.secondaryPillar.title} &middot; Currently at ${directives.secondaryPillar.score}%</p>
-      <p style="font-size:14.5px;color:#44403c;line-height:1.8;margin:0 0 20px;">${directives.secondaryShift.compassionateWhat}</p>
+      <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2.5px;color:#0A4682;margin:0 0 12px;">Secondary Focus</p>
+      <h3 style="font-size:20px;color:#2A2421;margin:0 0 4px;font-weight:400;">${directives.secondaryShift.protocolTitle}</h3>
+      <p style="font-size:12px;color:#8A7F72;margin:0 0 16px;">Targeting ${directives.secondaryPillar.title} &middot; Currently at ${directives.secondaryPillar.score}%</p>
+      <p style="font-size:14.5px;color:#5C534E;line-height:1.8;margin:0 0 20px;">${directives.secondaryShift.compassionateWhat}</p>
       ${directives.secondaryShift.protocolSteps.slice(0, 3).map((step: any, i: number) => {
         const action = typeof step === "string" ? step : step.action || "";
         const outcome = typeof step === "object" ? step.outcome || "" : "";
         return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;">
           <tr>
-            <td style="width:30px;vertical-align:top;"><span style="display:inline-block;width:22px;height:22px;background:#44403c;border-radius:50%;text-align:center;line-height:22px;font-family:'SF Mono',Menlo,monospace;font-size:10px;color:#fff;font-weight:600;">${i+1}</span></td>
+            <td style="width:30px;vertical-align:top;"><span style="display:inline-block;width:22px;height:22px;background:#0A4682;border-radius:50%;text-align:center;line-height:22px;font-family:'Inter',Helvetica,sans-serif;font-size:10px;color:#fff;font-weight:600;">${i+1}</span></td>
             <td style="padding-left:6px;">
-              <p style="font-size:13.5px;color:#1c1917;line-height:1.7;margin:0 0 4px;font-weight:500;">${action}</p>
+              <p style="font-size:13.5px;color:#2A2421;line-height:1.7;margin:0 0 4px;font-weight:500;">${action}</p>
               ${outcome ? `<p style="font-size:12px;color:#166534;line-height:1.5;margin:0;"><em>${outcome}</em></p>` : ''}
             </td>
           </tr>
@@ -294,8 +294,8 @@ function generateEmailHTML(dogData: any, results: any, directives: DirectivesPay
       const color = getFrequencyColor(freq);
       const dot = freq === "never" ? "\u25CB" : "\u25CF";
       return `<tr>
-        <td style="padding:6px 10px;border-bottom:1px solid #fafaf9;font-size:12px;color:#44403c;"><span style="color:${color};margin-right:5px;">${dot}</span>${r.label}</td>
-        <td style="padding:6px 10px;border-bottom:1px solid #fafaf9;text-align:right;font-size:10px;font-family:'SF Mono',Menlo,monospace;color:${color};font-weight:600;">${label}</td>
+        <td style="padding:6px 10px;border-bottom:1px solid #F8F5EE;font-size:12px;color:#5C534E;"><span style="color:${color};margin-right:5px;">${dot}</span>${r.label}</td>
+        <td style="padding:6px 10px;border-bottom:1px solid #F8F5EE;text-align:right;font-size:10px;font-family:'Inter',Helvetica,sans-serif;color:${color};font-weight:600;">${label}</td>
       </tr>`;
     }).join("");
 
@@ -303,20 +303,20 @@ function generateEmailHTML(dogData: any, results: any, directives: DirectivesPay
 
     return `
       <tr><td style="padding:${i === 0 ? '0' : '24px'} 32px 0;">
-        ${i > 0 ? '<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="border-top:1px solid #f5f5f4;"></td></tr></table>' : ''}
+        ${i > 0 ? '<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="border-top:1px solid #E8E2D9;"></td></tr></table>' : ''}
       </td></tr>
       <tr><td style="padding:16px 32px ${isLast ? '28px' : '0'};">
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
           <tr>
-            <td><h4 style="font-size:16px;color:#1c1917;margin:0;font-weight:400;">${f.title}${badge}</h4></td>
-            <td style="text-align:right;font-family:'SF Mono',Menlo,monospace;font-size:18px;font-weight:600;color:${score >= 70 ? '#166534' : score >= 45 ? '#92400e' : '#991b1b'};">${score}<span style="font-size:11px;color:#d6d3d1;">/100</span></td>
+            <td><h4 style="font-size:16px;color:#2A2421;margin:0;font-weight:400;">${f.title}${badge}</h4></td>
+            <td style="text-align:right;font-family:'Inter',Helvetica,sans-serif;font-size:18px;font-weight:600;color:${score >= 70 ? '#166534' : score >= 45 ? '#92400e' : '#991b1b'};">${score}<span style="font-size:11px;color:#8A7F72;">/100</span></td>
           </tr>
         </table>
-        <div style="width:100%;height:5px;background:#f5f5f4;border-radius:3px;margin:10px 0 12px;overflow:hidden;">
+        <div style="width:100%;height:5px;background:#E8E2D9;border-radius:3px;margin:10px 0 12px;overflow:hidden;">
           <div style="width:${score}%;height:100%;background:${score >= 70 ? '#166534' : score >= 45 ? '#d97706' : '#dc2626'};border-radius:3px;"></div>
         </div>
-        <p style="font-size:13.5px;color:#44403c;line-height:1.75;margin:0 0 14px;">${narrative}</p>
-        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#fafaf9;border-radius:6px;overflow:hidden;">
+        <p style="font-size:13.5px;color:#5C534E;line-height:1.75;margin:0 0 14px;">${narrative}</p>
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F8F5EE;border-radius:6px;overflow:hidden;">
           ${ritualRows}
         </table>
       </td></tr>
@@ -330,41 +330,41 @@ function generateEmailHTML(dogData: any, results: any, directives: DirectivesPay
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${name}'s Complete Dog Biology Blueprint™</title>
 </head>
-<body style="margin:0;padding:0;background-color:#f8f7f6;font-family:Georgia,'Times New Roman',serif;">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f8f7f6;">
+<body style="margin:0;padding:0;background-color:#FDFBF7;font-family:Georgia,'Times New Roman',serif;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#FDFBF7;">
     <tr>
       <td align="center" style="padding:40px 16px;">
         <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;">
 
           <!-- Header -->
           <tr><td style="padding:0 0 8px;text-align:center;">
-            <p style="font-family:'SF Mono',Menlo,monospace;font-size:10px;text-transform:uppercase;letter-spacing:3px;color:#a8a29e;margin:0;">Paya Labs</p>
+            <p style="font-family:'Inter',Helvetica,sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:3px;color:#8A7F72;margin:0;">The Paya Method</p>
           </td></tr>
           <tr><td style="padding:0 0 32px;text-align:center;">
-            <p style="font-size:11px;color:#d6d3d1;margin:0;">${currentDate}</p>
+            <p style="font-size:11px;color:#8A7F72;margin:0;">${currentDate}</p>
           </td></tr>
 
           <!-- Vitality Badge (Purple) -->
           <tr>
             <td>
-              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#1C1433;border-radius:20px;overflow:hidden;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#4B1D5C;border-radius:20px;overflow:hidden;">
                 <tr><td style="padding:36px 32px 28px;">
-                  <p style="text-align:center;font-family:'Courier New',monospace;font-size:9px;letter-spacing:3px;color:rgba(196,181,212,0.5);text-transform:uppercase;margin:0 0 4px;">DOG BIOLOGY BLUEPRINT™</p>
-                  <p style="text-align:center;font-family:'Courier New',monospace;font-size:9px;letter-spacing:1.5px;color:rgba(196,181,212,0.25);margin:0 0 4px;">Created using The Paya Method™</p>
-                  <p style="text-align:center;font-family:'Courier New',monospace;font-size:9px;letter-spacing:1.5px;color:rgba(196,181,212,0.25);margin:0 0 24px;">PL-${String(Math.floor(Math.random() * 9000) + 1000).padStart(4, '0')}</p>
+                  <p style="text-align:center;font-family:'Inter',Helvetica,sans-serif;font-size:11px;letter-spacing:0.15em;color:#9AB8C4;text-transform:uppercase;font-weight:600;margin:0 0 4px;">DOG BIOLOGY BLUEPRINT™</p>
+                  <p style="text-align:center;font-family:'Inter',Helvetica,sans-serif;font-size:10px;letter-spacing:0.05em;color:#C9B9CE;margin:0 0 4px;">Created using The Paya Method™</p>
+                  <p style="text-align:center;font-family:'Inter',Helvetica,sans-serif;font-size:10px;letter-spacing:0.05em;color:#C9B9CE;margin:0 0 24px;">PL-${String(Math.floor(Math.random() * 9000) + 1000).padStart(4, '0')}</p>
 
                   <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
                     <tr>
                       <td style="width:80px;vertical-align:middle;">
                         ${dogPhoto
-                          ? `<img src="${dogPhoto}" alt="${name}" style="width:72px;height:72px;border-radius:50%;object-fit:cover;border:1.5px solid rgba(196,181,212,0.2);" />`
-                          : `<div style="width:72px;height:72px;border-radius:50%;border:1.5px solid rgba(196,181,212,0.2);background:rgba(196,181,212,0.06);text-align:center;line-height:72px;"><span style="font-size:28px;color:#C4B5D4;">&#x1F43E;</span></div>`
+                          ? `<img src="${dogPhoto}" alt="${name}" style="width:72px;height:72px;border-radius:50%;object-fit:cover;border:1.5px solid rgba(154,184,196,0.3);" />`
+                          : `<div style="width:72px;height:72px;border-radius:50%;border:1.5px solid rgba(154,184,196,0.3);background:rgba(154,184,196,0.08);text-align:center;line-height:72px;"><span style="font-size:28px;color:#9AB8C4;">&#x1F43E;</span></div>`
                         }
                       </td>
                       <td style="padding-left:16px;vertical-align:middle;">
-                        <h1 style="font-family:Georgia,'Times New Roman',serif;font-size:38px;font-weight:300;color:#F0EBF5;margin:0 0 4px;letter-spacing:-0.5px;">${name}</h1>
-                        <p style="font-family:Georgia,'Times New Roman',serif;font-size:15px;font-style:italic;font-weight:300;color:#C4B5D4;margin:0;">${results.archetype.name}</p>
-                        ${dogData.breed ? `<p style="font-family:'Courier New',monospace;font-size:9px;color:rgba(196,181,212,0.4);margin:6px 0 0;letter-spacing:0.5px;">${dogData.breed}${dogData.age ? ` &middot; ${dogData.age}y` : ''}</p>` : ''}
+                        <h1 style="font-family:Georgia,'Times New Roman',serif;font-size:38px;font-weight:300;color:#FDFBF7;margin:0 0 4px;letter-spacing:-0.5px;">${name}</h1>
+                        <p style="font-family:Georgia,'Times New Roman',serif;font-size:15px;font-style:italic;font-weight:300;color:#9AB8C4;margin:0;">${results.archetype.name}</p>
+                        ${dogData.breed ? `<p style="font-family:'Inter',Helvetica,sans-serif;font-size:10px;color:#C9B9CE;margin:6px 0 0;">${dogData.breed}${dogData.age ? ` &middot; ${dogData.age}y` : ''}</p>` : ''}
                       </td>
                     </tr>
                   </table>
@@ -373,12 +373,12 @@ function generateEmailHTML(dogData: any, results: any, directives: DirectivesPay
                     <tr>
                       <td style="width:130px;vertical-align:top;text-align:center;">
                         <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;">
-                          <tr><td style="width:110px;height:110px;border-radius:55px;border:2px solid rgba(196,181,212,0.2);text-align:center;vertical-align:middle;">
-                            <span style="font-family:Georgia,'Times New Roman',serif;font-size:44px;font-weight:300;color:#F0EBF5;line-height:1;">${results.score}</span><br/>
-                            <span style="font-family:'Courier New',monospace;font-size:11px;color:rgba(196,181,212,0.5);letter-spacing:1px;">/100</span>
+                          <tr><td style="width:110px;height:110px;border-radius:55px;border:2px solid rgba(154,184,196,0.3);text-align:center;vertical-align:middle;">
+                            <span style="font-family:Georgia,'Times New Roman',serif;font-size:44px;font-weight:300;color:#FDFBF7;line-height:1;">${results.score}</span><br/>
+                            <span style="font-family:'Courier New',monospace;font-size:11px;color:#9AB8C4;letter-spacing:1px;">/100</span>
                           </td></tr>
                         </table>
-                        <p style="font-family:Georgia,'Times New Roman',serif;font-size:12px;font-style:italic;font-weight:300;color:#C4B5D4;margin:10px 0 0;text-align:center;">${results.score >= 80 ? 'Thriving' : results.score >= 65 ? 'On the Right Path' : results.score >= 45 ? 'Room to Grow' : 'Needs Attention'}</p>
+                        <p style="font-family:Georgia,'Times New Roman',serif;font-size:12px;font-style:italic;font-weight:300;color:#9AB8C4;margin:10px 0 0;text-align:center;">${results.score >= 80 ? 'Thriving' : results.score >= 65 ? 'On the Right Path' : results.score >= 45 ? 'Room to Grow' : 'Needs Attention'}</p>
                       </td>
                       <td style="vertical-align:bottom;padding-left:24px;">
                         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="height:120px;">
@@ -386,14 +386,14 @@ function generateEmailHTML(dogData: any, results: any, directives: DirectivesPay
                             ${FOUNDATIONS.map((f, i) => {
                               const s = results.phaseScores[i] || 50;
                               const barH = Math.max(12, Math.round((s / 100) * 100));
-                              const barColor = s >= 70 ? '#F0EBF5' : s >= 45 ? 'rgba(240,235,245,0.6)' : 'rgba(240,235,245,0.22)';
+                              const barColor = s >= 70 ? '#FDFBF7' : s >= 45 ? 'rgba(240,235,245,0.6)' : 'rgba(240,235,245,0.22)';
                               return `<td style="vertical-align:bottom;text-align:center;padding:0 3px;"><div style="width:100%;height:${barH}px;background:${barColor};border-radius:2px 2px 0 0;"></div></td>`;
                             }).join('')}
                           </tr>
                           <tr>
                             ${FOUNDATIONS.map((f) => {
                               const abbr = f.title.split(' ').pop()!.substring(0, 3).toUpperCase();
-                              return `<td style="text-align:center;padding-top:6px;"><span style="font-family:'Courier New',monospace;font-size:7px;color:rgba(196,181,212,0.4);letter-spacing:0.5px;">${abbr}</span></td>`;
+                              return `<td style="text-align:center;padding-top:6px;"><span style="font-family:'Courier New',monospace;font-size:7px;color:rgba(154,184,196,0.5);letter-spacing:0.5px;">${abbr}</span></td>`;
                             }).join('')}
                           </tr>
                         </table>
@@ -402,11 +402,11 @@ function generateEmailHTML(dogData: any, results: any, directives: DirectivesPay
                   </table>
                 </td></tr>
 
-                <tr><td style="padding:14px 32px;border-top:1px solid rgba(196,181,212,0.08);">
+                <tr><td style="padding:14px 32px;border-top:1px solid rgba(154,184,196,0.12);">
                   <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
                     <tr>
-                      <td style="font-family:'Courier New',monospace;font-size:9px;color:rgba(196,181,212,0.35);letter-spacing:1px;">Sync: ${results.packSync}%</td>
-                      <td style="text-align:right;font-family:-apple-system,Arial,sans-serif;font-size:11px;letter-spacing:2.5px;color:#C4B5D4;font-weight:500;text-transform:uppercase;">PAYALABS.NET</td>
+                      <td style="font-family:'Courier New',monospace;font-size:9px;color:rgba(154,184,196,0.45);letter-spacing:1px;">Sync: ${results.packSync}%</td>
+                      <td style="text-align:right;font-family:-apple-system,Arial,sans-serif;font-size:11px;letter-spacing:2.5px;color:#9AB8C4;font-weight:500;text-transform:uppercase;">PAYALABS.NET</td>
                     </tr>
                   </table>
                 </td></tr>
@@ -422,52 +422,52 @@ function generateEmailHTML(dogData: any, results: any, directives: DirectivesPay
 
                 <!-- Founder Note -->
                 <tr><td style="padding:32px 32px 24px;">
-                  <p style="font-family:'SF Mono',Menlo,monospace;font-size:9px;text-transform:uppercase;letter-spacing:2.5px;color:#a8a29e;margin:0 0 14px;">A Note from Cassie</p>
-                  <p style="font-size:15px;color:#44403c;line-height:1.85;margin:0 0 12px;">I am so honored to be part of ${name}'s longevity journey. We sat with their data &mdash; all ${totalRituals} markers, every pattern, every signal their body is sending.</p>
-                  <p style="font-size:15px;color:#44403c;line-height:1.85;margin:0 0 12px;">What follows is not a generic wellness plan. This is ${name}'s personal clinical blueprint &mdash; built from their specific scores across 7 Biology Markers, targeting the exact levers that will produce the most change.</p>
-                  <p style="font-size:15px;color:#44403c;line-height:1.85;margin:0;">Read it slowly. Implement it one step at a time.</p>
+                  <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2.5px;color:#8A7F72;margin:0 0 14px;">A Note from Cassie</p>
+                  <p style="font-size:15px;color:#5C534E;line-height:1.85;margin:0 0 12px;">I am so honored to be part of ${name}'s longevity journey. We sat with their data &mdash; all ${totalRituals} markers, every pattern, every signal their body is sending.</p>
+                  <p style="font-size:15px;color:#5C534E;line-height:1.85;margin:0 0 12px;">What follows is not a generic wellness plan. This is ${name}'s personal clinical blueprint &mdash; built from their specific scores across 7 Biology Markers, targeting the exact levers that will produce the most change.</p>
+                  <p style="font-size:15px;color:#5C534E;line-height:1.85;margin:0;">Read it slowly. Implement it one step at a time.</p>
                 </td></tr>
 
                 <!-- Divider -->
                 <tr><td style="padding:0 32px;">
-                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="border-top:1px solid #e7e5e4;"></td></tr></table>
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="border-top:1px solid #E8E2D9;"></td></tr></table>
                 </td></tr>
 
                 <!-- Archetype Analysis -->
                 <tr><td style="padding:28px 32px 24px;">
-                  <p style="font-family:'SF Mono',Menlo,monospace;font-size:9px;text-transform:uppercase;letter-spacing:2.5px;color:#78716c;margin:0 0 14px;">Your Archetype &mdash; ${results.archetype.name}</p>
-                  <p style="font-size:15px;color:#44403c;line-height:1.85;margin:0;">${results.archetype.analysis || results.archetype.freeTeaser}</p>
+                  <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2.5px;color:#0A4682;margin:0 0 14px;">Your Archetype &mdash; ${results.archetype.name}</p>
+                  <p style="font-size:15px;color:#5C534E;line-height:1.85;margin:0;">${results.archetype.analysis || results.archetype.freeTeaser}</p>
                 </td></tr>
 
                 <!-- Divider -->
                 <tr><td style="padding:0 32px;">
-                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="border-top:1px solid #e7e5e4;"></td></tr></table>
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="border-top:1px solid #E8E2D9;"></td></tr></table>
                 </td></tr>
 
                 <!-- Priority Protocol -->
                 <tr><td style="padding:28px 32px 20px;">
-                  <p style="font-family:'SF Mono',Menlo,monospace;font-size:9px;text-transform:uppercase;letter-spacing:2.5px;color:#78716c;margin:0 0 12px;">Priority Protocol</p>
-                  <h2 style="font-size:22px;color:#1c1917;margin:0 0 6px;font-weight:400;">${directives.priorityShift.protocolTitle}</h2>
-                  <p style="font-size:12px;color:#a8a29e;margin:0;">Targeting ${directives.bottomPillar.title} &middot; Currently at ${directives.bottomPillar.score}%</p>
+                  <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2.5px;color:#0A4682;margin:0 0 12px;">Priority Protocol</p>
+                  <h2 style="font-size:22px;color:#2A2421;margin:0 0 6px;font-weight:400;">${directives.priorityShift.protocolTitle}</h2>
+                  <p style="font-size:12px;color:#8A7F72;margin:0;">Targeting ${directives.bottomPillar.title} &middot; Currently at ${directives.bottomPillar.score}%</p>
                 </td></tr>
                 <tr><td style="padding:0 32px 20px;">
-                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#fafaf9;border-radius:8px;">
-                    <tr><td style="padding:18px 22px;border-left:3px solid #1c1917;">
-                      <p style="font-family:'SF Mono',Menlo,monospace;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#78716c;margin:0 0 8px;">The Biology</p>
-                      <p style="font-size:14px;color:#44403c;line-height:1.8;margin:0;">${directives.priorityShift.biologicalWhy}</p>
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F8F5EE;border-radius:8px;">
+                    <tr><td style="padding:18px 22px;border-left:3px solid #0A4682;">
+                      <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#0A4682;margin:0 0 8px;">The Biology</p>
+                      <p style="font-size:14px;color:#5C534E;line-height:1.8;margin:0;">${directives.priorityShift.biologicalWhy}</p>
                     </td></tr>
                   </table>
                 </td></tr>
                 <tr><td style="padding:0 32px 20px;">
-                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#fafaf9;border-radius:8px;">
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F8F5EE;border-radius:8px;">
                     <tr><td style="padding:18px 22px;border-left:3px solid #166534;">
-                      <p style="font-family:'SF Mono',Menlo,monospace;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#78716c;margin:0 0 8px;">What This Means for ${name}</p>
-                      <p style="font-size:14px;color:#44403c;line-height:1.8;margin:0;">${directives.priorityShift.compassionateWhat}</p>
+                      <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#0A4682;margin:0 0 8px;">What This Means for ${name}</p>
+                      <p style="font-size:14px;color:#5C534E;line-height:1.8;margin:0;">${directives.priorityShift.compassionateWhat}</p>
                     </td></tr>
                   </table>
                 </td></tr>
                 <tr><td style="padding:0 32px 28px;">
-                  <p style="font-family:'SF Mono',Menlo,monospace;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#78716c;margin:0 0 16px;">Exactly What to Do</p>
+                  <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#0A4682;margin:0 0 16px;">Exactly What to Do</p>
                   <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
                     ${protocolStepsHtml}
                   </table>
@@ -477,71 +477,71 @@ function generateEmailHTML(dogData: any, results: any, directives: DirectivesPay
 
                 <!-- Divider -->
                 <tr><td style="padding:0 32px;">
-                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="border-top:1px solid #e7e5e4;"></td></tr></table>
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="border-top:1px solid #E8E2D9;"></td></tr></table>
                 </td></tr>
 
                 <!-- The Mirror -->
                 <tr><td style="padding:28px 32px 24px;">
-                  <p style="font-family:'SF Mono',Menlo,monospace;font-size:9px;text-transform:uppercase;letter-spacing:2.5px;color:#78716c;margin:0 0 14px;">The Mirror</p>
-                  ${dogData.reflection ? `<p style="font-size:15px;font-style:italic;color:#78716c;line-height:1.8;margin:0 0 20px;padding-left:18px;border-left:2px solid #e7e5e4;">&ldquo;${dogData.reflection}&rdquo;</p>` : ''}
-                  <p style="font-family:'SF Mono',Menlo,monospace;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#a8a29e;margin:0 0 6px;">Your Resonance Level</p>
-                  <h3 style="font-size:20px;color:#1c1917;margin:0 0 16px;font-weight:400;">${mirror.tier}</h3>
-                  <p style="font-size:14.5px;color:#44403c;line-height:1.8;margin:0 0 20px;">${mirror.text}</p>
-                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#fafaf9;border-radius:8px;">
-                    <tr><td style="padding:18px 22px;border-left:3px solid #78716c;">
-                      <p style="font-family:'SF Mono',Menlo,monospace;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#78716c;margin:0 0 8px;">The Human Bridge</p>
-                      <p style="font-size:14px;color:#44403c;line-height:1.8;margin:0;">${mirror.humanBridge}</p>
+                  <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2.5px;color:#0A4682;margin:0 0 14px;">The Mirror</p>
+                  ${dogData.reflection ? `<p style="font-size:15px;font-style:italic;color:#0A4682;line-height:1.8;margin:0 0 20px;padding-left:18px;border-left:2px solid #E8E2D9;">&ldquo;${dogData.reflection}&rdquo;</p>` : ''}
+                  <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#8A7F72;margin:0 0 6px;">Your Resonance Level</p>
+                  <h3 style="font-size:20px;color:#2A2421;margin:0 0 16px;font-weight:400;">${mirror.tier}</h3>
+                  <p style="font-size:14.5px;color:#5C534E;line-height:1.8;margin:0 0 20px;">${mirror.text}</p>
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F8F5EE;border-radius:8px;">
+                    <tr><td style="padding:18px 22px;border-left:3px solid #0A4682;">
+                      <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#0A4682;margin:0 0 8px;">The Human Bridge</p>
+                      <p style="font-size:14px;color:#5C534E;line-height:1.8;margin:0;">${mirror.humanBridge}</p>
                     </td></tr>
                   </table>
                 </td></tr>
 
                 <!-- Divider -->
                 <tr><td style="padding:0 32px;">
-                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="border-top:1px solid #e7e5e4;"></td></tr></table>
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="border-top:1px solid #E8E2D9;"></td></tr></table>
                 </td></tr>
 
                 <!-- Weekly Rhythm -->
                 <tr><td style="padding:28px 32px 24px;">
-                  <p style="font-family:'SF Mono',Menlo,monospace;font-size:9px;text-transform:uppercase;letter-spacing:2.5px;color:#78716c;margin:0 0 14px;">Your Weekly Rhythm</p>
-                  <p style="font-size:14px;color:#44403c;line-height:1.8;margin:0 0 20px;">Consistency wins over intensity. ${name}'s biology responds to rhythm, not heroic effort.</p>
+                  <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2.5px;color:#0A4682;margin:0 0 14px;">Your Weekly Rhythm</p>
+                  <p style="font-size:14px;color:#5C534E;line-height:1.8;margin:0 0 20px;">Consistency wins over intensity. ${name}'s biology responds to rhythm, not heroic effort.</p>
                   <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-                    <tr><td style="padding:14px 0;border-bottom:1px solid #f5f5f4;">
-                      <p style="font-family:'SF Mono',Menlo,monospace;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#166534;font-weight:700;margin:0 0 8px;">Daily &mdash; Non-Negotiables</p>
-                      <p style="font-size:13.5px;color:#44403c;line-height:1.9;margin:0;">&bull; Priority protocol primary action<br/>&bull; Morning activation ritual (3-5 min)<br/>&bull; Structured meal timing<br/>&bull; Evening wind-down sequence</p>
+                    <tr><td style="padding:14px 0;border-bottom:1px solid #E8E2D9;">
+                      <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#166534;font-weight:700;margin:0 0 8px;">Daily &mdash; Non-Negotiables</p>
+                      <p style="font-size:13.5px;color:#5C534E;line-height:1.9;margin:0;">&bull; Priority protocol primary action<br/>&bull; Morning activation ritual (3-5 min)<br/>&bull; Structured meal timing<br/>&bull; Evening wind-down sequence</p>
                     </td></tr>
-                    <tr><td style="padding:14px 0;border-bottom:1px solid #f5f5f4;">
-                      <p style="font-family:'SF Mono',Menlo,monospace;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#166534;font-weight:700;margin:0 0 8px;">Every Other Day</p>
-                      <p style="font-size:13.5px;color:#44403c;line-height:1.9;margin:0;">&bull; Secondary protocol actions<br/>&bull; Cognitive enrichment (puzzle feeder or scent game)<br/>&bull; Body scan check (2 min)</p>
+                    <tr><td style="padding:14px 0;border-bottom:1px solid #E8E2D9;">
+                      <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#166534;font-weight:700;margin:0 0 8px;">Every Other Day</p>
+                      <p style="font-size:13.5px;color:#5C534E;line-height:1.9;margin:0;">&bull; Secondary protocol actions<br/>&bull; Cognitive enrichment (puzzle feeder or scent game)<br/>&bull; Body scan check (2 min)</p>
                     </td></tr>
                     <tr><td style="padding:14px 0;">
-                      <p style="font-family:'SF Mono',Menlo,monospace;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#166534;font-weight:700;margin:0 0 8px;">Weekly</p>
-                      <p style="font-size:13.5px;color:#44403c;line-height:1.9;margin:0;">&bull; Novel environment exploration<br/>&bull; Bed &amp; environment refresh<br/>&bull; Progress check against markers below</p>
+                      <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#166534;font-weight:700;margin:0 0 8px;">Weekly</p>
+                      <p style="font-size:13.5px;color:#5C534E;line-height:1.9;margin:0;">&bull; Novel environment exploration<br/>&bull; Bed &amp; environment refresh<br/>&bull; Progress check against markers below</p>
                     </td></tr>
                   </table>
                 </td></tr>
 
                 <!-- Divider -->
                 <tr><td style="padding:0 32px;">
-                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="border-top:1px solid #e7e5e4;"></td></tr></table>
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="border-top:1px solid #E8E2D9;"></td></tr></table>
                 </td></tr>
 
                 <!-- Progress Markers -->
                 <tr><td style="padding:28px 32px 32px;">
-                  <p style="font-family:'SF Mono',Menlo,monospace;font-size:9px;text-transform:uppercase;letter-spacing:2.5px;color:#78716c;margin:0 0 14px;">Progress Markers</p>
-                  <p style="font-size:14px;color:#44403c;line-height:1.8;margin:0 0 20px;">Biology moves on its own timeline. These markers confirm you're on the right track.</p>
+                  <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2.5px;color:#0A4682;margin:0 0 14px;">Progress Markers</p>
+                  <p style="font-size:14px;color:#5C534E;line-height:1.8;margin:0 0 20px;">Biology moves on its own timeline. These markers confirm you're on the right track.</p>
 
-                  <p style="font-family:'SF Mono',Menlo,monospace;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#1c1917;font-weight:700;margin:0 0 8px;">Days 1&ndash;7: Initial Response</p>
-                  <p style="font-size:13px;color:#44403c;line-height:1.9;margin:0 0 18px;padding-bottom:14px;border-bottom:1px solid #f5f5f4;">&bull; Settling into sleep faster (within 5 min)<br/>&bull; More predictable appetite at meal times<br/>&bull; Subtle shift in morning energy &mdash; calmer, more present<br/>&bull; May initially resist new enrichment (this is normal)</p>
+                  <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#2A2421;font-weight:700;margin:0 0 8px;">Days 1&ndash;7: Initial Response</p>
+                  <p style="font-size:13px;color:#5C534E;line-height:1.9;margin:0 0 18px;padding-bottom:14px;border-bottom:1px solid #E8E2D9;">&bull; Settling into sleep faster (within 5 min)<br/>&bull; More predictable appetite at meal times<br/>&bull; Subtle shift in morning energy &mdash; calmer, more present<br/>&bull; May initially resist new enrichment (this is normal)</p>
 
-                  <p style="font-family:'SF Mono',Menlo,monospace;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#1c1917;font-weight:700;margin:0 0 8px;">Days 8&ndash;14: System Calibration</p>
-                  <p style="font-size:13px;color:#44403c;line-height:1.9;margin:0 0 18px;padding-bottom:14px;border-bottom:1px solid #f5f5f4;">&bull; Cortisol normalizing &mdash; consistent energy throughout the day<br/>&bull; Stool consistency improving<br/>&bull; Reduced paw licking, eye discharge, or skin irritation<br/>&bull; Visibly deeper sleep positions (full lateral recumbency)</p>
+                  <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#2A2421;font-weight:700;margin:0 0 8px;">Days 8&ndash;14: System Calibration</p>
+                  <p style="font-size:13px;color:#5C534E;line-height:1.9;margin:0 0 18px;padding-bottom:14px;border-bottom:1px solid #E8E2D9;">&bull; Cortisol normalizing &mdash; consistent energy throughout the day<br/>&bull; Stool consistency improving<br/>&bull; Reduced paw licking, eye discharge, or skin irritation<br/>&bull; Visibly deeper sleep positions (full lateral recumbency)</p>
 
-                  <p style="font-family:'SF Mono',Menlo,monospace;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#1c1917;font-weight:700;margin:0 0 8px;">Days 15&ndash;30: Visible Transformation</p>
-                  <p style="font-size:13px;color:#44403c;line-height:1.9;margin:0 0 20px;">&bull; Coat showing improved luster and texture<br/>&bull; Sustained engagement during enrichment<br/>&bull; Improved social confidence and reduced reactivity<br/>&bull; Morning stiffness reduced or eliminated<br/>&bull; Overall demeanor shift &mdash; &ldquo;they seem like themselves again&rdquo;</p>
+                  <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#2A2421;font-weight:700;margin:0 0 8px;">Days 15&ndash;30: Visible Transformation</p>
+                  <p style="font-size:13px;color:#5C534E;line-height:1.9;margin:0 0 20px;">&bull; Coat showing improved luster and texture<br/>&bull; Sustained engagement during enrichment<br/>&bull; Improved social confidence and reduced reactivity<br/>&bull; Morning stiffness reduced or eliminated<br/>&bull; Overall demeanor shift &mdash; &ldquo;they seem like themselves again&rdquo;</p>
 
-                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#fafaf9;border-radius:8px;">
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F8F5EE;border-radius:8px;">
                     <tr><td style="padding:14px 18px;">
-                      <p style="font-size:12.5px;color:#44403c;line-height:1.7;margin:0;"><strong>Note:</strong> If you don't see initial markers by Day 10, don't adjust &mdash; increase consistency. Biology responds to repetition before intensity.</p>
+                      <p style="font-size:12.5px;color:#5C534E;line-height:1.7;margin:0;"><strong>Note:</strong> If you don't see initial markers by Day 10, don't adjust &mdash; increase consistency. Biology responds to repetition before intensity.</p>
                     </td></tr>
                   </table>
                 </td></tr>
@@ -553,17 +553,17 @@ function generateEmailHTML(dogData: any, results: any, directives: DirectivesPay
 
           <!-- Protocol notice -->
           <tr>
-            <td style="text-align:center;padding:32px 28px;background:#1c1917;border-radius:12px;">
-              <p style="font-size:16px;color:#e7e5e4;line-height:1.8;margin:0 0 10px;font-weight:300;">Your 30-Day Protocol is being prepared.</p>
-              <p style="font-family:'SF Mono',Menlo,monospace;font-size:10px;color:#a8a29e;margin:0;letter-spacing:1px;text-transform:uppercase;">Arriving in your inbox within 24 hours</p>
+            <td style="text-align:center;padding:32px 28px;background:#4B1D5C;border-radius:12px;">
+              <p style="font-size:16px;color:#FDFBF7;line-height:1.8;margin:0 0 10px;font-weight:300;">Your 30-Day Protocol is being prepared.</p>
+              <p style="font-family:'Inter',Helvetica,sans-serif;font-size:10px;color:#9AB8C4;margin:0;letter-spacing:1px;text-transform:uppercase;">Arriving in your inbox within 24 hours</p>
             </td>
           </tr>
           <tr><td style="height:32px;"></td></tr>
 
           <!-- ═══ REFERENCE: FULL PILLAR AUDIT ═══ -->
           <tr><td style="padding:0 0 16px;">
-            <p style="font-family:'SF Mono',Menlo,monospace;font-size:9px;text-transform:uppercase;letter-spacing:2.5px;color:#a8a29e;margin:0;">Reference &mdash; Full ${totalRituals}-Marker Audit</p>
-            <p style="font-size:12px;color:#a8a29e;margin:6px 0 0;">Bookmark this section. Return to it as you implement your protocol.</p>
+            <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2.5px;color:#8A7F72;margin:0;">Reference &mdash; Full ${totalRituals}-Marker Audit</p>
+            <p style="font-size:12px;color:#8A7F72;margin:6px 0 0;">Bookmark this section. Return to it as you implement your protocol.</p>
           </td></tr>
           <tr>
             <td style="background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.05);">
@@ -576,10 +576,10 @@ function generateEmailHTML(dogData: any, results: any, directives: DirectivesPay
 
           <!-- Footer -->
           <tr>
-            <td style="text-align:center;padding:28px 0 0;border-top:1px solid #e7e5e4;">
+            <td style="text-align:center;padding:28px 0 0;border-top:1px solid #E8E2D9;">
               <p style="font-size:14px;font-style:italic;color:#57534e;line-height:1.8;margin:0 0 20px;max-width:440px;display:inline-block;">You already know how to love this dog. Now you have the map to love them with precision.</p>
-              <p style="font-family:'SF Mono',Menlo,monospace;font-size:9px;text-transform:uppercase;letter-spacing:2.5px;color:#a8a29e;margin:0 0 12px;">Cassie &middot; Paya Labs</p>
-              <p style="font-size:11px;color:#d6d3d1;margin:0;line-height:1.6;">For educational purposes. Always consult your veterinarian<br>before making changes to your dog's routine or nutrition.</p>
+              <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2.5px;color:#8A7F72;margin:0 0 12px;">Cassie &middot; The Paya Method</p>
+              <p style="font-size:11px;color:#8A7F72;margin:0;line-height:1.6;">For educational purposes. Always consult your veterinarian<br>before making changes to your dog's routine or nutrition.</p>
             </td>
           </tr>
           <tr><td style="height:40px;"></td></tr>
