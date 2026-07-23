@@ -304,7 +304,7 @@ export function Audit({
             {/* Answer tap cards — 3-point Soulful Scale */}
             <div className="space-y-2.5">
               {(['resilient', 'whispering', 'burdened'] as FrequencyLevel[]).map((level) => {
-                const scale = foundation.scale || SOULFUL_SCALE_FALLBACK;
+                const scale = ritual?.scale || foundation.scale || SOULFUL_SCALE_FALLBACK;
                 const isSelected = currentFrequency === level;
                 const label = level.charAt(0).toUpperCase() + level.slice(1);
                 return (
