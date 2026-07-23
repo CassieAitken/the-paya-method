@@ -117,7 +117,7 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
               The 7 Biology Markers
             </h2>
             <p className="text-[11px] uppercase tracking-[0.15em] text-[#8A8A86]">
-              50 Markers &middot; 7 Biology Markers &middot; One Score out of 100
+              50 Points &middot; 7 Biology Markers &middot; One Score out of 100
             </p>
           </div>
 
@@ -128,7 +128,7 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
               return (
                 <div
                   key={f.id}
-                  className="group cursor-pointer"
+                  className={`group cursor-pointer ${i === 6 ? 'sm:col-start-2' : ''}`}
                   onClick={() => setOpenPillar(isOpen ? null : i)}
                 >
                   <div className="w-12 h-12 rounded-full border border-[#9AB8C4]/40 flex items-center justify-center mb-4 group-hover:border-[#9AB8C4] transition-colors">
