@@ -105,7 +105,7 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
       </section>
 
       {/* ===== SEVEN PILLARS (Editorial List) ===== */}
-      <section ref={pillarsReveal.ref as React.RefObject<HTMLElement>} className={`relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#FDFBF7] py-16 sm:py-24 lg:py-32 px-6 ${pillarsReveal.className}`} data-section="pillars">
+      <section ref={pillarsReveal.ref as React.RefObject<HTMLElement>} className={`relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#FDFBF7] py-16 sm:py-24 lg:py-32 px-8 sm:px-6 ${pillarsReveal.className}`} data-section="pillars">
         <div className="max-w-5xl mx-auto">
           <div className="mb-14 sm:mb-20 text-center">
             <div className="flex items-center justify-center gap-3 mb-5">
@@ -170,7 +170,7 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
       </section>
 
       {/* ===== YOUR DOG BIOLOGY BLUEPRINT INCLUDES (Editorial List) ===== */}
-      <section id="how-it-works" className="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#FDFBF7] py-16 sm:py-24 lg:py-32 px-6 border-t border-[#E8E2D9]">
+      <section id="how-it-works" className="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#FDFBF7] py-16 sm:py-24 lg:py-32 px-8 sm:px-6 border-t border-[#E8E2D9]">
         <div className="max-w-5xl mx-auto">
           <div className="mb-14 sm:mb-20 text-center">
             <div className="flex items-center justify-center gap-3 mb-5">
@@ -232,7 +232,7 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
       </section>
 
       {/* ===== FINAL CTA ===== */}
-      <section ref={ctaReveal.ref as React.RefObject<HTMLElement>} className={`relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#FDFBF7] py-20 sm:py-32 lg:py-40 px-6 border-t border-[#E8E2D9] ${ctaReveal.className}`}>
+      <section ref={ctaReveal.ref as React.RefObject<HTMLElement>} className={`relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#FDFBF7] py-20 sm:py-32 lg:py-40 px-8 sm:px-6 border-t border-[#E8E2D9] ${ctaReveal.className}`}>
         <div className="max-w-4xl mx-auto text-center space-y-10 sm:space-y-14">
           <div className="flex items-center justify-center gap-3">
             <div className="w-8 h-px bg-[#9AB8C4]"></div>
