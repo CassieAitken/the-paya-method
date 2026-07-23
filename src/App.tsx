@@ -634,7 +634,7 @@ The part that got me? How much my own habits are showing up in their biology.`;
   return (
     <div className="min-h-screen text-[#2A2421] bg-[#FDFBF7]">
       <nav className={`sticky top-0 z-50 w-full bg-[#FDFBF7] border-b border-[#E8E2D9] ${step === 'analyzing' ? 'hidden' : ''}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-4 sm:py-5 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-3 sm:py-5 flex flex-wrap justify-between items-center gap-y-2">
         <button onClick={() => { setStep('landing'); window.scrollTo(0, 0); }} className="flex items-center gap-2.5 sm:gap-3 hover:opacity-80 transition-opacity flex-shrink-0">
           <span className="font-serif font-medium text-lg sm:text-xl tracking-tight text-[#2A2A28]">The Paya Method</span>
           <span className="hidden sm:inline-flex items-center gap-3 ml-3">
@@ -642,50 +642,52 @@ The part that got me? How much my own habits are showing up in their biology.`;
             <span className="text-[10px] uppercase tracking-[0.15em] text-[#9AB8C4]">Love Them Longer</span>
           </span>
         </button>
-        <div className="flex items-center gap-6 sm:gap-8">
+        {step === 'landing' && (
+          <div className="flex items-center gap-1 order-3 w-full justify-center sm:w-auto sm:order-none sm:justify-start">
+            <button
+              onClick={() => {
+                const el = document.querySelector('[data-section="pillars"]');
+                if (el) {
+                  const navHeight = document.querySelector('nav')?.getBoundingClientRect().height || 0;
+                  const top = el.getBoundingClientRect().top + window.scrollY - navHeight;
+                  window.scrollTo({ top, behavior: 'smooth' });
+                }
+              }}
+              className="text-[10px] font-semibold sm:font-medium tracking-[0.06em] sm:tracking-[0.12em] text-[#2A2A28] sm:text-[#8A8A86] hover:text-[#2A2A28] transition-colors px-2 sm:px-3 py-1.5"
+            >
+              Markers
+            </button>
+            <span className="text-[#8A8A86]/40 text-[10px] select-none">&middot;</span>
+            <button
+              onClick={() => setShowFounderMessage(true)}
+              className="text-[10px] font-semibold sm:font-medium tracking-[0.06em] sm:tracking-[0.12em] text-[#2A2A28] sm:text-[#8A8A86] hover:text-[#2A2A28] transition-colors px-2 sm:px-3 py-1.5"
+            >
+              Founder
+            </button>
+            <span className="text-[#8A8A86]/40 text-[10px] select-none">&middot;</span>
+            <button
+              onClick={() => {
+                const el = document.getElementById('how-it-works');
+                if (el) {
+                  const navHeight = document.querySelector('nav')?.getBoundingClientRect().height || 0;
+                  const top = el.getBoundingClientRect().top + window.scrollY - navHeight;
+                  window.scrollTo({ top, behavior: 'smooth' });
+                }
+              }}
+              className="text-[10px] font-semibold sm:font-medium tracking-[0.06em] sm:tracking-[0.12em] text-[#2A2A28] sm:text-[#8A8A86] hover:text-[#2A2A28] transition-colors px-2 sm:px-3 py-1.5"
+            >
+              Preview
+            </button>
+          </div>
+        )}
+        <div className="flex items-center gap-3">
           {step === 'landing' && (
-            <div className="flex items-center gap-1 sm:gap-1">
-              <button
-                onClick={() => {
-                  const el = document.querySelector('[data-section="pillars"]');
-                  if (el) {
-                    const navHeight = document.querySelector('nav')?.getBoundingClientRect().height || 0;
-                    const top = el.getBoundingClientRect().top + window.scrollY - navHeight;
-                    window.scrollTo({ top, behavior: 'smooth' });
-                  }
-                }}
-                className="hidden sm:inline-block text-[10px] font-semibold sm:font-medium tracking-[0.06em] sm:tracking-[0.12em] text-[#2A2A28] sm:text-[#8A8A86] hover:text-[#2A2A28] transition-colors px-2 sm:px-3 py-1.5"
-              >
-                Markers
-              </button>
-              <span className="hidden sm:inline text-[#8A8A86]/40 text-[10px] select-none">&middot;</span>
-              <button
-                onClick={() => setShowFounderMessage(true)}
-                className="text-[10px] font-semibold sm:font-medium tracking-[0.06em] sm:tracking-[0.12em] text-[#2A2A28] sm:text-[#8A8A86] hover:text-[#2A2A28] transition-colors px-2 sm:px-3 py-1.5"
-              >
-                Founder
-              </button>
-              <span className="hidden sm:inline text-[#8A8A86]/40 text-[10px] select-none">&middot;</span>
-              <button
-                onClick={() => {
-                  const el = document.getElementById('how-it-works');
-                  if (el) {
-                    const navHeight = document.querySelector('nav')?.getBoundingClientRect().height || 0;
-                    const top = el.getBoundingClientRect().top + window.scrollY - navHeight;
-                    window.scrollTo({ top, behavior: 'smooth' });
-                  }
-                }}
-                className="hidden sm:inline-block text-[10px] font-semibold sm:font-medium tracking-[0.06em] sm:tracking-[0.12em] text-[#2A2A28] sm:text-[#8A8A86] hover:text-[#2A2A28] transition-colors px-2 sm:px-3 py-1.5"
-              >
-                Preview
-              </button>
-              <button
-                onClick={() => { setStep('intake'); window.scrollTo(0, 0); }}
-                className="ml-2 sm:ml-4 text-[10px] sm:text-[10px] uppercase tracking-[0.15em] sm:tracking-[0.15em] text-white bg-[#0A4682] hover:bg-[#083A6D] px-4 py-2.5 sm:px-5 transition-all duration-300 whitespace-nowrap rounded-sm"
-              >
-                Begin
-              </button>
-            </div>
+            <button
+              onClick={() => { setStep('intake'); window.scrollTo(0, 0); }}
+              className="text-[10px] uppercase tracking-[0.15em] text-white bg-[#0A4682] hover:bg-[#083A6D] px-4 py-2.5 sm:px-5 transition-all duration-300 whitespace-nowrap rounded-sm"
+            >
+              Begin
+            </button>
           )}
           {import.meta.env.DEV && step === 'results' && !hasPaid && (
             <button
