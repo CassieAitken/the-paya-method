@@ -635,12 +635,12 @@ The part that got me? How much my own habits are showing up in their biology.`;
     <div className="min-h-screen text-[#2A2421] bg-[#FDFBF7]">
       <nav className={`sticky top-0 z-50 w-full bg-[#FDFBF7] border-b border-[#E8E2D9] ${step === 'analyzing' ? 'hidden' : ''}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-3 sm:py-5 flex flex-wrap justify-between items-center gap-y-2">
-        <div className="w-full flex justify-center sm:justify-start sm:w-auto">
+        <div className="w-full flex justify-center lg:justify-start lg:w-auto">
         <button onClick={() => { setStep('landing'); window.scrollTo(0, 0); }} className="flex items-center gap-2.5 sm:gap-3 hover:opacity-80 transition-opacity flex-shrink-0">
           <span className="font-serif font-medium text-lg sm:text-xl tracking-tight text-[#2A2A28]">The Paya Method</span>
         </button>
         </div>
-        <div className="w-full flex flex-wrap items-center justify-center sm:justify-between gap-y-2 order-3 sm:w-auto sm:order-none">
+        <div className="w-full flex flex-wrap items-center justify-center lg:justify-between gap-y-2 order-3 lg:w-auto lg:order-none">
         {step === 'landing' && (
           <div className="flex items-center gap-1 justify-center">
             <span className="text-[10px] uppercase tracking-[0.15em] text-[#9AB8C4] mr-3">Love Them Longer</span>
