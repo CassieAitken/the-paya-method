@@ -234,15 +234,15 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
 
       {/* ===== FINAL CTA ===== */}
       <section ref={ctaReveal.ref as React.RefObject<HTMLElement>} className={`relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#FDFBF7] py-20 sm:py-32 lg:py-40 px-6 border-t border-[#E8E2D9] ${ctaReveal.className}`}>
-        <div className="max-w-3xl mx-auto text-center space-y-10 sm:space-y-14">
+        <div className="max-w-4xl mx-auto text-center space-y-10 sm:space-y-14">
           <div className="flex items-center justify-center gap-3">
             <div className="w-8 h-px bg-[#9AB8C4]"></div>
             <p className="text-[10px] uppercase tracking-[0.2em] text-[#9AB8C4] font-medium">Department 03</p>
             <div className="w-8 h-px bg-[#9AB8C4]"></div>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#2A2A28] leading-[1.1] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#2A2A28] leading-[1.35] tracking-tight">
             Your dog is already telling you everything.{' '}
-            <em className="text-[#4B1D5C]">The Dog Biology Blueprint™ teaches you how to listen.</em>
+            <em className="text-[#4B1D5C]">The Dog Biology Blueprint<span className="text-[0.5em] align-super">™</span> teaches you how to listen.</em>
           </h2>
           <div className="flex flex-col items-center gap-6">
             <button
