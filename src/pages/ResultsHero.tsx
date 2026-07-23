@@ -350,7 +350,7 @@ export function ResultsHero({
           {/* Score Display — Radial */}
           <div className="text-center space-y-10">
             <RadialScore score={results.score} />
-            <div className="inline-block bg-[#4B1D5C] text-white text-[10px] uppercase tracking-[0.15em] px-4 py-1.5 rounded-full shadow-none">
+            <div className="inline-block bg-[#61356F] border border-[#B09469]/50 text-[#FDFBF7] text-[10px] uppercase tracking-[0.15em] px-4 py-1.5 rounded-full shadow-none">
               Founding Member
             </div>
             <div className="space-y-3 text-left max-w-md mx-auto">

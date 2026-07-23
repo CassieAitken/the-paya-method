@@ -53,7 +53,7 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
           <div className="w-16 h-[0.5px] bg-[#B09469]/50 mx-auto mt-5 sm:mt-6"></div>
 
           <p className="text-base sm:text-xl font-serif italic text-[#E4D9E8] leading-[1.9] sm:leading-[1.8] font-light max-w-xs sm:max-w-[650px] mx-auto mt-5 sm:mt-6">
-            You know the exact spot they love to be scratched, the unique cadence of their bark, and the gentle sigh they make when they finally settle against your feet. PayaLabs translates 50 carefully selected biological questions into a personalized Dog Biology Blueprint™ — a gentle, science-backed roadmap that uncovers what's quietly working against them, so you can protect their comfort and keep them moving, playing, and thriving for as long as possible.
+            You know the exact spot they love to be scratched, the unique cadence of their bark, and the gentle sigh they make when they finally settle against your feet. The Paya Method translates 50 carefully selected biological questions into a personalized Dog Biology Blueprint™ — a gentle, science-backed roadmap that uncovers what's quietly working against them, so you can protect their comfort and keep them moving, playing, and thriving for as long as possible.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[11px] sm:text-[13px] font-medium uppercase tracking-[0.15em] text-[#EDE6E9] mt-3 sm:mt-4">
@@ -117,8 +117,8 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
                   key={f.id}
                   className={`group relative border rounded-lg transition-all duration-300 cursor-pointer ${
                     isOpen
-                      ? 'border-[#B09469]/40 bg-[#FDFBF7]/[0.06] shadow-sm'
-                      : 'border-[#FDFBF7]/15 hover:border-[#FDFBF7]/30 hover:bg-[#FDFBF7]/[0.03]'
+                      ? 'border-[#B09469]/40 bg-[#61356F] shadow-sm'
+                      : 'bg-[#61356F] border-[#FDFBF7]/15 hover:border-[#FDFBF7]/30'
                   } ${i === 6 ? 'sm:col-span-2 sm:max-w-[calc(50%-0.625rem)] sm:mx-auto' : ''}`}
                   onClick={() => setOpenPillar(isOpen ? null : i)}
                 >
@@ -199,14 +199,14 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
             ].map((item) => {
               const Icon = item.icon;
               return (
-                <div key={item.title} className="bg-[#4B1D5C] p-8 sm:p-10 space-y-4">
+                <div key={item.title} className="bg-[#61356F] p-8 sm:p-10 space-y-4">
                   <Icon size={20} className="text-[#B09469]" strokeWidth={1.2} />
                   <h3 className="text-[10px] uppercase tracking-[0.15em] text-[#B09469] font-bold">{item.title}</h3>
                   <p className="text-[13px] text-[#E4D9E8] leading-[1.8] font-light">{item.desc}</p>
                 </div>
               );
             })}
-            <div className="bg-[#4B1D5C] p-8 sm:p-10 space-y-4 md:col-span-2">
+            <div className="bg-[#61356F] p-8 sm:p-10 space-y-4 md:col-span-2">
               <Icons.Mail size={20} className="text-[#B09469]" strokeWidth={1.2} />
               <h3 className="text-[10px] uppercase tracking-[0.15em] text-[#B09469] font-bold">Personalized Delivery</h3>
               <p className="text-[13px] text-[#E4D9E8] leading-[1.8] font-light max-w-2xl">

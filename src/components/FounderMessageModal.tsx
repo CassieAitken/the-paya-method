@@ -53,7 +53,7 @@ export function FounderMessageModal({ isOpen, onClose }: { isOpen: boolean; onCl
 
             <div className="pt-6 border-t border-[#FDFBF7]/15">
               <p className="text-lg font-serif text-[#FDFBF7]">Cassie Aitken</p>
-              <p className="text-[10px] text-[#C9B9CE] uppercase tracking-[0.15em] mt-1">Founder, PayaLabs</p>
+              <p className="text-[10px] text-[#C9B9CE] uppercase tracking-[0.15em] mt-1">Founder, The Paya Method</p>
               <ul className="mt-3 space-y-1.5">
                 {[
                   '15+ Years Wellness Practice',

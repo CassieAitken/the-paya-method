@@ -162,7 +162,7 @@ export const Icons = {
         <path d="M48 85 L52 92 M60 85 L60 93 M72 85 L68 92" stroke="#2A2421" strokeWidth="1.5" strokeLinecap="round"/>
       </g>
 
-      <text x="60" y="115" fontFamily="system-ui, -apple-system, sans-serif" fontSize="16" fontWeight="600" textAnchor="middle" fill="#2A2421" letterSpacing="0.5">PayaLabs</text>
+      <text x="60" y="115" fontFamily="system-ui, -apple-system, sans-serif" fontSize="13" fontWeight="600" textAnchor="middle" fill="#2A2421" letterSpacing="0.5">The Paya Method</text>
       <text x="60" y="130" fontFamily="system-ui, -apple-system, sans-serif" fontSize="9" fontWeight="500" textAnchor="middle" fill="#2A2421" opacity="0.7" letterSpacing="1">VITALITY</text>
     </svg>
   ),

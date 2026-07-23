@@ -553,7 +553,7 @@ Human-Dog Sync: ${results.packSync}%`;
     if (navigator.share) {
       try {
         await navigator.share({
-          title: `${dogName}'s PayaLabs Vitality Score`,
+          title: `${dogName}'s Paya Method Vitality Score`,
           text: shareText
         });
       } catch (err) {

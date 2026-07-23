@@ -177,7 +177,7 @@ export function Results({
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-md mx-auto pt-2">
             <div className="flex items-center justify-center gap-3 text-[#5C534E]/60">
               <Icons.Globe size={18} />
-              <span className="text-[11px] font-semibold">PayaLabs</span>
+              <span className="text-[11px] font-semibold">The Paya Method</span>
             </div>
             <a
               href="mailto:payalabs01@gmail.com"

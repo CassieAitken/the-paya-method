@@ -91,9 +91,8 @@ export function AnalysisLoader({
       <div className="relative w-full max-w-xl mx-auto px-8">
         {/* Top branding */}
         <div className="flex items-center gap-3 mb-6">
-          <Icons.Leaf size={18} className="text-[#8A7F72]" strokeWidth={1.5} />
-          <span className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium font-medium">
-            PayaLabs Bio-Audit
+          <span className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium">
+            The Paya Method &middot; Bio-Audit
           </span>
         </div>
 
