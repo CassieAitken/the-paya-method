@@ -119,26 +119,6 @@ Deno.serve(async (req: Request) => {
       }).catch(console.error)
     );
 
-    // Send immediate confirmation email for guide and bundle buyers
-    if (productKey === "blueprint_in_motion" || productKey === "complete_vitality_system") {
-      EdgeRuntime.waitUntil(
-        fetch(`${supabaseUrl}/functions/v1/send-purchase-confirmation`, {
-          method: "POST",
-          headers: {
-            "Authorization": `Bearer ${serviceRoleKey}`,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            customerEmail: dogData.ownerEmail,
-            customerName: dogData.ownerName,
-            dogName: dogData.name,
-            productKey,
-            dogNumber,
-          }),
-        }).catch(console.error)
-      );
-    }
-
     // Queue 24-hour follow-up (protocol included with all purchases)
     EdgeRuntime.waitUntil(
       fetch(`${supabaseUrl}/functions/v1/queue-followup-email`, {
