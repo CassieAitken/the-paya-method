@@ -131,9 +131,11 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
                   className="group cursor-pointer"
                   onClick={() => setOpenPillar(isOpen ? null : i)}
                 >
-                  <span className="font-serif text-3xl text-[#C9C4B8] tracking-tight leading-none block mb-3">
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
+                  <div className="w-12 h-12 rounded-full border border-[#9AB8C4]/40 flex items-center justify-center mb-4 group-hover:border-[#9AB8C4] transition-colors">
+                    <span className="font-serif text-lg text-[#C9C4B8] tracking-tight leading-none">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                  </div>
                   <div className="flex items-baseline justify-between gap-3">
                     <h3 className="font-serif text-xl tracking-tight leading-tight text-[#2A2A28] group-hover:text-[#4B1D5C] transition-colors">
                       {f.title}
@@ -208,9 +210,11 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
               },
             ].map((item, i) => (
               <div key={item.title}>
-                <span className="font-serif text-3xl text-[#C9C4B8] tracking-tight leading-none block mb-3">
-                  {String(i + 1).padStart(2, '0')}
-                </span>
+                <div className="w-12 h-12 rounded-full border border-[#9AB8C4]/40 flex items-center justify-center mb-4">
+                  <span className="font-serif text-lg text-[#C9C4B8] tracking-tight leading-none">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                </div>
                 <h3 className="font-serif text-xl tracking-tight leading-tight text-[#2A2A28]">
                   {item.title}
                 </h3>
