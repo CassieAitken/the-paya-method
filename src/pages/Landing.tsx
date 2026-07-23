@@ -231,12 +231,38 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
         </div>
       </section>
 
+      {/* ===== MEET THE FOUNDER (Visible Teaser) ===== */}
+      <section className="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#FDFBF7] py-16 sm:py-24 lg:py-32 px-8 sm:px-6 border-t border-[#E8E2D9]">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="flex items-center justify-center gap-3 mb-5">
+            <div className="w-8 h-px bg-[#9AB8C4]"></div>
+            <p className="text-[10px] uppercase tracking-[0.2em] text-[#9AB8C4] font-medium">Department 03</p>
+            <div className="w-8 h-px bg-[#9AB8C4]"></div>
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#2A2A28] leading-[1.05] tracking-tight mb-8">
+            From the Founder
+          </h2>
+          <p className="font-serif italic text-xl sm:text-2xl text-[#4B1D5C] leading-[1.5] max-w-2xl mx-auto">
+            "Your dog doesn't need more things. They need you to understand them at the cellular level."
+          </p>
+          <p className="text-[15px] text-[#5C534E] font-light leading-[1.8] max-w-xl mx-auto mt-6">
+            Cassie Aitken built The Paya Method after years of watching dog owners wait for a diagnosis instead of catching what their dog's biology was already trying to tell them.
+          </p>
+          <button
+            onClick={onShowFounderMessage}
+            className="text-[10px] uppercase tracking-[0.15em] text-[#9AB8C4] hover:text-[#4B1D5C] transition-colors font-bold mt-6 inline-flex items-center gap-2"
+          >
+            Read Cassie's Full Message →
+          </button>
+        </div>
+      </section>
+
       {/* ===== FINAL CTA ===== */}
       <section ref={ctaReveal.ref as React.RefObject<HTMLElement>} className={`relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#FDFBF7] py-20 sm:py-32 lg:py-40 px-8 sm:px-6 border-t border-[#E8E2D9] ${ctaReveal.className}`}>
         <div className="max-w-4xl mx-auto text-center space-y-10 sm:space-y-14">
           <div className="flex items-center justify-center gap-3">
             <div className="w-8 h-px bg-[#9AB8C4]"></div>
-            <p className="text-[10px] uppercase tracking-[0.2em] text-[#9AB8C4] font-medium">Department 03</p>
+            <p className="text-[10px] uppercase tracking-[0.2em] text-[#9AB8C4] font-medium">Department 04</p>
             <div className="w-8 h-px bg-[#9AB8C4]"></div>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#2A2A28] leading-[1.35] tracking-tight">
