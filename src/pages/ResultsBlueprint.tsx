@@ -231,42 +231,28 @@ export function ResultsBlueprint({
 
       {/* ===== SUPERPOWER & PRIORITY GAP ===== */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-white border border-[#E8E2D9] p-6 sm:p-8 rounded-none shadow-none">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 rounded-full bg-[#0A4682]/10 border border-[#0A4682]/20 flex items-center justify-center">
-              <Icons.TrendingUp size={18} className="text-[#0A4682]" />
-            </div>
-            <div>
-              <span className="text-[10px] uppercase tracking-[0.15em] text-[#0A4682] font-medium block">Superpower</span>
-              <h4 className="text-lg font-serif text-[#2A2421] leading-tight">{topPillar.title}</h4>
-            </div>
-          </div>
+        <div className="bg-white border-t-2 border-[#0A4682] p-6 sm:p-8">
+          <span className="text-[10px] uppercase tracking-[0.15em] text-[#0A4682] font-medium block mb-2">Superpower</span>
+          <h4 className="text-lg font-serif text-[#2A2A28] leading-tight mb-4">{topPillar.title}</h4>
           <div className="flex items-center gap-3 mb-3">
-            <div className="flex-1 h-2 bg-stone-200/60 rounded-full overflow-hidden">
+            <div className="flex-1 h-[3px] bg-[#E8E2D9] rounded-full overflow-hidden">
               <div className="h-full bg-[#0A4682] rounded-full" style={{ width: `${topPillar.score}%` }} />
             </div>
-            <span className="text-[#2A2421] font-serif text-lg font-light">{topPillar.score}%</span>
+            <span className="text-[#2A2A28] font-serif text-lg font-light">{topPillar.score}%</span>
           </div>
           <p className="text-sm text-[#5C534E] leading-[1.7] font-light">
             This is {Name}'s strongest biological system. It's working in {pPoss} favor every single day — an anchor of vitality that elevates everything else. Your job: protect it.
           </p>
         </div>
 
-        <div className="bg-white border border-[#E8E2D9] p-6 sm:p-8 rounded-none shadow-none">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 rounded-full bg-amber-50 border border-amber-200/60 flex items-center justify-center">
-              <Icons.Target size={18} className="text-amber-600" />
-            </div>
-            <div>
-              <span className="text-[10px] uppercase tracking-[0.15em] text-amber-600 font-medium block">Priority Gap</span>
-              <h4 className="text-lg font-serif text-[#2A2421] leading-tight">{bottomPillar.title}</h4>
-            </div>
-          </div>
+        <div className="bg-white border-t-2 border-[#9C6B3E] p-6 sm:p-8">
+          <span className="text-[10px] uppercase tracking-[0.15em] text-[#9C6B3E] font-medium block mb-2">Priority Gap</span>
+          <h4 className="text-lg font-serif text-[#2A2A28] leading-tight mb-4">{bottomPillar.title}</h4>
           <div className="flex items-center gap-3 mb-3">
-            <div className="flex-1 h-2 bg-stone-200/60 rounded-full overflow-hidden">
-              <div className="h-full bg-amber-500 rounded-full" style={{ width: `${bottomPillar.score}%` }} />
+            <div className="flex-1 h-[3px] bg-[#E8E2D9] rounded-full overflow-hidden">
+              <div className="h-full bg-[#9C6B3E] rounded-full" style={{ width: `${bottomPillar.score}%` }} />
             </div>
-            <span className="text-[#2A2421] font-serif text-lg font-light">{bottomPillar.score}%</span>
+            <span className="text-[#2A2A28] font-serif text-lg font-light">{bottomPillar.score}%</span>
           </div>
           <p className="text-sm text-[#5C534E] leading-[1.7] font-light">
             This is where {Name}'s vitality is being held back. The protocol below targets this system with precision — because raising this single pillar produces the largest ripple effect across {pPoss} entire biology.
@@ -274,46 +260,50 @@ export function ResultsBlueprint({
         </div>
       </div>
 
-      {/* ===== THE SEVEN PILLARS ===== */}
+      {/* ===== THE SEVEN BIOLOGY MARKERS (Editorial List) ===== */}
       <div className="space-y-12">
         <div className="space-y-4">
-          <h3 className="text-4xl lg:text-5xl font-serif text-[#2A2421] border-b border-[#E8E2D9] pb-8 tracking-tight leading-[1.08]">
-            The Seven Pillars — What We Found
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-px bg-[#9AB8C4]"></div>
+            <p className="text-[10px] uppercase tracking-[0.2em] text-[#9AB8C4] font-medium">What We Found</p>
+          </div>
+          <h3 className="text-4xl lg:text-5xl font-serif text-[#2A2A28] border-b border-[#E8E2D9] pb-8 tracking-tight leading-[1.08]">
+            The Seven Biology Markers
           </h3>
           <p className="text-[#5C534E] text-lg leading-[1.8] font-light max-w-3xl">
             We evaluated {Name} across <strong>7 Biology Markers</strong>. Each score is paired with our clinical read — connecting each finding to your daily life together.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+        <div className="divide-y divide-[#E8E2D9]">
           {foundations.map((f, i) => {
-            const Icon = f.Icon;
             const score = results.phaseScores[i];
             return (
-              <div
-                key={i}
-                className="space-y-5 border border-[#E8E2D9] p-5 sm:p-7 lg:p-8 bg-white rounded-none shadow-none hover:shadow-none transition-shadow duration-300"
-              >
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-3">
-                    <Icon size={18} strokeWidth={1.3} className="text-[#0A4682]" />
-                    <span className="text-[10px] uppercase tracking-[0.15em] text-[#5C534E]/60 font-medium">
-                      {f.label}
-                    </span>
+              <div key={i} className="py-8 sm:py-10">
+                <div className="flex items-start gap-5 sm:gap-7">
+                  <span className="font-serif text-3xl sm:text-4xl text-[#C9C4B8] tracking-tight flex-shrink-0 leading-none pt-1">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <div className="flex-1 min-w-0 space-y-4">
+                    <div className="flex justify-between items-baseline gap-4">
+                      <span className="text-[10px] uppercase tracking-[0.15em] text-[#8A8A86] font-medium">
+                        {f.label}
+                      </span>
+                      <span className="text-[#2A2A28] text-xl font-serif font-light flex-shrink-0">{score}%</span>
+                    </div>
+                    <div className="w-full h-[3px] bg-[#E8E2D9] relative rounded-full overflow-hidden">
+                      <div
+                        className="absolute top-0 left-0 h-full bg-[#0A4682] transition-all duration-700 rounded-full"
+                        style={{ width: `${score}%` }}
+                      />
+                    </div>
+                    <div className="space-y-2 pt-1">
+                      <h5 className="text-[10px] uppercase tracking-[0.15em] text-[#8A8A86]/70 font-medium">
+                        Our Read
+                      </h5>
+                      <p className="text-sm text-[#5C534E] leading-[1.7] font-light" dangerouslySetInnerHTML={{ __html: (track === 'legacy' ? getLegacyPillarBridge : track === 'master' ? getMasterPillarBridge : getAscentPillarBridge)(score, f.label, name, pPoss, f.id) }} />
+                    </div>
                   </div>
-                  <span className="text-[#2A2421] text-xl font-serif font-light">{score}%</span>
-                </div>
-                <div className="w-full h-2 bg-stone-200/60 relative rounded-full overflow-hidden">
-                  <div
-                    className="absolute top-0 left-0 h-full bg-[#0A4682] transition-all duration-700 rounded-full"
-                    style={{ width: `${score}%` }}
-                  />
-                </div>
-                <div className="space-y-3 border-t border-[#E8E2D9] pt-5">
-                  <h5 className="text-[10px] uppercase tracking-[0.15em] text-[#5C534E]/40 font-medium">
-                    Our Read
-                  </h5>
-                  <p className="text-sm text-[#5C534E] leading-[1.7] font-light" dangerouslySetInnerHTML={{ __html: (track === 'legacy' ? getLegacyPillarBridge : track === 'master' ? getMasterPillarBridge : getAscentPillarBridge)(score, f.label, name, pPoss, f.id) }} />
                 </div>
               </div>
             );
