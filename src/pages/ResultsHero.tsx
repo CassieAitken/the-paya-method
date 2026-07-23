@@ -227,14 +227,14 @@ export function ResultsHero({
 
                 {/* Protocol step preview */}
                 <div className="bg-white border border-[#E8E2D9] overflow-hidden">
-                  <div className="bg-[#4B1D5C] text-white p-4">
+                  <div className="bg-white border-l-2 border-[#4B1D5C] p-4">
                     <div className="flex items-center gap-3">
                       <span className="text-lg">{directives.priorityShift.emoji}</span>
                       <div>
-                        <span className="text-[10px] uppercase tracking-[0.15em] text-white/50 font-medium block">
+                        <span className="text-[10px] uppercase tracking-[0.15em] text-[#8A8A86] font-medium block">
                           {directives.bottomPillar.title} — Step 1 of {directives.priorityShift.protocolSteps.length}
                         </span>
-                        <span className="text-xs font-light text-white/90">{directives.priorityShift.protocolTitle}</span>
+                        <span className="text-xs font-light text-[#2A2A28]">{directives.priorityShift.protocolTitle}</span>
                       </div>
                     </div>
                   </div>
@@ -256,15 +256,18 @@ export function ResultsHero({
 
         {/* 6. Unlock CTA — the money-maker */}
         <div className="max-w-2xl mx-auto text-center space-y-6 sm:space-y-8 pt-8 sm:pt-12">
-          <div className="bg-[#4B1D5C] rounded-none p-8 sm:p-12 shadow-none relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#0A4682]/5 to-transparent pointer-events-none" />
+          <div className="bg-white border border-[#E8E2D9] rounded-none p-8 sm:p-12 shadow-none relative overflow-hidden">
             <div className="relative z-10 space-y-6">
-              <p className="text-white/50 text-[10px] uppercase tracking-[0.15em]">Unlock the Full Blueprint</p>
-              <p className="text-white text-lg sm:text-xl font-light leading-[1.85] max-w-xl mx-auto">
+              <div className="flex items-center justify-center gap-3">
+                <div className="w-8 h-px bg-[#9AB8C4]"></div>
+                <p className="text-[#9AB8C4] text-[10px] uppercase tracking-[0.15em] font-medium">Unlock the Full Blueprint</p>
+                <div className="w-8 h-px bg-[#9AB8C4]"></div>
+              </div>
+              <p className="text-[#2A2A28] text-lg sm:text-xl font-serif leading-[1.5] max-w-xl mx-auto">
                 You spent 10 minutes learning how to love them better. Spend $49 to know exactly how.
               </p>
               <div className="space-y-3 text-left max-w-md mx-auto">
-                <p className="text-sm text-white/60 leading-[1.8] font-light">Join 100+ dog owners who have discovered what their dog's biology has been trying to tell them.</p>
+                <p className="text-sm text-[#5C534E] leading-[1.8] font-light">Join 100+ dog owners who have discovered what their dog's biology has been trying to tell them.</p>
               </div>
               <div className="pt-4 space-y-4">
                 <button
@@ -274,7 +277,7 @@ export function ResultsHero({
                   <span>UNLOCK {Name.toUpperCase()}'S BLUEPRINT — $49</span>
                   <Icons.ArrowRight size={16} strokeWidth={1.5} />
                 </button>
-                <p className="text-[10px] text-white/40 tracking-wider flex items-center justify-center gap-3">
+                <p className="text-[10px] text-[#8A8A86] tracking-wider flex items-center justify-center gap-3">
                   <Icons.Shield size={12} strokeWidth={1.5} />
                   Instant access. One-time payment. PDF emailed immediately.
                 </p>

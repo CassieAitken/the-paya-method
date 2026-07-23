@@ -45,11 +45,11 @@ export function Results({
         {/* Success Toast */}
         {paymentSuccess && (
           <div className="fixed top-8 left-1/2 -translate-x-1/2 z-50">
-            <div className="bg-[#4B1D5C] text-white px-8 py-5 rounded-none shadow-none flex items-center gap-3 border border-white/10">
+            <div className="bg-white text-[#2A2A28] px-8 py-5 rounded-none shadow-lg flex items-center gap-3 border-l-2 border-[#4B1D5C]">
               <Icons.Check size={20} className="text-[#0A4682]" />
               <div className="space-y-0.5">
                 <p className="text-[11px] font-bold uppercase tracking-[0.15em]">Blueprint Unlocked</p>
-                <p className="text-sm font-light text-white/80">The full blueprint is now yours.</p>
+                <p className="text-sm font-light text-[#5C534E]">The full blueprint is now yours.</p>
               </div>
             </div>
           </div>

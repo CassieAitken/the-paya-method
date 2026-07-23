@@ -249,16 +249,16 @@ export function Audit({
                 Phase {currentPhaseId} of 3 — {AUDIT_PHASES[currentPhaseId].name}
               </span>
             </div>
-            <div className="bg-[#4B1D5C] text-white p-5 sm:p-7">
-              <p className="text-[10px] uppercase tracking-[0.15em] text-white/50 mb-3 flex items-center gap-2">
+            <div className="bg-white border-l-2 border-[#4B1D5C] p-5 sm:p-7">
+              <p className="text-[10px] uppercase tracking-[0.15em] text-[#8A8A86] mb-3 flex items-center gap-2">
                 <Icons.Waves size={11} strokeWidth={1.5} /> The Soul Mirror
               </p>
-              <p className="text-sm sm:text-base leading-[1.8] text-white/85 font-light">
+              <p className="text-sm sm:text-base leading-[1.8] text-[#5C534E] font-light italic">
                 {foundation.dogNote(dogData.name || 'Your Companion')}
               </p>
-              <div className="flex items-center gap-1.5 mt-4 pt-4 border-t border-white/10">
-                <Icons.Heart size={12} className="text-rose-300 fill-current flex-shrink-0" />
-                <p className="text-xs font-serif text-white/70">{dogData.name || 'Your Companion'}</p>
+              <div className="flex items-center gap-1.5 mt-4 pt-4 border-t border-[#E8E2D9]">
+                <Icons.Heart size={12} className="text-[#9C6B3E] fill-current flex-shrink-0" />
+                <p className="text-xs font-serif text-[#8A8A86]">{dogData.name || 'Your Companion'}</p>
               </div>
             </div>
           </div>

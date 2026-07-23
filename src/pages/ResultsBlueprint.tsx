@@ -372,12 +372,12 @@ export function ResultsBlueprint({
         </div>
 
         <div className="bg-white border border-[#E8E2D9] rounded-none shadow-none overflow-hidden">
-          <div className="bg-[#4B1D5C] text-white p-6 sm:p-8 lg:p-10">
-            <div className="flex items-center gap-4 mb-6">
+          <div className="bg-white border-l-2 border-[#4B1D5C] p-6 sm:p-8 lg:p-10 border-b border-b-[#E8E2D9]">
+            <div className="flex items-center gap-4">
               <span className="text-3xl">{priorityShift.emoji}</span>
               <div>
-                <span className="text-[10px] uppercase tracking-[0.15em] text-white/40 font-medium block">{bottomPillar.title} — Priority Protocol</span>
-                <h4 className="text-2xl font-serif text-white leading-tight">{priorityShift.protocolTitle}</h4>
+                <span className="text-[10px] uppercase tracking-[0.15em] text-[#8A8A86] font-medium block">{bottomPillar.title} — Priority Protocol</span>
+                <h4 className="text-2xl font-serif text-[#2A2A28] leading-tight">{priorityShift.protocolTitle}</h4>
               </div>
             </div>
           </div>
