@@ -25,13 +25,13 @@ interface LandingProps {
 }
 
 const pillarDescriptions = [
-  { focus: 'Metabolic Science', definition: 'Measures how efficiently your dog converts food into cellular fuel — tracking digestive rhythms, nutrient absorption windows, and gut rest cycles that determine daily energy output.' },
-  { focus: 'Restorative Biology', definition: 'Evaluates the depth and quality of your dog\'s cellular repair cycles — mapping sleep architecture, recovery speed, and the nervous system conditions required for deep tissue regeneration.' },
-  { focus: 'Environmental Toxicology', definition: 'Assesses the invisible chemical burden your dog\'s biology processes daily — from synthetic fragrances and floor chemicals to water quality and material off-gassing in their living space.' },
-  { focus: 'Nervous System Synchronization', definition: 'Quantifies the biological bond between you and your dog — measuring how your calm, your stress, and your daily rhythms directly regulate their autonomic nervous system and healing capacity.' },
-  { focus: 'Cognitive Neuroscience', definition: 'Tracks your dog\'s mental sharpness and neural pathway health — evaluating novelty exposure, problem-solving engagement, and the sensory variety that prevents cognitive decline.' },
-  { focus: 'Movement Science', definition: 'Maps your dog\'s movement quality and structural integrity — identifying compensation patterns, joint mobility, muscle tone balance, and terrain confidence that predict long-term physical freedom.' },
-  { focus: 'Vital Sign Baseline', definition: 'Establishes your dog\'s biological fingerprint through outward markers — coat quality, eye clarity, energy distribution, and digestive consistency that reflect cellular health status.' },
+  { focus: 'How They\'re Fueled', teaser: 'Are they truly nourished, or just fed?', definition: 'Measures how efficiently your dog converts food into cellular fuel — tracking digestive rhythms, nutrient absorption windows, and gut rest cycles that determine daily energy output.' },
+  { focus: 'How They Rest', teaser: 'Is their body actually repairing at night?', definition: 'Evaluates the depth and quality of your dog\'s cellular repair cycles — mapping sleep architecture, recovery speed, and the nervous system conditions required for deep tissue regeneration.' },
+  { focus: 'What Surrounds Them', teaser: 'What\'s quietly working against them at home?', definition: 'Assesses the invisible chemical burden your dog\'s biology processes daily — from synthetic fragrances and floor chemicals to water quality and material off-gassing in their living space.' },
+  { focus: 'The Bond Between You', teaser: 'How your energy shapes their nervous system.', definition: 'Quantifies the biological bond between you and your dog — measuring how your calm, your stress, and your daily rhythms directly regulate their autonomic nervous system and healing capacity.' },
+  { focus: 'How They Think', teaser: 'Is their mind as engaged as their body?', definition: 'Tracks your dog\'s mental sharpness and neural pathway health — evaluating novelty exposure, problem-solving engagement, and the sensory variety that prevents cognitive decline.' },
+  { focus: 'How They Move', teaser: 'How freely — and comfortably — they really move.', definition: 'Maps your dog\'s movement quality and structural integrity — identifying compensation patterns, joint mobility, muscle tone balance, and terrain confidence that predict long-term physical freedom.' },
+  { focus: 'What You Can See', teaser: 'The visible signs that tell the real story.', definition: 'Establishes your dog\'s biological fingerprint through outward markers — coat quality, eye clarity, energy distribution, and digestive consistency that reflect cellular health status.' },
 ];
 
 export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: LandingProps) {
@@ -144,6 +144,9 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
                       </div>
                       <p className="text-[10px] uppercase tracking-[0.15em] text-[#8A8A86] mt-1.5">
                         {desc.focus}
+                      </p>
+                      <p className="text-[13px] font-serif italic text-[#5C534E] mt-1.5">
+                        {desc.teaser}
                       </p>
 
                       <div className={`transition-all duration-300 ease-in-out overflow-hidden ${
