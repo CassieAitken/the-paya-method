@@ -16,7 +16,7 @@ export function OwnerInfo({
     <div className="min-h-screen bg-[#FDFBF7] flex flex-col items-center justify-center px-6 py-16 sm:py-24">
       <div className="max-w-2xl w-full space-y-12 sm:space-y-16 animate-in">
         <div className="space-y-6">
-          <p className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium">Almost There</p>
+          <p className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium">Almost There</p>
           <h2 className="text-4xl sm:text-5xl font-serif text-[#2A2421] tracking-tight leading-[1.05]">
             One Last Thing
           </h2>
@@ -27,11 +27,11 @@ export function OwnerInfo({
 
         <div className="space-y-10">
           <div className="space-y-4">
-            <label className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium block">
+            <label className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium block">
               Breed <span className="text-[#C4B9A8]">(optional)</span>
             </label>
             <input
-              className="w-full bg-transparent border-b border-[#C4B9A8] pb-4 outline-none font-serif text-xl sm:text-2xl text-[#2A2421] focus:border-[#2A2421] transition-colors placeholder:text-[#C4B9A8] font-light"
+              className="w-full bg-transparent border-b border-[#C4B9A8] pb-4 outline-none font-serif text-xl sm:text-2xl text-[#2A2421] focus:border-[#0A4682] transition-colors placeholder:text-[#C4B9A8] font-light"
               placeholder="e.g., Golden Retriever, Lab Mix"
               value={dogData.breed}
               onChange={(e) => setDogData({ ...dogData, breed: e.target.value })}
@@ -41,11 +41,11 @@ export function OwnerInfo({
 
           <div className="border border-[#E8E2D9] bg-white/60 p-6 sm:p-8 lg:p-10 space-y-10">
             <div className="space-y-4">
-              <label className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium block">
+              <label className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium block">
                 Your Name
               </label>
               <input
-                className="w-full bg-transparent border-b border-[#C4B9A8] pb-4 outline-none font-serif text-2xl sm:text-3xl text-[#2A2421] focus:border-[#2A2421] transition-colors placeholder:text-[#C4B9A8] font-light"
+                className="w-full bg-transparent border-b border-[#C4B9A8] pb-4 outline-none font-serif text-2xl sm:text-3xl text-[#2A2421] focus:border-[#0A4682] transition-colors placeholder:text-[#C4B9A8] font-light"
                 placeholder="e.g., Cassie"
                 value={dogData.ownerName}
                 onChange={(e) => setDogData({ ...dogData, ownerName: e.target.value })}
@@ -55,12 +55,12 @@ export function OwnerInfo({
             </div>
 
             <div className="space-y-4">
-              <label className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium block">
+              <label className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium block">
                 Email Address
               </label>
               <input
                 type="email"
-                className="w-full bg-transparent border-b border-[#C4B9A8] pb-4 outline-none font-serif text-2xl sm:text-3xl text-[#2A2421] focus:border-[#2A2421] transition-colors placeholder:text-[#C4B9A8] font-light"
+                className="w-full bg-transparent border-b border-[#C4B9A8] pb-4 outline-none font-serif text-2xl sm:text-3xl text-[#2A2421] focus:border-[#0A4682] transition-colors placeholder:text-[#C4B9A8] font-light"
                 placeholder="you@example.com"
                 value={dogData.ownerEmail}
                 onChange={(e) => setDogData({ ...dogData, ownerEmail: e.target.value })}
@@ -78,7 +78,7 @@ export function OwnerInfo({
               setStep('reflection');
               window.scrollTo(0, 0);
             }}
-            className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium hover:text-[#2A2421] transition-colors"
+            className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium hover:text-[#2A2421] transition-colors"
           >
             Back
           </button>
@@ -88,7 +88,7 @@ export function OwnerInfo({
               setStep('analyzing');
               window.scrollTo(0, 0);
             }}
-            className={`bg-[#2A2421] text-white px-10 py-5 text-[10px] uppercase tracking-[0.15em] flex items-center gap-3 transition-all font-bold ${
+            className={`bg-[#0A4682] text-white px-10 py-5 text-[10px] uppercase tracking-[0.15em] flex items-center gap-3 transition-all font-bold ${
               !canProceed ? 'opacity-25 cursor-not-allowed' : 'hover:bg-[#3A3330]'
             }`}
           >

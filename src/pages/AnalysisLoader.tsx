@@ -91,7 +91,7 @@ export function AnalysisLoader({
       <div className="relative w-full max-w-xl mx-auto px-8">
         {/* Top branding */}
         <div className="flex items-center gap-3 mb-6">
-          <span className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium">
+          <span className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium">
             The Paya Method &middot; Bio-Audit
           </span>
         </div>

@@ -27,7 +27,7 @@ export function FounderMessageModal({ isOpen, onClose }: { isOpen: boolean; onCl
               onClick={onClose}
               className="ml-4 p-2 hover:bg-[#FDFBF7]/10 rounded-lg transition-colors flex-shrink-0 mt-1"
             >
-              <Icons.X size={22} className="text-[#B09469]" />
+              <Icons.X size={22} className="text-[#9AB8C4]" />
             </button>
           </div>
 
@@ -62,7 +62,7 @@ export function FounderMessageModal({ isOpen, onClose }: { isOpen: boolean; onCl
                   'Canine Biology & Nervous System Researcher',
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-2 text-xs text-[#C9B9CE] font-light">
-                    <span className="w-1 h-1 rounded-full bg-[#B09469] flex-shrink-0"></span>
+                    <span className="w-1 h-1 rounded-full bg-[#9AB8C4] flex-shrink-0"></span>
                     {item}
                   </li>
                 ))}

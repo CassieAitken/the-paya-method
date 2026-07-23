@@ -44,17 +44,17 @@ export function Intake({
     <div className="w-full bg-[#FDFBF7]">
       <div className="py-12 sm:py-24 lg:py-36 max-w-4xl mx-auto px-6 space-y-16 sm:space-y-24 lg:space-y-32">
         <div className="space-y-4">
-          <p className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium">The Assessment</p>
+          <p className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium">The Assessment</p>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif text-[#2A2421] tracking-tight leading-[1.05]">Tell Us About Your Companion</h2>
         </div>
 
         <div className="space-y-16 sm:space-y-24 lg:space-y-32">
           <div className="space-y-6">
-            <label className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium block">
+            <label className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium block">
               Dog's Name
             </label>
             <input
-              className="w-full bg-transparent border-b border-[#C4B9A8] pb-4 sm:pb-6 outline-none font-serif text-3xl sm:text-4xl text-[#2A2421] focus:border-[#2A2421] transition-colors placeholder:text-[#C4B9A8] font-light"
+              className="w-full bg-transparent border-b border-[#C4B9A8] pb-4 sm:pb-6 outline-none font-serif text-3xl sm:text-4xl text-[#2A2421] focus:border-[#0A4682] transition-colors placeholder:text-[#C4B9A8] font-light"
               placeholder="e.g., Paya"
               value={dogData.name}
               onChange={(e) => setDogData({ ...dogData, name: e.target.value })}
@@ -63,7 +63,7 @@ export function Intake({
           </div>
 
           <div className="space-y-6">
-            <label className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium block">
+            <label className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium block">
               Photo <span className="text-[#C4B9A8]">(optional)</span>
             </label>
             <div className="flex items-center gap-6">
@@ -114,7 +114,7 @@ export function Intake({
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 sm:gap-20 lg:gap-28">
             <div className="space-y-6">
-              <label className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium block">
+              <label className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium block">
                 Sex
               </label>
               <div className="grid grid-cols-2 border border-[#E8E2D9] overflow-hidden">
@@ -132,7 +132,7 @@ export function Intake({
               </div>
             </div>
             <div className="space-y-6">
-              <label className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium block">
+              <label className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium block">
                 Age
               </label>
               <div className="flex gap-8">
@@ -142,7 +142,7 @@ export function Intake({
                     min="0"
                     max="30"
                     onKeyDown={handleNumberInput}
-                    className="w-full bg-transparent border-b border-[#C4B9A8] pb-4 outline-none font-serif text-3xl text-[#2A2421] focus:border-[#2A2421] transition-colors placeholder:text-[#C4B9A8] font-light"
+                    className="w-full bg-transparent border-b border-[#C4B9A8] pb-4 outline-none font-serif text-3xl text-[#2A2421] focus:border-[#0A4682] transition-colors placeholder:text-[#C4B9A8] font-light"
                     placeholder="0"
                     value={dogData.age}
                     onChange={(e) => {
@@ -158,7 +158,7 @@ export function Intake({
                     min="0"
                     max="11"
                     onKeyDown={handleNumberInput}
-                    className="w-full bg-transparent border-b border-[#C4B9A8] pb-4 outline-none font-serif text-3xl text-[#2A2421] focus:border-[#2A2421] transition-colors placeholder:text-[#C4B9A8] font-light"
+                    className="w-full bg-transparent border-b border-[#C4B9A8] pb-4 outline-none font-serif text-3xl text-[#2A2421] focus:border-[#0A4682] transition-colors placeholder:text-[#C4B9A8] font-light"
                     placeholder="0"
                     value={dogData.ageMonths}
                     onChange={(e) => {
@@ -197,7 +197,7 @@ export function Intake({
           <button
             disabled={!dogData.name || (!dogData.age && !dogData.ageMonths) || !dogData.gender}
             onClick={handleProceed}
-            className={`bg-[#2A2421] text-white px-10 py-5 sm:px-14 sm:py-5 text-[10px] uppercase tracking-[0.15em] flex items-center gap-3 transition-all font-bold ${
+            className={`bg-[#0A4682] text-white px-10 py-5 sm:px-14 sm:py-5 text-[10px] uppercase tracking-[0.15em] flex items-center gap-3 transition-all font-bold ${
               !dogData.name || (!dogData.age && !dogData.ageMonths) || !dogData.gender ? 'opacity-25 cursor-not-allowed' : 'hover:bg-[#3A3330]'
             }`}
           >
@@ -222,7 +222,7 @@ export function Intake({
 
             <div className="p-10 sm:p-12 space-y-8">
               <div className="space-y-4">
-                <p className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium">The Growth Phase</p>
+                <p className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium">The Growth Phase</p>
                 <h3 className="text-3xl sm:text-4xl font-serif text-[#2A2421] tracking-tight leading-[1.1]">
                   Under 18 months
                 </h3>
@@ -241,12 +241,12 @@ export function Intake({
                 </p>
               </div>
 
-              <div className="border-l border-[#2A2421]/30 pl-6 space-y-3">
+              <div className="border-l border-[#0A4682]/30 pl-6 space-y-3">
                 <p className="text-[#5C534E] text-[14px] leading-[1.85] font-light">
                   In the meantime — reach out to{' '}
                   <a
                     href={`mailto:payalabs01@gmail.com?subject=${encodeURIComponent((dogData.name || 'My dog') + ' — Growth Phase Question')}&body=${encodeURIComponent(`Hi Paya Labs,\n\nMy dog ${dogData.name || ''} is currently in the growth phase and I'd love some guidance.\n\n`)}`}
-                    className="underline underline-offset-2 text-[#2A2421] hover:text-[#2A2421] transition-colors"
+                    className="underline underline-offset-2 text-[#2A2421] hover:text-[#0A4682] transition-colors"
                   >
                     payalabs01@gmail.com
                   </a>
@@ -256,7 +256,7 @@ export function Intake({
               <div className="flex items-center gap-4 pt-4">
                 <button
                   onClick={() => setShowGrowthGate(false)}
-                  className="text-[11px] uppercase tracking-[0.15em] text-[#2A2421] font-medium hover:text-[#2A2421] transition-colors px-4 py-3"
+                  className="text-[11px] uppercase tracking-[0.15em] text-[#0A4682] font-medium hover:text-[#2A2421] transition-colors px-4 py-3"
                 >
                   Adjust Age
                 </button>
@@ -266,7 +266,7 @@ export function Intake({
                     setStep('landing');
                     window.scrollTo(0, 0);
                   }}
-                  className="bg-[#2A2421] text-white px-8 py-3.5 text-[10px] uppercase tracking-[0.15em] hover:bg-[#3A3330] transition-all font-bold"
+                  className="bg-[#0A4682] text-white px-8 py-3.5 text-[10px] uppercase tracking-[0.15em] hover:bg-[#3A3330] transition-all font-bold"
                 >
                   Return Home
                 </button>
