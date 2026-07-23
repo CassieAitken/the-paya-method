@@ -121,14 +121,14 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
             </p>
           </div>
 
-          <div className="divide-y divide-[#E8E2D9]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-10">
             {foundations.map((f, i) => {
               const isOpen = openPillar === i;
               const desc = pillarDescriptions[i];
               return (
                 <div
                   key={f.id}
-                  className="group cursor-pointer py-6 sm:py-7"
+                  className="group cursor-pointer py-6 border-b border-[#E8E2D9]"
                   onClick={() => setOpenPillar(isOpen ? null : i)}
                 >
                   <div className="flex items-start gap-5 sm:gap-6">
@@ -185,7 +185,7 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
             </p>
           </div>
 
-          <div className="divide-y divide-[#E8E2D9]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-10">
             {[
               {
                 title: 'Vitality Score',
@@ -208,7 +208,7 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
                 desc: 'Your Dog Biology Blueprint™ is delivered as two detailed personalized reports with individualized findings, explanations, recommendations, and a practical action plan tailored specifically to your dog.',
               },
             ].map((item, i) => (
-              <div key={item.title} className="py-6 sm:py-7">
+              <div key={item.title} className="py-6 border-b border-[#E8E2D9]">
                 <div className="flex items-start gap-5 sm:gap-6">
                   <span className="font-serif text-2xl sm:text-3xl text-[#C9C4B8] tracking-tight flex-shrink-0 leading-none pt-1">
                     {String(i + 1).padStart(2, '0')}
