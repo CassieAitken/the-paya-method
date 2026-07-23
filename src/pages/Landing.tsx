@@ -43,38 +43,47 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
     <div className="animate-in-slow bg-[#FDFBF7]">
 
       {/* ===== HERO ===== */}
-      <section className="relative left-1/2 right-1/2 -mx-[50vw] w-screen min-h-[90vh] flex flex-col items-center justify-center text-center px-6 sm:px-8 py-20 md:py-32 bg-[#4B1D5C]">
+      <section className="relative left-1/2 right-1/2 -mx-[50vw] w-screen min-h-[90vh] flex flex-col items-center justify-center text-center px-6 sm:px-8 py-20 md:py-32 bg-[#FDFBF7]">
         <div className="max-w-4xl mx-auto hero-stagger">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[7rem] font-serif leading-[0.88] sm:leading-[0.85] text-[#FDFBF7] tracking-[-0.02em]">
-            Your dog's lifespan<br className="hidden sm:block" /> is not pre-written.<br />
-            <span className="font-serif italic text-[#9AB8C4]">Their vitality is yours<br className="hidden sm:block" /> to protect.</span>
+          <div className="flex items-center justify-center gap-3 mb-7 sm:mb-9">
+            <div className="w-8 h-px bg-[#9AB8C4]"></div>
+            <p className="text-[10px] uppercase tracking-[0.2em] text-[#9AB8C4] font-medium">The Paya Method</p>
+            <div className="w-8 h-px bg-[#9AB8C4]"></div>
+          </div>
+
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[7rem] font-serif leading-[0.88] sm:leading-[0.85] text-[#2A2A28] tracking-[-0.02em]">
+            Your dog's lifespan<br className="hidden sm:block" /> is not pre-written.
           </h1>
 
-          <div className="w-16 h-[0.5px] bg-[#9AB8C4]/50 mx-auto mt-5 sm:mt-6"></div>
+          <div className="max-w-xl mx-auto mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-[#9AB8C4]/40">
+            <p className="font-serif italic text-2xl sm:text-3xl text-[#4B1D5C] leading-[1.3]">
+              Their vitality is yours to protect.
+            </p>
+          </div>
 
-          <p className="text-base sm:text-xl font-serif italic text-[#E4D9E8] leading-[1.9] sm:leading-[1.8] font-light max-w-xs sm:max-w-[650px] mx-auto mt-5 sm:mt-6">
+          <p className="text-base sm:text-lg text-[#5C534E] leading-[1.9] sm:leading-[1.8] font-light max-w-xs sm:max-w-[650px] mx-auto mt-8 sm:mt-10">
             You know the exact spot they love to be scratched, the unique cadence of their bark, and the gentle sigh they make when they finally settle against your feet. The Paya Method translates 50 carefully selected biological questions into a personalized Dog Biology Blueprint™ — a gentle, science-backed roadmap that uncovers what's quietly working against them, so you can protect their comfort and keep them moving, playing, and thriving for as long as possible.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[11px] sm:text-[13px] font-medium uppercase tracking-[0.15em] text-[#EDE6E9] mt-3 sm:mt-4">
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[10px] sm:text-[11px] uppercase tracking-[0.15em] text-[#8A8A86] mt-4 sm:mt-5">
             <span>10-Minute Assessment</span>
-            <span className="w-1 h-1 rounded-full bg-[#EDE6E9]/40" />
+            <span className="w-1 h-1 rounded-full bg-[#8A8A86]/40" />
             <span>Personalized Dog Biology Blueprint™</span>
-            <span className="w-1 h-1 rounded-full bg-[#EDE6E9]/40" />
+            <span className="w-1 h-1 rounded-full bg-[#8A8A86]/40" />
             <span>Science-Backed Guidance</span>
           </div>
 
-          <div className="flex flex-col items-center justify-center gap-3 w-full max-w-sm mx-auto mt-6 sm:mt-8">
+          <div className="flex flex-col items-center justify-center gap-3 w-full max-w-sm mx-auto mt-8 sm:mt-10">
             <button
               type="button"
               onClick={() => {
                 const el = document.getElementById('how-it-works');
                 el?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="inline-flex items-center gap-1.5 text-[13px] sm:text-[14px] font-serif italic text-[#9AB8C4] underline underline-offset-4 decoration-[#9AB8C4]/40 hover:decoration-[#9AB8C4] hover:text-[#FDFBF7] hover:bg-[#FDFBF7]/[0.06] transition-all cursor-pointer px-4 py-2 rounded-full"
+              className="inline-flex items-center gap-1.5 text-[13px] sm:text-[14px] font-serif italic text-[#4B1D5C] underline underline-offset-4 decoration-[#9AB8C4]/50 hover:decoration-[#9AB8C4] transition-all cursor-pointer px-4 py-2 rounded-full hover:bg-[#4B1D5C]/[0.04]"
             >
               See what you get
-              <Icons.ChevronDown size={13} strokeWidth={1.5} className="text-[#9AB8C4]/70" />
+              <Icons.ChevronDown size={13} strokeWidth={1.5} className="text-[#9AB8C4]" />
             </button>
             <button
               type="button"
@@ -87,7 +96,7 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
               <span>Begin Assessment</span>
               <Icons.ArrowRight size={16} className="transition-transform group-hover:translate-x-1" strokeWidth={1.5} />
             </button>
-            <span className="text-[10px] tracking-[0.2em] uppercase text-[#EDE6E9] font-bold mt-1 block w-full text-center">
+            <span className="text-[10px] tracking-[0.2em] uppercase text-[#8A8A86] font-bold mt-1 block w-full text-center">
               $49 &bull; 10 Minutes &bull; Instant Results
             </span>
           </div>
@@ -159,73 +168,81 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
         </div>
       </section>
 
-      {/* ===== YOUR DOG BIOLOGY BLUEPRINT INCLUDES ===== */}
-      <section id="how-it-works" className="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#4B1D5C] py-16 sm:py-24 lg:py-32 px-6">
-        <div className="max-w-4xl mx-auto">
-          <div className="mb-14 sm:mb-20 text-center space-y-4">
-            <p className="text-[10px] uppercase tracking-[0.15em] text-[#9AB8C4]">Delivered instantly. Personalized to your dog.</p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#FDFBF7] leading-[1.05] tracking-tight">
+      {/* ===== YOUR DOG BIOLOGY BLUEPRINT INCLUDES (Editorial List) ===== */}
+      <section id="how-it-works" className="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#FDFBF7] py-16 sm:py-24 lg:py-32 px-6 border-t border-[#E8E2D9]">
+        <div className="max-w-3xl mx-auto">
+          <div className="mb-14 sm:mb-20 text-center">
+            <div className="flex items-center justify-center gap-3 mb-5">
+              <div className="w-8 h-px bg-[#9AB8C4]"></div>
+              <p className="text-[10px] uppercase tracking-[0.2em] text-[#9AB8C4] font-medium">Department 02</p>
+              <div className="w-8 h-px bg-[#9AB8C4]"></div>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#2A2A28] leading-[1.05] tracking-tight">
               The Dog Biology Blueprint™<br className="hidden sm:block" /> Includes
             </h2>
-            <p className="text-[15px] text-[#E4D9E8] font-light leading-[1.8] max-w-xl mx-auto pt-2">
+            <p className="text-[15px] text-[#5C534E] font-light leading-[1.8] max-w-xl mx-auto pt-4">
               Every Blueprint is built from your dog's specific answers — no generic profiles, no one-size-fits-all advice. Here's what you receive:
             </p>
           </div>
 
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+          <div className="divide-y divide-[#E8E2D9]">
             {[
               {
-                icon: Icons.TrendingUp,
                 title: 'Vitality Score',
                 desc: 'One number that tells the truth about how well your dog\'s daily life supports their biology. Plus their unique archetype — the lens for everything that follows.',
               },
               {
-                icon: Icons.Brain,
                 title: '7 Biology Markers Map',
                 desc: 'Where they\'re thriving. Where small shifts make the biggest difference. No guessing — just clarity across all 7 Biology Markers.',
               },
               {
-                icon: Icons.Zap,
                 title: 'Priority Actions',
                 desc: 'The specific changes that move the needle most, ordered by impact. Not a rigid plan — a clear starting point you can act on today.',
               },
               {
-                icon: Icons.Compass,
                 title: 'The Mirror',
                 desc: 'How your rhythms shape their biology. The piece no one else is showing you — and often the single highest-leverage shift available.',
               },
-            ].map((item) => {
-              const Icon = item.icon;
-              return (
-                <div key={item.title} className="bg-[#61356F] border border-[#FDFBF7]/15 rounded-lg p-8 sm:p-10 space-y-4">
-                  <Icon size={20} className="text-[#9AB8C4]" strokeWidth={1.2} />
-                  <h3 className="text-[10px] uppercase tracking-[0.15em] text-[#9AB8C4] font-bold">{item.title}</h3>
-                  <p className="text-[13px] text-[#E4D9E8] leading-[1.8] font-light">{item.desc}</p>
+              {
+                title: 'Personalized Delivery',
+                desc: 'Your Dog Biology Blueprint™ is delivered as two detailed personalized reports with individualized findings, explanations, recommendations, and a practical action plan tailored specifically to your dog.',
+              },
+            ].map((item, i) => (
+              <div key={item.title} className="py-6 sm:py-7">
+                <div className="flex items-start gap-5 sm:gap-6">
+                  <span className="font-serif text-2xl sm:text-3xl text-[#C9C4B8] tracking-tight flex-shrink-0 leading-none pt-1">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-serif text-lg sm:text-xl tracking-tight leading-tight text-[#2A2A28]">
+                      {item.title}
+                    </h3>
+                    <p className="text-[13px] sm:text-[14px] text-[#5C534E] leading-[1.8] font-light mt-2">
+                      {item.desc}
+                    </p>
+                  </div>
                 </div>
-              );
-            })}
-            <div className="bg-[#61356F] border border-[#FDFBF7]/15 rounded-lg p-8 sm:p-10 space-y-4 md:col-span-2">
-              <Icons.Mail size={20} className="text-[#9AB8C4]" strokeWidth={1.2} />
-              <h3 className="text-[10px] uppercase tracking-[0.15em] text-[#9AB8C4] font-bold">Personalized Delivery</h3>
-              <p className="text-[13px] text-[#E4D9E8] leading-[1.8] font-light max-w-2xl">
-                Your Dog Biology Blueprint™ is delivered as two detailed personalized reports with individualized findings, explanations, recommendations, and a practical action plan tailored specifically to your dog.
-              </p>
-            </div>
+              </div>
+            ))}
           </div>
 
-          <p className="text-center text-[12px] text-[#C9B9CE] font-light mt-8 tracking-wide">
+          <p className="text-center text-[12px] text-[#8A8A86] font-light mt-10 tracking-wide">
             Delivered instantly as a visual report you can save, revisit, and share with your vet.
           </p>
         </div>
       </section>
 
       {/* ===== FINAL CTA ===== */}
-      <section ref={ctaReveal.ref as React.RefObject<HTMLElement>} className={`relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#4B1D5C] py-20 sm:py-32 lg:py-40 px-6 ${ctaReveal.className}`}>
+      <section ref={ctaReveal.ref as React.RefObject<HTMLElement>} className={`relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#FDFBF7] py-20 sm:py-32 lg:py-40 px-6 border-t border-[#E8E2D9] ${ctaReveal.className}`}>
         <div className="max-w-3xl mx-auto text-center space-y-10 sm:space-y-14">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#FDFBF7] leading-[1.1] tracking-tight">
+          <div className="flex items-center justify-center gap-3">
+            <div className="w-8 h-px bg-[#9AB8C4]"></div>
+            <p className="text-[10px] uppercase tracking-[0.2em] text-[#9AB8C4] font-medium">Department 03</p>
+            <div className="w-8 h-px bg-[#9AB8C4]"></div>
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#2A2A28] leading-[1.1] tracking-tight">
             Your dog is already telling you everything.{' '}
-            <em className="text-[#9AB8C4]">The Dog Biology Blueprint™ teaches you how to listen.</em>
+            <em className="text-[#4B1D5C]">The Dog Biology Blueprint™ teaches you how to listen.</em>
           </h2>
           <div className="flex flex-col items-center gap-6">
             <button
@@ -241,7 +258,7 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
             </button>
             <button
               onClick={onShowFounderMessage}
-              className="text-[10px] uppercase tracking-[0.15em] text-[#9AB8C4] hover:text-[#FDFBF7] transition-colors"
+              className="text-[10px] uppercase tracking-[0.15em] text-[#8A8A86] hover:text-[#4B1D5C] transition-colors"
             >
               Meet the Founder →
             </button>

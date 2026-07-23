@@ -633,12 +633,12 @@ The part that got me? How much my own habits are showing up in their biology.`;
 
   return (
     <div className="min-h-screen text-[#2A2421] bg-[#FDFBF7]">
-      <nav className={`sticky top-0 z-50 w-full bg-[#4B1D5C] border-b border-[#FDFBF7]/10 ${step === 'analyzing' ? 'hidden' : ''}`}>
+      <nav className={`sticky top-0 z-50 w-full bg-[#FDFBF7] border-b border-[#E8E2D9] ${step === 'analyzing' ? 'hidden' : ''}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-4 sm:py-5 flex justify-between items-center">
         <button onClick={() => { setStep('landing'); window.scrollTo(0, 0); }} className="flex items-center gap-2.5 sm:gap-3 hover:opacity-80 transition-opacity flex-shrink-0">
-          <span className="font-serif font-medium text-lg sm:text-xl tracking-tight text-[#FDFBF7]">The Paya Method</span>
+          <span className="font-serif font-medium text-lg sm:text-xl tracking-tight text-[#2A2A28]">The Paya Method</span>
           <span className="hidden sm:inline-flex items-center gap-3 ml-3">
-            <span className="w-px h-4 bg-[#FDFBF7]/20"></span>
+            <span className="w-px h-4 bg-[#E8E2D9]"></span>
             <span className="text-[10px] uppercase tracking-[0.15em] text-[#9AB8C4]">Love Them Longer</span>
           </span>
         </button>
@@ -654,18 +654,18 @@ The part that got me? How much my own habits are showing up in their biology.`;
                     window.scrollTo({ top, behavior: 'smooth' });
                   }
                 }}
-                className="text-[10px] font-semibold sm:font-medium tracking-[0.06em] sm:tracking-[0.12em] text-[#FDFBF7] sm:text-[#EDE6E9]/80 hover:text-[#FDFBF7] transition-colors px-2 sm:px-3 py-1.5"
+                className="text-[10px] font-semibold sm:font-medium tracking-[0.06em] sm:tracking-[0.12em] text-[#2A2A28] sm:text-[#8A8A86] hover:text-[#2A2A28] transition-colors px-2 sm:px-3 py-1.5"
               >
                 Pillars
               </button>
-              <span className="text-[#FDFBF7]/25 text-[10px] select-none">&middot;</span>
+              <span className="text-[#8A8A86]/40 text-[10px] select-none">&middot;</span>
               <button
                 onClick={() => setShowFounderMessage(true)}
-                className="text-[10px] font-semibold sm:font-medium tracking-[0.06em] sm:tracking-[0.12em] text-[#FDFBF7] sm:text-[#EDE6E9]/80 hover:text-[#FDFBF7] transition-colors px-2 sm:px-3 py-1.5"
+                className="text-[10px] font-semibold sm:font-medium tracking-[0.06em] sm:tracking-[0.12em] text-[#2A2A28] sm:text-[#8A8A86] hover:text-[#2A2A28] transition-colors px-2 sm:px-3 py-1.5"
               >
                 Founder
               </button>
-              <span className="text-[#FDFBF7]/25 text-[10px] select-none">&middot;</span>
+              <span className="text-[#8A8A86]/40 text-[10px] select-none">&middot;</span>
               <button
                 onClick={() => {
                   const el = document.getElementById('how-it-works');
@@ -675,7 +675,7 @@ The part that got me? How much my own habits are showing up in their biology.`;
                     window.scrollTo({ top, behavior: 'smooth' });
                   }
                 }}
-                className="text-[10px] font-semibold sm:font-medium tracking-[0.06em] sm:tracking-[0.12em] text-[#FDFBF7] sm:text-[#EDE6E9]/80 hover:text-[#FDFBF7] transition-colors px-2 sm:px-3 py-1.5"
+                className="text-[10px] font-semibold sm:font-medium tracking-[0.06em] sm:tracking-[0.12em] text-[#2A2A28] sm:text-[#8A8A86] hover:text-[#2A2A28] transition-colors px-2 sm:px-3 py-1.5"
               >
                 Preview
               </button>
@@ -787,8 +787,8 @@ The part that got me? How much my own habits are showing up in their biology.`;
         )}
       </main>
 
-      <footer className={`max-w-4xl mx-auto px-8 lg:px-12 py-16 text-center ${step === 'landing' ? '' : 'mt-32'} ${step === 'analyzing' ? 'hidden' : ''} ${step === 'landing' ? 'relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#4B1D5C] !max-w-none !px-8' : ''}`}>
-        <p className={`text-[11px] font-serif ${step === 'landing' ? 'text-[#C9B9CE]' : 'text-stone-400'}`}>
+      <footer className={`max-w-4xl mx-auto px-8 lg:px-12 py-16 text-center mt-32 ${step === 'analyzing' ? 'hidden' : ''} border-t border-[#E8E2D9]`}>
+        <p className="text-[11px] font-serif text-[#8A8A86]">
           For educational purposes. Always consult your veterinarian before making significant changes to your dog's care.
         </p>
       </footer>
