@@ -174,7 +174,7 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
           </div>
 
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#FDFBF7]/15 border border-[#FDFBF7]/15">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
             {[
               {
                 icon: Icons.TrendingUp,
@@ -199,14 +199,14 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
             ].map((item) => {
               const Icon = item.icon;
               return (
-                <div key={item.title} className="bg-[#61356F] p-8 sm:p-10 space-y-4">
+                <div key={item.title} className="bg-[#61356F] border border-[#FDFBF7]/15 rounded-lg p-8 sm:p-10 space-y-4">
                   <Icon size={20} className="text-[#9AB8C4]" strokeWidth={1.2} />
                   <h3 className="text-[10px] uppercase tracking-[0.15em] text-[#9AB8C4] font-bold">{item.title}</h3>
                   <p className="text-[13px] text-[#E4D9E8] leading-[1.8] font-light">{item.desc}</p>
                 </div>
               );
             })}
-            <div className="bg-[#61356F] p-8 sm:p-10 space-y-4 md:col-span-2">
+            <div className="bg-[#61356F] border border-[#FDFBF7]/15 rounded-lg p-8 sm:p-10 space-y-4 md:col-span-2">
               <Icons.Mail size={20} className="text-[#9AB8C4]" strokeWidth={1.2} />
               <h3 className="text-[10px] uppercase tracking-[0.15em] text-[#9AB8C4] font-bold">Personalized Delivery</h3>
               <p className="text-[13px] text-[#E4D9E8] leading-[1.8] font-light max-w-2xl">
