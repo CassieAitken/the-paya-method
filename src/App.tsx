@@ -643,7 +643,6 @@ The part that got me? How much my own habits are showing up in their biology.`;
         <div className="w-full flex flex-wrap items-center justify-center lg:justify-between gap-y-2 order-3 lg:w-auto lg:order-none">
         {step === 'landing' && (
           <div className="flex items-center gap-1 justify-center">
-            <span className="text-[10px] uppercase tracking-[0.15em] text-[#9AB8C4] mr-3">Love Them Longer</span>
             <button
               onClick={() => {
                 const el = document.querySelector('[data-section="pillars"]');
