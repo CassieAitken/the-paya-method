@@ -79,7 +79,7 @@ Deno.serve(async (req: Request) => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            from: "Paya Labs <cassie@send.payalabs.net>",
+            from: "The Paya Method <cassie@send.payalabs.net>",
             reply_to: "payalabs01@gmail.com",
             to: [row.customer_email],
             bcc: ["payalabs01@gmail.com"],
@@ -132,8 +132,8 @@ function generateFollowupEmail(row: QueueRow): string {
   const { dog_name, customer_name } = row;
   const ownerName = customer_name || "there";
 
-  const p = (text: string) => `<p style="font-size:15px;color:#44403c;line-height:1.85;margin:0 0 16px;">${text}</p>`;
-  const pItalic = (text: string) => `<p style="font-size:13px;color:#78716c;line-height:1.8;margin:0;font-style:italic;padding-left:14px;border-left:2px solid #e7e5e4;">${text}</p>`;
+  const p = (text: string) => `<p style="font-size:15px;color:#5C534E;line-height:1.85;margin:0 0 16px;">${text}</p>`;
+  const pItalic = (text: string) => `<p style="font-size:13px;color:#0A4682;line-height:1.8;margin:0;font-style:italic;padding-left:14px;border-left:2px solid #E8E2D9;">${text}</p>`;
   const weekHeader = (title: string, theme: string) => `
     <tr><td style="height:32px;"></td></tr>
     <tr>
@@ -141,8 +141,8 @@ function generateFollowupEmail(row: QueueRow): string {
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
           <tr>
             <td style="padding:32px 32px 0;">
-              <h2 style="font-size:20px;color:#1c1917;margin:0 0 4px;font-weight:400;">${title}</h2>
-              <p style="font-family:'SF Mono',Menlo,monospace;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#78716c;margin:0 0 18px;">Theme: ${theme}</p>
+              <h2 style="font-size:20px;color:#2A2421;margin:0 0 4px;font-weight:400;">${title}</h2>
+              <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#0A4682;margin:0 0 18px;">Theme: ${theme}</p>
             </td>
           </tr>`;
   const weekFooter = `
@@ -153,17 +153,35 @@ function generateFollowupEmail(row: QueueRow): string {
   const dayEntry = (day: number, title: string, pillar: string, body: string, thisWeek: string) => `
           <tr>
             <td style="padding:0 32px;">
-              <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="border-top:1px solid #f0efed;"></td></tr></table>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="border-top:1px solid #E8E2D9;"></td></tr></table>
             </td>
           </tr>
           <tr>
             <td style="padding:20px 32px 0;">
-              <h3 style="font-size:16px;color:#1c1917;margin:0 0 3px;font-weight:500;">Day ${day} &mdash; ${title}</h3>
-              <p style="font-family:'SF Mono',Menlo,monospace;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#a8a29e;margin:0 0 14px;">${pillar}</p>
+              <h3 style="font-size:16px;color:#2A2421;margin:0 0 3px;font-weight:500;">Day ${day} &mdash; ${title}</h3>
+              <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#8A7F72;margin:0 0 14px;">${pillar}</p>
               ${p(body)}
               ${pItalic("This week: " + thisWeek)}
             </td>
           </tr>`;
+  let dayCounter = 0;
+  const glanceWeek = (weekLabel: string, weekTheme: string, dayTitles: string[], isLast = false) => {
+    const startDay = dayCounter + 1;
+    dayCounter += dayTitles.length;
+    const rows = dayTitles.map((t, i) => `
+                <tr>
+                  <td style="padding:3px 0;width:36px;font-family:'Inter',Helvetica,sans-serif;font-size:11px;color:#9AB8C4;vertical-align:top;">Day ${startDay + i}</td>
+                  <td style="padding:3px 0;font-size:13px;color:#E4D9E8;vertical-align:top;">${t}</td>
+                </tr>`).join('');
+    return `
+                <tr>
+                  <td style="padding:${isLast ? '0 32px 28px' : '0 32px 20px'};">
+                    <p style="font-family:'Inter',Helvetica,sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:#FDFBF7;font-weight:600;margin:0 0 8px;">${weekLabel} &mdash; ${weekTheme}</p>
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0">${rows}
+                    </table>
+                  </td>
+                </tr>`;
+  };
 
   return `
 <!DOCTYPE html>
@@ -173,15 +191,15 @@ function generateFollowupEmail(row: QueueRow): string {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${dog_name}'s 30-Day Protocol</title>
 </head>
-<body style="margin:0;padding:0;background-color:#f8f7f6;font-family:Georgia,'Times New Roman',serif;">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f8f7f6;">
+<body style="margin:0;padding:0;background-color:#FDFBF7;font-family:Georgia,'Times New Roman',serif;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#FDFBF7;">
     <tr>
       <td align="center" style="padding:40px 16px;">
         <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;">
 
           <!-- Header -->
           <tr><td style="padding:0 0 32px;text-align:center;">
-            <p style="font-family:'SF Mono',Menlo,monospace;font-size:10px;text-transform:uppercase;letter-spacing:3px;color:#a8a29e;margin:0;">Paya Labs</p>
+            <p style="font-family:'Inter',Helvetica,sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:3px;color:#8A7F72;margin:0;">The Paya Method</p>
           </td></tr>
 
           <!-- Intro + Before You Begin (one card) -->
@@ -190,42 +208,61 @@ function generateFollowupEmail(row: QueueRow): string {
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
                 <tr>
                   <td style="padding:36px 32px 24px;">
-                    <h1 style="font-size:24px;color:#1c1917;margin:0 0 24px;font-weight:400;">${dog_name}'s 30-Day Protocol</h1>
+                    <h1 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;color:#4B1D5C;margin:0 0 24px;font-weight:500;">${dog_name}'s 30-Day Protocol</h1>
 
                     ${p(`Thirty days is not arbitrary. It's the window where two things happen simultaneously &mdash; and both have to happen for this to work.`)}
                     ${p(`In ${dog_name}'s body, cellular patterns are shifting. Cortisol baselines are resetting. Neural pathways are consolidating around new rhythms. The body is learning to trust what's coming next. That trust is what unlocks deep repair.`)}
                     ${p(`But here's what most protocols miss: ${dog_name} cannot do this alone. Their nervous system is wired to yours. Which means the second thing that has to happen over these 30 days is <em>you</em> &mdash; your rhythms, your consistency, your calm. When you change, they change. That's not metaphor. That's the biology this protocol is built on.`)}
                     ${p(`What you'll notice by day 30: a dog who moves more freely, sleeps more deeply, and looks at you with steadier eyes. And if you're paying attention &mdash; a version of yourself who is a little more present too.`)}
-                    <p style="font-size:15px;color:#44403c;line-height:1.85;margin:0;">&mdash; Cassie</p>
+                    <p style="font-size:15px;color:#5C534E;line-height:1.85;margin:0;">&mdash; Cassie</p>
                   </td>
                 </tr>
 
                 <!-- Divider -->
                 <tr><td style="padding:0 32px;">
-                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="border-top:1px solid #e7e5e4;"></td></tr></table>
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="border-top:1px solid #E8E2D9;"></td></tr></table>
                 </td></tr>
 
                 <!-- Before You Begin -->
                 <tr>
                   <td style="padding:24px 32px 32px;">
-                    <p style="font-family:'SF Mono',Menlo,monospace;font-size:9px;text-transform:uppercase;letter-spacing:2.5px;color:#78716c;margin:0 0 16px;">Before You Begin</p>
+                    <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2.5px;color:#0A4682;margin:0 0 16px;">Before You Begin</p>
 
-                    ${p(`Open your Dog Biology Blueprint™ and find your two lowest pillar scores. Write them somewhere you'll see them every day for the next 30 days.`)}
+                    ${p(`Open your Dog Biology Blueprint™ and find your two lowest marker scores. Write them somewhere you'll see them every day for the next 30 days.`)}
 
-                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#fafaf9;border-radius:8px;margin:0 0 20px;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F8F5EE;border-radius:8px;margin:0 0 20px;">
                       <tr>
                         <td style="padding:18px 22px;">
-                          <p style="font-size:14px;color:#44403c;line-height:2.2;margin:0;">My priority pillar 1: _______________</p>
-                          <p style="font-size:14px;color:#44403c;line-height:2.2;margin:0;">My priority pillar 2: _______________</p>
+                          <p style="font-size:14px;color:#5C534E;line-height:2.2;margin:0;">My priority marker 1: _______________</p>
+                          <p style="font-size:14px;color:#5C534E;line-height:2.2;margin:0;">My priority marker 2: _______________</p>
                         </td>
                       </tr>
                     </table>
 
-                    ${p(`Every time you see those pillars referenced in your protocol &mdash; treat those days as non-negotiable. Everything matters. Those days are <em>essential</em>.`)}
+                    ${p(`Every time you see those markers referenced in your protocol &mdash; treat those days as non-negotiable. Everything matters. Those days are <em>essential</em>.`)}
                     ${p(`We encourage you to keep a simple journal alongside this protocol &mdash; even just a few words each day. The notes you take on Day 4 will mean everything on Day 28.`)}
-                    <p style="font-size:15px;color:#44403c;line-height:1.85;margin:0;">We've got you. And we've got ${dog_name}.</p>
+                    <p style="font-size:15px;color:#5C534E;line-height:1.85;margin:0;">We've got you. And we've got ${dog_name}.</p>
                   </td>
                 </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ==================== MONTH AT A GLANCE ==================== -->
+          <tr><td style="height:32px;"></td></tr>
+          <tr>
+            <td style="background:#4B1D5C;border-radius:12px;overflow:hidden;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="padding:28px 32px 8px;">
+                    <p style="font-family:'Inter',Helvetica,sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:0.15em;color:#9AB8C4;font-weight:600;margin:0 0 4px;">Month at a Glance</p>
+                    <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;color:#FDFBF7;font-style:italic;margin:0 0 20px;">The whole shape of the next 30 days, before you begin.</p>
+                  </td>
+                </tr>
+                ${glanceWeek("Week 1", "Build the Foundation", ["Set the Feeding Clock", "Audit the Floor", "Create the Sleep Sanctuary", "The Body Scan", "Introduce the Fasting Window", "The Sniff Walk", "Week 1 Check-In"])}
+                ${glanceWeek("Week 2", "Activate the Body", ["Morning Sunlight Ritual", "Watch Them Move", "Natural Ground Day", "Free Running Time", "Introduce a New Movement", "The Hydration Check", "Week 2 Check-In"])}
+                ${glanceWeek("Week 3", "Deepen the Bond", ["The Undivided 15", "Manage Your Own Cortisol", "Touch for No Reason", "The Long Gaze", "The Homecoming Reset", "Do One Thing Together", "Week 3 Check-In"])}
+                ${glanceWeek("Week 4", "Lock It In", ["Rotate the Protein", "Audit the Grooming Products", "Create a Quiet Retreat", "The Nose Game", "Review the Sleep", "Write Their Progress", "The Coat and Eye Check", "Celebrate the Bond", "Reassess"], true)}
               </table>
             </td>
           </tr>
@@ -255,7 +292,7 @@ function generateFollowupEmail(row: QueueRow): string {
           ${dayEntry(6, "The Sniff Walk", "Ancestral Cognition",
             `Today's walk has no destination and no pace. Let ${dog_name} lead entirely &mdash; following their nose wherever it takes them. No pulling them away from interesting spots. No rushing. This is not exercise. This is nervous system medicine.`,
             `Let them stop as many times as they want. Follow their nose.`)}
-          ${dayEntry(7, "Week 1 Check-In", "All Pillars",
+          ${dayEntry(7, "Week 1 Check-In", "All Markers",
             `Look back at your Day 4 body scan notes. Has anything shifted? How is ${dog_name} sleeping? Are they approaching meals with more calm? Write down three things you noticed this week. This is your data &mdash; and your motivation.`,
             `Write your three observations. You are already changing things.`)}
           ${weekFooter}
@@ -285,7 +322,7 @@ function generateFollowupEmail(row: QueueRow): string {
           ${dayEntry(13, "The Hydration Check", "Physiological Harmony",
             `Gently pinch the skin between ${dog_name}'s shoulder blades. Does it snap back immediately? If it's slow, increase water intake today. Add a splash of bone broth to their water bowl to encourage drinking. Also wash the water bowl today with soap and hot water.`,
             `Check the skin snap every day this week.`)}
-          ${dayEntry(14, "Week 2 Check-In", "All Pillars",
+          ${dayEntry(14, "Week 2 Check-In", "All Markers",
             `Compare movement to your Day 9 observations. Any difference in how ${dog_name} gets up? How they walk? How long it takes to settle after exercise? Write it down. You are becoming fluent in ${dog_name}'s body language.`,
             `Note any changes &mdash; even tiny ones count.`)}
           ${weekFooter}
@@ -315,7 +352,7 @@ function generateFollowupEmail(row: QueueRow): string {
           ${dayEntry(20, "Do One Thing Together", "The Pack Bond",
             `Choose one activity today that asks you both to be present &mdash; a training session, a new walk route, a game that requires communication between you. Shared focus deepens the neurological bond measurably.`,
             `One shared intentional activity. It doesn't have to be long.`)}
-          ${dayEntry(21, "Week 3 Check-In", "All Pillars",
+          ${dayEntry(21, "Week 3 Check-In", "All Markers",
             `How is ${dog_name}'s emotional steadiness this week compared to week 1? Are they settling faster after stress? Seeking you out more? Sleeping more deeply? These are signs the Human-Dog Sync is strengthening. Write down what you see.`,
             `Three observations. You are halfway through something real.`)}
           ${weekFooter}
@@ -342,17 +379,17 @@ function generateFollowupEmail(row: QueueRow): string {
           ${dayEntry(26, "Review the Sleep", "The Restorative Cycle",
             `Is ${dog_name} sleeping through the night? Showing signs of deep dreamy sleep &mdash; soft vocalisations, running paws? Waking easily and moving without stiffness? Sleep quality at day 26 compared to day 1 is one of your most reliable vitality indicators.`,
             `Compare sleep now to week 1. What has changed?`)}
-          ${dayEntry(27, "Write Their Progress", "All Pillars",
+          ${dayEntry(27, "Write Their Progress", "All Markers",
             `Take out your notes from Days 4, 7, 14, and 21. Read them in sequence. You have been watching a biological transformation in real time. Write a short paragraph about what has changed. This is your proof &mdash; and your motivation to continue.`,
             `Read your notes in order. You'll be surprised.`)}
           ${dayEntry(28, "The Coat and Eye Check", "Physiological Harmony",
             `Look closely at ${dog_name}'s coat and eyes today compared to day 1. Brighter eyes, softer coat, less shedding &mdash; these are the visible signs of internal systems coming into balance. Take a photo. This is what 28 days of precision looks like.`,
             `Take a photo. Compare it to day 1.`)}
-          ${dayEntry(29, "Celebrate the Bond", "All Pillars",
+          ${dayEntry(29, "Celebrate the Bond", "All Markers",
             `Do something today that is purely for joy &mdash; yours and ${dog_name}'s. A new trail, a beach, a visit to a dog friend. No agenda. No protocol. Just the two of you, fully alive together. This is what all of it is for.`,
             `Go somewhere new together. Just for the joy of it.`)}
-          ${dayEntry(30, "Reassess", "All Pillars",
-            `You've completed the protocol. Now go back to payalabs.net and retake the assessment. Compare your new scores to your original Blueprint. The pillars that were lowest on day 1 &mdash; look at them now. This is ${dog_name}'s biology, rewritten. One home at a time.`,
+          ${dayEntry(30, "Reassess", "All Markers",
+            `You've completed the protocol. Now go back to payalabs.net and retake the assessment. Compare your new scores to your original Blueprint. The markers that were lowest on day 1 &mdash; look at them now. This is ${dog_name}'s biology, rewritten. One home at a time.`,
             `Retake the assessment at payalabs.net and see what changed.`)}
           ${weekFooter}
 
@@ -363,12 +400,12 @@ function generateFollowupEmail(row: QueueRow): string {
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
                 <tr>
                   <td style="padding:32px 32px;">
-                    <p style="font-family:'SF Mono',Menlo,monospace;font-size:9px;text-transform:uppercase;letter-spacing:2.5px;color:#78716c;margin:0 0 16px;">What Comes Next</p>
+                    <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2.5px;color:#0A4682;margin:0 0 16px;">What Comes Next</p>
                     ${p(`Thirty days ago you started paying attention in a new way. Don't stop now.`)}
                     ${p(`Most owners reassess every 6 months &mdash; as ${dog_name} moves through life stages, seasons, and changes. Each Blueprint will look different. Each one will show you something new.`)}
                     ${p(`${dog_name}'s vitality is not a destination. It's a conversation &mdash; one you now know how to have.`)}
-                    <p style="font-size:15px;color:#44403c;line-height:1.85;margin:24px 0 0;"><strong>We've got you. And we've got ${dog_name}.</strong></p>
-                    <p style="font-size:15px;color:#44403c;line-height:1.85;margin:12px 0 0;">&mdash; Cassie</p>
+                    <p style="font-size:15px;color:#5C534E;line-height:1.85;margin:24px 0 0;"><strong>We've got you. And we've got ${dog_name}.</strong></p>
+                    <p style="font-size:15px;color:#5C534E;line-height:1.85;margin:12px 0 0;">&mdash; Cassie</p>
                   </td>
                 </tr>
               </table>
@@ -378,9 +415,9 @@ function generateFollowupEmail(row: QueueRow): string {
           <!-- Footer -->
           <tr><td style="height:32px;"></td></tr>
           <tr>
-            <td style="text-align:center;padding:24px 0 0;border-top:1px solid #e7e5e4;">
-              <p style="font-family:'SF Mono',Menlo,monospace;font-size:9px;text-transform:uppercase;letter-spacing:2.5px;color:#a8a29e;margin:0 0 12px;">Cassie &middot; Paya Labs</p>
-              <p style="font-size:11px;color:#d6d3d1;margin:0;line-height:1.6;font-style:italic;">
+            <td style="text-align:center;padding:24px 0 0;border-top:1px solid #E8E2D9;">
+              <p style="font-family:'Inter',Helvetica,sans-serif;font-size:9px;text-transform:uppercase;letter-spacing:2.5px;color:#8A7F72;margin:0 0 12px;">Cassie &middot; The Paya Method</p>
+              <p style="font-size:11px;color:#8A7F72;margin:0;line-height:1.6;font-style:italic;">
                 For educational purposes. Always consult your veterinarian<br>before making significant changes to your dog's care.
               </p>
             </td>
