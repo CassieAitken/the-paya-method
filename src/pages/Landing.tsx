@@ -95,62 +95,61 @@ export function Landing({ setStep, onSelectPillar, onShowFounderMessage }: Landi
         </div>
       </section>
 
-      {/* ===== SEVEN PILLARS (Card Grid) ===== */}
-      <section ref={pillarsReveal.ref as React.RefObject<HTMLElement>} className={`relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#4B1D5C] py-16 sm:py-24 lg:py-32 px-6 ${pillarsReveal.className}`} data-section="pillars">
-        <div className="max-w-5xl mx-auto">
-          <div className="mb-12 sm:mb-16 text-center">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#FDFBF7] leading-[1.05] tracking-tight mb-4">
+      {/* ===== SEVEN PILLARS (Editorial List) ===== */}
+      <section ref={pillarsReveal.ref as React.RefObject<HTMLElement>} className={`relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#FDFBF7] py-16 sm:py-24 lg:py-32 px-6 ${pillarsReveal.className}`} data-section="pillars">
+        <div className="max-w-3xl mx-auto">
+          <div className="mb-14 sm:mb-20 text-center">
+            <div className="flex items-center justify-center gap-3 mb-5">
+              <div className="w-8 h-px bg-[#9AB8C4]"></div>
+              <p className="text-[10px] uppercase tracking-[0.2em] text-[#9AB8C4] font-medium">Department 01</p>
+              <div className="w-8 h-px bg-[#9AB8C4]"></div>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#2A2A28] leading-[1.05] tracking-tight mb-4">
               The 7 Biology Markers
             </h2>
-            <p className="text-[10px] uppercase tracking-[0.15em] text-[#9AB8C4]">
+            <p className="text-[11px] uppercase tracking-[0.15em] text-[#8A8A86]">
               50 Markers &middot; 7 Biology Markers &middot; One Score out of 100
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+          <div className="divide-y divide-[#E8E2D9]">
             {foundations.map((f, i) => {
-              const Icon = f.Icon;
               const isOpen = openPillar === i;
               const desc = pillarDescriptions[i];
               return (
                 <div
                   key={f.id}
-                  className={`group relative border rounded-lg transition-all duration-300 cursor-pointer ${
-                    isOpen
-                      ? 'border-[#9AB8C4]/40 bg-[#61356F] shadow-sm'
-                      : 'bg-[#61356F] border-[#FDFBF7]/15 hover:border-[#FDFBF7]/30'
-                  } ${i === 6 ? 'sm:col-span-2 sm:max-w-[calc(50%-0.625rem)] sm:mx-auto' : ''}`}
+                  className="group cursor-pointer py-6 sm:py-7"
                   onClick={() => setOpenPillar(isOpen ? null : i)}
                 >
-                  <div className="p-5 sm:p-6">
-                    <div className="flex items-start gap-4">
-                      <div className={`w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 transition-colors ${
-                        isOpen ? 'bg-[#9AB8C4]/15' : 'bg-[#FDFBF7]/10'
-                      }`}>
-                        <Icon size={16} strokeWidth={1.4} className="transition-colors text-[#9AB8C4]" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h3 className="font-serif text-base sm:text-lg tracking-tight transition-colors leading-tight text-[#FDFBF7]">
+                  <div className="flex items-start gap-5 sm:gap-6">
+                    <span className="font-serif text-2xl sm:text-3xl text-[#C9C4B8] tracking-tight flex-shrink-0 leading-none pt-1">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-baseline justify-between gap-4">
+                        <h3 className="font-serif text-lg sm:text-xl tracking-tight leading-tight text-[#2A2A28] group-hover:text-[#4B1D5C] transition-colors">
                           {f.title}
                         </h3>
-                        <p className="text-[10px] uppercase tracking-[0.15em] text-[#EDE6E9]/80 mt-1.5">
-                          {desc.focus}
-                        </p>
+                        <Icons.ChevronDown size={14} strokeWidth={1.5} className={`text-[#8A8A86] flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
                       </div>
-                    </div>
-
-                    <div className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                      isOpen ? 'max-h-64 opacity-100 mt-4' : 'max-h-0 opacity-0 mt-0'
-                    }`}>
-                      <p className="text-[#E4D9E8] leading-[1.8] font-light text-[13px] sm:text-[14px] pl-[52px]">
-                        {desc.definition}
+                      <p className="text-[10px] uppercase tracking-[0.15em] text-[#8A8A86] mt-1.5">
+                        {desc.focus}
                       </p>
-                      <button
-                        onClick={(e) => { e.stopPropagation(); onSelectPillar(f); }}
-                        className="text-[10px] uppercase tracking-[0.15em] text-[#9AB8C4] hover:text-[#FDFBF7] transition-colors font-bold mt-3 pl-[52px]"
-                      >
-                        Explore Full Detail
-                      </button>
+
+                      <div className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                        isOpen ? 'max-h-64 opacity-100 mt-4' : 'max-h-0 opacity-0 mt-0'
+                      }`}>
+                        <p className="text-[#5C534E] leading-[1.8] font-light text-[13px] sm:text-[14px]">
+                          {desc.definition}
+                        </p>
+                        <button
+                          onClick={(e) => { e.stopPropagation(); onSelectPillar(f); }}
+                          className="text-[10px] uppercase tracking-[0.15em] text-[#9AB8C4] hover:text-[#4B1D5C] transition-colors font-bold mt-3"
+                        >
+                          Explore Full Detail
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
